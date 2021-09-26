@@ -1,5 +1,3 @@
-# WDW_Project
-**Online Resume Builder**
-This Online resume builder is simplifies the task of creating a resume for individuals to help the job seekers to creates a professional resume for them.
-Individuals just have to fill up a form that specifies questions from all required fields such as personal questions, educational, qualities, interest, skills and so on. The answers provided by the users are stored and the system automatically generates a well structured resume. Users have option to create resume in any format and file.
+#**Online Resume Builder**
+This online resume builder simplifies the work of making a resume for job seekers by help them in creating a professional resume. Individuals must simply complete a form that includes questions from all needed fields, including personal questions, educational questions, traits, interests, and skills, among others. The answers given by the users are saved, and the system generates a well-structured resume automatically. Users can produce resumes in any format and file type.
 
