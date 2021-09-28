@@ -1,0 +1,43 @@
+#b1 {
+  border: 1px solid #a1a1a1;
+  background-color: #6a90fa;
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+  width: 100px;
+}
+#b1:hover {
+  background: #4f68da;
+  box-shadow: 3px 3px 5px rgb(206, 206, 206);
+}
+
+#nav-list li:hover {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+body {
+  padding-top: 5rem;
+}
+.container-fluid {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#c1 {
+  height: 500px;
+  background-color: #3be67f;
+  /* border-radius: 20px; */
+}
+
+#cvButton {
+  background-color: #626ccc;
+  color: #ffffff;
+  /* border-radius: 15px; */
+  height: 50px;
+  width: 200px;
+}
