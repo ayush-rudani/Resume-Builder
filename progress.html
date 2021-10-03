@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar</title>
+</head>
+<style>
+    h1{
+        text-align:center;
+    }
+    .container{
+        margin-top: 50px;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .circle{
+        position:relative;
+        border: 4px solid grey;
+        padding: 15px 20px;
+        border-radius: 50%;
+    }
+    .circle::after{
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        border:3px solid gray;
+        content: "";
+        width: 585%;
+        height: 0px;
+        z-index: -1;
+        transition: 0.4s ease;
+        margin-left: 20px;
+    }
+    .circle:last-child::after{
+        display: none;
+    }
+    .active{
+        border-color: purple;
+    }
+    .active2::after{
+        position: absolute;
+        top:50%;
+        transform: translateY(-50%);
+        border:3px solid purple;
+        content: "";
+        width: 585%;
+        height: 0px;
+        z-index: -1;
+        transition: 0.4s ease;
+        margin-left: 20px;
+    }
+    .active2:last-child::after{
+        display: none;
+    }
+    .btns{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .btns button{
+        margin: 0 10px;
+        padding: 10px 25px;
+        border-radius: 5%;
+        border:1px solid purple;
+        background-color: rgb(250, 37, 144);
+    }
+    .btns button:hover{
+        cursor: pointer;
+        background-color: black;
+        color:white;
+    }
+    .btns button:active{
+        transform: scale(0.97);
+    }
+    button:disabled{
+        color:black;
+        opacity: 0.85;
+    }
+</style>
+<body>
+    <div class="header">
+        <h1>Progress Bar</h1>
+    </div>
+    <div class="container">
+        <div class="circle active">
+            <span>1</span>
+        </div>
+        <div class="circle">
+            <span>2</span>
+        </div>
+        <div class="circle">
+            <span>3</span>
+        </div>
+        <div class="circle">
+            <span>4</span>
+        </div>
+    </div>
+    <div class="btns">
+        <button id="prev" disabled>Previous</button>
+        <button id="next">Next</button>
+    </div>
+</body>
+<script>
+    let next = document.querySelector('#next');
+    let prev = document.querySelector('#prev');
+    let counter = 1;
+    next.addEventListener('click',()=>{
+        if(counter !== document.getElementsByClassName('circle').length){
+            counter++; 
+        }
+        update();
+    })
+    prev.addEventListener('click',()=>{
+        if(counter !== 1){
+            counter--; 
+        }
+        update();
+    })
+    function update(){
+        let circles = document.querySelectorAll('.circle');
+        circles.forEach((ele,ind)=>{
+            if(ind < counter){
+                ele.classList.add('active');
+                if(ind>=1){
+                document.getElementsByClassName('circle')[ind-1].classList.add('active2');}
+            }
+            else{
+                ele.classList.remove('active');
+                if(ind>=1){
+                document.getElementsByClassName('circle')[ind-1].classList.remove('active2');}
+            }
+        });
+        if(counter == 1){
+            prev.disabled = true;
+        }
+        else{
+            prev.disabled = false;
+        }
+        if(document.querySelectorAll('.active').length == document.querySelectorAll('.circle').length){
+            next.disabled = true;
+        }
+        else{
+            next.disabled = false;
+        }
+    }
+</script>
+</html>
