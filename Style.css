@@ -1,18 +1,29 @@
+body {
+}
+
 #b1 {
-  border: 1px solid #a1a1a1;
-  background-color: #6a90fa;
+  border: 0px solid #a1a1a1;
+  background-color: #205bff00;
   color: rgb(255, 255, 255);
-  border-radius: 20px;
+  border-radius: 12px;
   width: 100px;
 }
 #b1:hover {
-  background: #4f68da;
-  box-shadow: 3px 3px 5px rgb(206, 206, 206);
+  /* background: #03c4ff; */
+  box-shadow: 3px 3px 3px rgb(206, 206, 206);
 }
 
 #nav-list li:hover {
   font-size: 1rem;
   font-weight: 500;
+}
+
+#nav {
+  /* margin-top: 50px; */
+  background-color: #5691ff;
+  /* top: -5%; */
+  /* left: -5%; */
+  /* transform: rotate(2deg); */
 }
 
 body {
@@ -40,4 +51,28 @@ body {
   /* border-radius: 15px; */
   height: 50px;
   width: 200px;
+}
+
+#bdate {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #dadee3;
+}
+
+#card {
+  /* border-radius: 12px ; */
+  border-radius: 15px 50px;
+  border: 1px solid #dadee300;
+  /* box-shadow: 3px 3px 3px rgb(206, 206, 206); */
+}
+
+#nstp {
+  border: 1px solid #4294ff;
+  border-radius: 6px;
+  color: white;
+  background-color: #5691ff;
+  padding: 10px;
+  width: 200px;
+  height: 50px;
+  margin-bottom: 50px;
 }
