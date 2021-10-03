@@ -7,6 +7,9 @@
     <title>Progress Bar</title>
 </head>
 <style>
+    :root{
+        --line-width:50px;
+    }
     h1{
         text-align:center;
     }
@@ -29,7 +32,7 @@
         transform: translateY(-50%);
         border:3px solid gray;
         content: "";
-        width: 585%;
+        width: var(--line-width);
         height: 0px;
         z-index: -1;
         transition: 0.4s ease;
@@ -47,7 +50,7 @@
         transform: translateY(-50%);
         border:3px solid purple;
         content: "";
-        width: 585%;
+        width: var(--line-width);
         height: 0px;
         z-index: -1;
         transition: 0.4s ease;
@@ -106,6 +109,13 @@
     </div>
 </body>
 <script>
+    function responsive(){
+    let width = document.querySelectorAll('.circle')[1].offsetLeft - document.querySelectorAll('.circle')[0].offsetLeft - 57;
+    document.documentElement.style.setProperty('--line-width',width+'px');
+    }
+
+    window.setInterval(responsive,1000);
+
     let next = document.querySelector('#next');
     let prev = document.querySelector('#prev');
     let counter = 1;
