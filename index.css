@@ -1,0 +1,78 @@
+html,body{
+height:100%;
+font-size:1rem;
+font-family: 'Open Sans', sans-serif;
+font-style:bold;
+}
+.gradient{
+background-image:url("joao-ferrao-4YzrcDNcRVg-unsplash.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+height:100%;
+width:100%;
+background-transparent:0.2;
+/*background:rgb(0,97,242);
+background:linear-gradient(135deg,rgba(0,97,242,1)0%,rgba(105,0,199,1)100%);*/
+clip-path:polygon(0 0,100% 0,100% 100%,70% 95%,0 100%);
+}
+.page-header{
+margin-top:3.5rem;
+font-size:48px;
+color:#000000;
+}
+.page-header p{
+padding:10rem 5rem 0rem 5rem;
+}
+.page-header button{
+margin-left:5rem;
+}
+li{
+padding-left:2.5rem;
+}
+
+.templates{
+margin-bottom:10rem;
+background-size: cover;
+height:100%;
+width:100%;
+background:rgb(240,240,240);
+clip-path:polygon(0 0,100% 0,100% 100%,70% 90%,0 100%);
+}
+.templates h1{
+padding-top:3.5rem;
+text-align:center;
+}
+.templates p{
+padding:1.5rem;
+text-align:center;
+}
+.templates img:hover{
+}
+.features h1{
+margin:0rem;
+padding:0rem 0rem 3.5rem 0rem;
+text-align:center;
+}
+.page{
+margin-top:2.5rem;
+background:rgb(240,240,240);
+clip-path:polygon(0 0,100% 0,100% 70%,0 100%);
+}
+.page-title{
+margin:4rem 0rem 2.5rem 7rem;
+}
+.page-title-para{
+margin:0.5rem 0rem 2.5rem 7rem;
+}
+.creater h1{
+margin:5rem;
+text-align:center;
+}
+.creater{
+margin-bottom:5rem;
+}
+footer{
+background-color:#000000;
+color:#ffffff;
+}
