@@ -7,16 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-    <title>Basic</title>
+    <link rel="icon" href="/images/RB_Logo.png" type="image/x-icon">
+    <title>Resume</title>
     <link rel="stylesheet" href="Style.css">
 </head>
 
 <body>
     <!-- NavBar -->
-    <nav class="navbar navbar-default navbar-static-top fixed-top navbar-expand-lg navbar-light" id="nav">
+    <!-- <nav class="navbar navbar-default navbar-static-top fixed-top navbar-expand-lg navbar-light" id="nav">
         <div class="container">
             <a class="navbar-brand  float-left" href="#">
-                <!-- <h2>Resume</h2> -->
+             
                 <img src="images/RB.svg" alt="" height="50px">
             </a>
             <ul class="navbar-nav">
@@ -26,112 +27,419 @@
             </ul>
         </div>
         </div>
+    </nav> -->
+    <!-- NavBar End -->
+
+    <!-- NavBar -->
+    <nav class="navbar navbar-default navbar-static-top fixed-top navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+            <a class="navbar-brand mx-auto" href="#">
+                <!-- <h2>Resume</h2> -->
+                <img src="images/RB.svg" alt="" height="50px">
+            </a>
+
+            <div class="collapse navbar-collapse" id="nav-list">
+                <!-- <ul class="navbar-nav mx-auto mt-2 mt-lg-0 ">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="index.html">Create CV</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#">CV Templates</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#">Resources</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link" href="#">FAQ</a>
+                    </li>
+                </ul> -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#!" id="b1" class="btn btn-rounded-3 ">Log In</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
     <!-- NavBar End -->
 
     <div class="container-fluid p-0">
 
-        <div class="container mt-5">
-            <h1 class="d-flex justify-content-center m-5" style="font-weight: 600;">Personal Details</h1>
-        </div>
-
-
-        <div class="card-container mb-5 shadow p-3 mb-5 bg-white" style="width:50%; margin:auto" id="card">
-            <div class="d-flex mt-3 mx-3">
-                <h6>Personal Details</h6>
-            </div>
-            <hr style="width:95%; margin: 10px;" , size="3" class="bg-secondary">
-            <div class="d-flex flex-row">
-                <div class="img-thumbnail float-left m-4" style="width: 150px; height:150px; border:1px doted black;">
-                    <img src="..." alt="">
-                </div>
-                <div class="row col-6  m-3 " style="float:left;">
-                    <div class="col-12">
-                        <label for="fname" class="form-label">First Name</label>
-                        <input type="text" class="form-control" id="fname">
-                    </div>
-                    <div class="col-12">
-                        <label for="lname" class="form-label">Second Name</label>
-                        <input type="text" class="form-control" id="lname">
-                    </div>
-                </div>
+        <form id="form1">
+            <div class="container mt-5">
+                <h1 class="d-flex justify-content-center m-5" style="font-weight: 600;">Personal Details</h1>
             </div>
 
-            <div class="row mx-5 mb-5">
-                <div class="col-md-6 ">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="example@gmail.com">
+            <div class="card-container mb-5 shadow p-3 mb-5 bg-white" style="width:850px; margin:auto" id="card">
+                <div class="d-flex mt-3 mx-3">
+                    <h6>Personal Details</h6>
+                </div>
+                <hr style="width:95%; margin: 10px;" , size="3" class="bg-secondary">
+                <div class="d-flex flex-row">
+                    <div class="img-thumbnail float-left m-4"
+                        style="width: 150px; height:150px; border:1px doted black;">
+                        <img src="..." alt="">
+                    </div>
+                    <div class="row col-6  m-3 " style="float:left;">
+                        <div class="col-12">
+                            <label for="fname" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="fname">
+                        </div>
+                        <div class="col-12">
+                            <label for="lname" class="form-label">Second Name</label>
+                            <input type="text" class="form-control" id="lname">
+                        </div>
+                    </div>
                 </div>
 
-                <div class="col-md-6">
-                    <label for="cnumber" class="form-label">Phone Number</label>
-                    <input type="text" class="form-control" id="cnumber" placeholder="xxxxxxxxxx">
-                </div>
+                <div class="row mx-5 mb-5">
+                    <div class="col-md-6 ">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="example@gmail.com">
+                    </div>
 
-                <div class="col-12 mt-3">
-                    <label for="inputAddress" class="form-label">Address</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-                </div>
+                    <div class="col-md-6">
+                        <label for="cnumber" class="form-label">Phone Number</label>
+                        <input type="text" class="form-control" id="cnumber" placeholder="xxxxxxxxxx">
+                    </div>
 
-                <div class="col-md-6 mt-3">
-                    <label for="inputCity" class="form-label">City</label>
-                    <input type="text" class="form-control" id="inputCity">
-                </div>
+                    <div class="col-12 mt-3">
+                        <label for="inputAddress" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    </div>
 
-                <div class="col-md-4 mt-3">
-                    <label for="inputState" class="form-label">State</label>
-                    <select id="inputState" class="form-select">
-                        <option selected>Choose...</option>
-                        <option>...</option>
-                    </select>
-                </div>
-
-                <div class="col-md-2 mt-3">
-                    <label for="inputZip" class="form-label">Zip</label>
-                    <input type="text" class="form-control" id="inputZip">
-                </div>
-
-                <div class="row">
-                    <div class="col-md-2 mt-3">
-                        <label for="gender" class="form-label">Gender</label>
-                        <select id="gender" class="form-select">
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Other</option>
-                        </select>
+                    <div class="col-md-6 mt-3">
+                        <label for="inputCity" class="form-label">City</label>
+                        <input type="text" class="form-control" id="inputCity">
                     </div>
 
                     <div class="col-md-4 mt-3">
-                        <label for="bdate" class="form-label">Birth Date</label>
-                        <input type="date" id="bdate">
+                        <label for="inputState" class="form-label">State</label>
+                        <select id="inputState" class="form-select">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
                     </div>
-                </div>
 
-                <div class="col-6 mt-3">
-                    <label for="linkedIn" class="form-label">LinkedIn </label>
-                    <input type="text" class="form-control" id="linkedIn">
-                </div>
+                    <div class="col-md-2 mt-3">
+                        <label for="inputZip" class="form-label">Zip</label>
+                        <input type="text" class="form-control" id="inputZip">
+                    </div>
 
-                <div class="col-6 mt-3">
-                    <label for="Website" class="form-label">Website</label>
-                    <input type="text" class="form-control" id="Website">
+                    <div class="row">
+                        <div class="col-md-2 mt-3">
+                            <label for="gender" class="form-label">Gender</label>
+                            <select id="gender" class="form-select">
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-4 mt-3">
+                            <label for="bdate" class="form-label">Birth Date</label>
+                            <input type="date" class="date" id="bdate">
+                        </div>
+                    </div>
+
+                    <div class="col-6 mt-3">
+                        <label for="linkedIn" class="form-label">LinkedIn </label>
+                        <input type="text" class="form-control" id="linkedIn">
+                    </div>
+
+                    <div class="col-6 mt-3">
+                        <label for="Website" class="form-label">Website</label>
+                        <input type="text" class="form-control" id="Website">
+                    </div>
+
                 </div>
 
             </div>
 
-        </div>
+            <div class="container d-block text-center">
+                <button class="btn " id="nstp">Next Step</button>
+            </div>
 
-        <div class="container d-block text-center">
-            <button class="btn " id="nstp">Next Step</button>
-        </div>
+        </form>
 
+
+
+
+        <form id="form2">
+
+            <div class="container mt-5">
+                <h1 class="d-flex justify-content-center m-5" style="font-weight: 600;">My experiences</h1>
+            </div>
+
+            <div class="card-container shadow mb-5 p-3 mb-5 bg-white" style="width:850px; margin:auto" id="card">
+                <div class="d-flex mt-3 mx-3">
+                    <h6>My experiences</h6>
+                </div>
+                <hr style="width:95%; margin: 10px;" , size="3" class="bg-secondary">
+
+
+                <div class="flip-cards d-flex flex-column m-4">
+
+                    <!-- Flip card 1 -->
+                    <div class="fc1">
+
+                        <div class="flip-card card-container p-2 mb-4 bg-white ">
+
+                            <div class="flip1 card-body">
+                                <h4 class="mx-4 my-0 p-2">Education and Qualifications</h5>
+                            </div>
+
+                            <div class="panel1 p-1">
+                                <hr>
+                                <div class="row mx-2 mb-5">
+
+                                    <div class="col-md-6 ">
+                                        <label for="degree" class="form-label">Degree</label>
+                                        <input type="text" class="form-control" id="degree" placeholder="e.g. B.Tech ">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="city" class="form-label">City/Town</label>
+                                        <input type="text" class="form-control" id="city"
+                                            placeholder="e.g. San francico">
+                                    </div>
+
+                                    <div class="col-12 mt-3">
+                                        <label for="School" class="form-label">School</label>
+                                        <input type="text" class="form-control" id="School"
+                                            placeholder="e.g. International Academy.">
+                                    </div>
+                                    <div class="col-6 mt-3">
+                                        <div class="d-flex flex-row">
+                                            <div class="me-4 mt-2">
+                                                <label for="" class="form-label">Start Date</label>
+                                                <input class="date" type="date" id="edu_start">
+                                            </div>
+
+                                            <div class="ms-4 mt-2">
+                                                <label for="" class="form-label">End Date</label>
+                                                <input class="date" type="date" id="edu_end">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-4">
+                                        <label for="edu_description" class="form-label">Description</label>
+                                        <textarea class="form-control" id="edu_description" rows="3"></textarea>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Flip card 1 End-->
+
+
+                    </div>
+
+                    <!-- Flip card 2 -->
+                    <div class="fc2">
+                        <div class="flip-card card-container  p-2 mb-4 bg-white ">
+
+                            <div class="flip2 card-body">
+                                <h4 class="mx-4 my-0 p-2">Work Experience</h4>
+                            </div>
+
+                            <div class="panel2 p-1">
+                                <hr>
+                                <div class="row mx-2 mb-5">
+
+                                    <div class="col-md-6 ">
+                                        <label for="email" class="form-label">Job Title</label>
+                                        <input type="text" class="form-control" id="job_title"
+                                            placeholder="e.g. Web Devloper">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="work_city" class="form-label">City/Town</label>
+                                        <input type="text" class="form-control" id="work_city"
+                                            placeholder="e.g. San francico">
+                                    </div>
+
+                                    <div class="col-12 mt-3">
+                                        <label for="employer" class="form-label">Employer</label>
+                                        <input type="text" class="form-control" id="employer" placeholder="e.g. PwC">
+                                    </div>
+                                    <div class="col-6 mt-3">
+                                        <div class="d-flex flex-row">
+                                            <div class="me-4 mt-2">
+                                                <label for="" class="form-label">Start Date</label>
+                                                <input class="date" type="date" id="Work1_start">
+                                            </div>
+
+                                            <div class="ms-4 mt-2">
+                                                <label for="" class="form-label">End Date</label>
+                                                <input class="date" type="date" id="Work1_end">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-4">
+                                        <label for="work_description" class="form-label">Description</label>
+                                        <textarea class="form-control" id="work_description" rows="3"></textarea>
+                                    </div>
+
+                                    <div class="mt-5 d-flex justify-content-center"><button type="button"
+                                            class="btn btn-outline-secondary" style="width:95%;">Add another
+                                            work experience</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flip card 2 End-->
+
+
+                    <!-- Flip card 3 -->
+                    <div class="fc3">
+                        <div class="flip-card card-container p-2 mb-4 bg-white">
+
+                            <div class="flip3 card-body">
+                                <h4 class="mx-4 my-0 p-2">Skills</h4>
+                            </div>
+
+                            <div class="panel3 p-1">
+                                <hr>
+
+                                <div class="row mx-2 mb-5">
+                                    <div class="col-12 mt-3">
+                                        <div class="d-flex flex-row">
+
+                                            <div class="col-md-6">
+                                                <label for="skill1" class="form-label">Skill</label>
+                                                <input type="text" class="form-control" id="skill1"
+                                                    placeholder="e.g. photoshop, Python, DBMS">
+                                            </div>
+
+                                            <div class="col-6  ms-3">
+                                                <label for="" class="form-label">Level</label>
+                                                <select id="skill1_level" class="form-select">
+                                                    <option selected>Select level</option>
+                                                    <option>Beginner</option>
+                                                    <option>Intermediate</option>
+                                                    <option>Skillful</option>
+                                                    <option>Expert</option>
+                                                    <option>Experienced</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-5 d-flex justify-content-center"><button type="button"
+                                            class="btn btn-outline-secondary" style="width:95%;">Add another
+                                            skill</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Flip card 3 End-->
+
+
+                    <!-- Flip card 4 -->
+                    <div class="fc4">
+                        <div class="flip-card card-container p-2 mb-4 bg-white">
+
+                            <div class="flip4 card-body">
+                                <h4 class="mx-4 my-0 p-2">Interests</h4>
+                            </div>
+
+                            <div class="panel4 p-1">
+                                <hr>
+
+                                <div class="row mx-2 mb-5">
+
+                                    <div class="col-12 mt-3">
+                                        <label for="hobby1" class="form-label">Hobby</label>
+                                        <input type="text" class="form-control" id="hobby1"
+                                            placeholder="e.g. Reading, Writing">
+                                    </div>
+
+                                    <div class="mt-5 d-flex justify-content-center"><button type="button"
+                                            class="btn btn-outline-secondary" style="width:95%;">Add another
+                                            hobby</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Flip card 4 End-->
+
+
+                    <!-- Flip card 5 -->
+                    <div class="fc5">
+                        <div class="flip-card card-container p-2 mb-4 bg-white ">
+
+                            <div class="flip5 card-body">
+                                <h4 class="mx-4 my-0 p-2">Achievements</h4>
+                            </div>
+
+                            <div class="panel5 p-1">
+                                <hr>
+
+                                <div class="row mx-2 mb-5">
+                                    <div class="mt-4">
+                                        <label for="achv_description" class="form-label">Description</label>
+                                        <textarea class="form-control" id="achv_description" rows=6"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Flip card 5 End-->
+
+                        <div class="fc5 my-3">
+                            <div class="flip5 card card-body">
+                                <select class="form-select mx-4 py-2" style="width:95%;"
+                                    aria-label="Default select example">
+                                    <option selected>+ Add extra section</option>
+                                    <option value="1">Courses</option>
+                                    <option value="2">Resume Objective</option>
+                                    <option value="3">References</option>
+                                </select>
+                            </div>
+                            <div class="panel5"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container d-block text-center">
+                <button class="btn " id="nstp">Next Step</button>
+            </div>
+
+        </form>
     </div>
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
 <script>
+    $(document).ready(function () {
+
+        function slideTog(el) {
+            $(el).next().slideToggle(500);
+        }
+        $(".flip1, .flip2, .flip3, .flip4, .flip5, .flip6, .flip7").click(function () {
+            slideTog(this);
+        });
+
+
+    });
+
 
 </script>
 
