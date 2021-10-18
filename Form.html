@@ -246,7 +246,7 @@
 
                             <div class="panel2 p-1">
                                 <hr>
-                                <div class="row mx-2 mb-5">
+                                <div class="list row mx-2 mb-5">
 
                                     <div class="col-md-6 ">
                                         <label for="email" class="form-label">Job Title</label>
@@ -283,10 +283,12 @@
                                         <textarea class="form-control" id="work_description" rows="3"></textarea>
                                     </div>
 
-                                    <div class="mt-5 d-flex justify-content-center"><button type="button"
-                                            class="btn btn-outline-secondary" style="width:95%;">Add another
-                                            work experience</button>
-                                    </div>
+                                    <!-- New Work Experience -->
+
+                                </div>
+                                <div class="my-5 d-flex justify-content-center"><button type="button"
+                                        class="btn btn-outline-secondary" style="width:90%;">Add another
+                                        work experience</button>
                                 </div>
 
                             </div>
@@ -307,7 +309,8 @@
                             <div class="panel3 p-1">
                                 <hr>
 
-                                <div class="row mx-2 mb-5">
+                                <div class="list row mx-2 mb-5">
+
                                     <div class="col-12 mt-3">
                                         <div class="d-flex flex-row">
 
@@ -330,10 +333,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="mt-5 d-flex justify-content-center"><button type="button"
-                                            class="btn btn-outline-secondary" style="width:95%;">Add another
-                                            skill</button>
-                                    </div>
+
+                                    <!-- New Skills -->
+
+                                </div>
+                                <div class="my-5 d-flex justify-content-center"><button type="button"
+                                        class="btn btn-outline-secondary" style="width:90%;" id="addSkill">Add
+                                        another
+                                        skill</button>
                                 </div>
 
                             </div>
@@ -353,20 +360,22 @@
                             <div class="panel4 p-1">
                                 <hr>
 
-                                <div class="row mx-2 mb-5">
+                                <div class="list row mx-2 mb-5">
 
-                                    <div class="col-12 mt-3">
+                                    <div class="col-12 mt-4">
                                         <label for="hobby1" class="form-label">Hobby</label>
                                         <input type="text" class="form-control" id="hobby1"
                                             placeholder="e.g. Reading, Writing">
                                     </div>
 
-                                    <div class="mt-5 d-flex justify-content-center"><button type="button"
-                                            class="btn btn-outline-secondary" style="width:95%;">Add another
-                                            hobby</button>
-                                    </div>
-                                </div>
+                                    <!-- New Hobby -->
 
+                                </div>
+                                <div class="my-5 d-flex justify-content-center"><button type="button"
+                                        class="btn btn-outline-secondary" id="addHobby" style="width:90%;">Add
+                                        another
+                                        hobby</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -435,6 +444,18 @@
         }
         $(".flip1, .flip2, .flip3, .flip4, .flip5, .flip6, .flip7").click(function () {
             slideTog(this);
+        });
+
+
+        $('#addHobby').click(function () {
+            let obj = $('div.panel4').children("div.list");
+            let curr_len = obj.length - 2;
+            let node =
+                `<div class="col-12 mt-4">
+                     <label for='hobby${curr_len + 1}' class="form-label">Hobby</label>
+                    <input type="text" class="form-control" id="hobby${curr_len + 1}" placeholder="e.g. Reading, Writing">
+                </div>`;
+            obj.append(node);
         });
 
 
