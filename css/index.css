@@ -28,7 +28,7 @@ nav li a:hover {
   border-radius: 30px;
 }
 .gradient {
-  background-image: url('../images/img1.jpg');
+  background-image: url("../images/img1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
