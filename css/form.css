@@ -20,7 +20,9 @@
 
 #nav {
   /* margin-top: 50px; */
-  background-color: #32e479;
+  /* background-color: #32e479; */
+  background-color: #c7c7c7;
+
   /* top: -5%; */
   /* left: -5%; */
   /* transform: rotate(2deg); */
@@ -114,12 +116,12 @@ div[class*="panel"] {
   box-shadow: 0px 0px 5px rgb(204, 204, 204);
 }
 
-#accordionWork .accordion-header{
+#accordionWork .accordion-header {
   position: relative;
-  display:none;
+  display: none;
 }
 
-#accordionWork .delete-item{
+#accordionWork .delete-item {
   z-index: 10;
   position: absolute;
   top: 0.75em;
@@ -129,8 +131,8 @@ div[class*="panel"] {
   background-color: transparent;
 }
 
-#accordionWork .delete-item:hover{
-  color:red;
+#accordionWork .delete-item:hover {
+  color: red;
 }
 
 /* Scroll Bar  */

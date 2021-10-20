@@ -1,78 +1,112 @@
-html,body{
-height:100%;
-font-size:1rem;
-font-family: 'Open Sans', sans-serif;
-font-style:bold;
-}
-.gradient{
-background-image:url("joao-ferrao-4YzrcDNcRVg-unsplash.jpg");
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-height:100%;
-width:100%;
-background-transparent:0.2;
-/*background:rgb(0,97,242);
-background:linear-gradient(135deg,rgba(0,97,242,1)0%,rgba(105,0,199,1)100%);*/
-clip-path:polygon(0 0,100% 0,100% 100%,70% 95%,0 100%);
-}
-.page-header{
-margin-top:3.5rem;
-font-size:48px;
-color:#000000;
-}
-.page-header p{
-padding:10rem 5rem 0rem 5rem;
-}
-.page-header button{
-margin-left:5rem;
-}
-li{
-padding-left:2.5rem;
+html,
+body {
+  height: 100%;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-style: bold;
 }
 
-.templates{
-margin-bottom:10rem;
-background-size: cover;
-height:100%;
-width:100%;
-background:rgb(240,240,240);
-clip-path:polygon(0 0,100% 0,100% 100%,70% 90%,0 100%);
+/* .button {
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 6px;
+  color: white;
+  background-color: #626ccc;
+  padding: 10px;
+  margin: 20px;
+  width: 180px;
+  height: 50px;
+  margin-bottom: 50px;
+} */
+
+button1 {
+  width: 300x;
+  height: 100px;
 }
-.templates h1{
-padding-top:3.5rem;
-text-align:center;
+
+nav li a:hover {
+  background-color: rgb(240, 240, 240);
+  border-radius: 30px;
 }
-.templates p{
-padding:1.5rem;
-text-align:center;
+.gradient {
+  background-image: url("/images/img1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  background-transparent: 0.2;
+  /*background:rgb(0,97,242);
+background:linear-gradient(135deg,rgba(0,97,242,1)0%,rgba(105,0,199,1)100%);*/
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
 }
-.templates img:hover{
+.page-header {
+  margin-top: 3.5rem;
+  font-size: 40px;
+  color: #000000;
 }
-.features h1{
-margin:0rem;
-padding:0rem 0rem 3.5rem 0rem;
-text-align:center;
+.page-header p {
+  margin-left: 50rem;
+  padding: 10rem 5rem 0rem 0rem;
 }
-.page{
-margin-top:2.5rem;
-background:rgb(240,240,240);
-clip-path:polygon(0 0,100% 0,100% 70%,0 100%);
+.page-header button {
+  margin-left: 50rem;
 }
-.page-title{
-margin:4rem 0rem 2.5rem 7rem;
+li {
+  padding-left: 2.5rem;
 }
-.page-title-para{
-margin:0.5rem 0rem 2.5rem 7rem;
+
+.templates {
+  margin-bottom: 10rem;
+  background-size: cover;
+  height: auto;
+  width: auto;
+  padding-bottom: 7rem;
+  background: rgb(240, 240, 240);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
-.creater h1{
-margin:5rem;
-text-align:center;
+.templates h1 {
+  padding-top: 3.5rem;
+  text-align: center;
 }
-.creater{
-margin-bottom:5rem;
+.templates p {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 18px;
 }
-footer{
-background-color:#000000;
-color:#ffffff;
+.templates img {
+  padding: rem;
+  border: 0px;
+}
+.features h1 {
+  margin: 0rem 0rem 2rem 0rem;
+  text-align: center;
+}
+.page {
+  margin-top: 2.5rem;
+  background: rgb(240, 240, 240);
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+}
+.page-title {
+  margin: 4rem 0rem 2.5rem 7rem;
+}
+.page-title-para {
+  margin: 0.5rem 0rem 2.5rem 7rem;
+}
+form {
+  margin-left: 10rem;
+  padding-left: 10rem;
+}
+.Form h1 {
+  margin: 5rem;
+  text-align: center;
+}
+.Form div {
+  margin-bottom: 2.5rem;
+}
+.Form button {
+  margin-top: 2rem;
+}
+footer {
+  background-color: #000000;
+  color: #ffffff;
 }

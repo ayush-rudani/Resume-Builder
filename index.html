@@ -16,21 +16,48 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 		crossorigin="anonymous"></script>
-	<link rel="icon" href="images/RB_Logo.png" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="css/index.css">
+	<link rel="icon" href="images/RB_Logo.png" type="image/x-icon">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-	<title>Welcome To Our Website</title>
+	<title>Resume_Builder</title>
 </head>
 
 <body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="color:#000000;">
+		<div class="container" style="font-size:20px;">
+			<a class="navbar-brand" href="index.html" style="font-size:32px;"><img src="images/RB.svg" alt=""
+					height="45px"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#pageHeader">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="form.html">Create Resume</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#templates">Resume Templates</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="faq.html">FAQ</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
-	<!-- NavBar -->
+	<!-- NavBar
 	<nav class="navbar navbar-default navbar-static-top fixed-top navbar-expand-lg navbar-light bg-white">
 		<div class="container">
 			<a class="navbar-brand mx-auto" href="#">
-				<!-- <h2>Resume</h2> -->
+				 <h2>Resume</h2>
 				<img src="images/RB.svg" alt="" height="50px">
 			</a>
 
@@ -57,38 +84,38 @@
 			</div>
 		</div>
 	</nav>
-	<!-- NavBar End -->
-	<header class="page-header gradient">
+	-->
+	<header class="page-header gradient" id="pageHeader">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6">
-
-				</div>
-				<div class="col-md-6">
-					<p>Create Your Profffesional Resume With Resume Builder</p>
-					<button type="button" class="btn btn-outline-dark">Create Your Resume</button>
+				<div>
+					<p style="color: #0a0000; font-weight: bold;">Create Your Profffesional Resume With Resume Builder
+					</p>
+					<button type="button" class="btn btn-primary"><a href="Form.html"
+							style="text-decoration:none; color:white;"><i
+								class="bi bi-file-earmark-person-fill mr-4"></i>Create Your Resume</a></button>
 				</div>
 			</div>
 		</div>
 	</header>
-	<div class="container-fluid templates ">
+	<div class="container-fluid templates " id="templates">
 		<h1>Make a resume that stands out</h1>
 		<p>Increse your chance of getting a job by creating your resume with our professionally-designed resume
 			templates.</p>
 		<div class="row">
 			<div class="col-md-4">
-				<img src="images/img1.jpg" class="img-thumbnail" alt="...">
+				<img src="images/T1.PNG" class="img-thumbnail" alt="...">
 			</div>
 			<div class="col-md-4">
-				<img src="images/img1.jpg" class="img-thumbnail" alt="...">
+				<img src="images/T4.PNG" class="img-thumbnail" style="width:520px;height:620px;" alt="...">
 			</div>
 			<div class="col-md-4">
-				<img src="images/img1.jpg" class="img-thumbnail" alt="...">
+				<img src="images/T3.PNG" class="img-thumbnail" alt="...">
 			</div>
 		</div>
 	</div>
 
-	<div class="container features ">
+	<div class="container features">
 		<h1>Features</h1>
 		<div class="row">
 			<div class="card mb-3" style="max-width: 100%; justify-content:center;">
@@ -154,37 +181,32 @@
 		</div>
 		<div class="row">
 			<div class="button-container" style="margin:0rem 0rem 2.5rem 7rem; height:100%;">
-				<button type="button" class="btn btn-outline-dark">Create Your Resume</button>
+				<button type="button" class="btn btn-outline-dark"><a href="Form.html"
+						style="text-decoration:none;">Create Your Resume</a></button>
 			</div>
 		</div>
 	</div>
-	<div class="container creater">
-		<h1>Created by</h1>
+	<div class="container Form">
+		<h1>Contact Us</h1>
 		<div class="row">
-			<div class="col-md-4">
-				<div class="card profile" style="width: 18rem;">
-					<img class="card-img-top" src="images/img1.jpg" alt="Card image cap">
-					<div class="card-body">
-						<h3 class="card-text">Name</h3>
-					</div>
+			<form class="row g-3">
+				<div class="col-md-6">
+					<label for="name" class="form-label">Name</label>
+					<input type="text" class="form-control" id="inputEmail4">
 				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="card profile" style="width: 18rem;">
-					<img class="card-img-top" src="images/img1.jpg" alt="Card image cap">
-					<div class="card-body">
-						<h3 class="card-text">Name</h3>
-					</div>
+				<div class="col-md-6">
+					<label for="inputEmail4" class="form-label">Email</label>
+					<input type="email" class="form-control" id="inputEmail4">
 				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="card profile" style="width: 18rem;">
-					<img class="card-img-top" src="images/img1.jpg" alt="Card image cap">
-					<div class="card-body">
-						<h3 class="card-text">Name</h3>
-					</div>
+				<div class="col-12">
+					<label for="inputAddress" class="form-label">Feedback</label>
+					<textarea type="text" class="form-control" row="5" id="inputAddress"
+						placeholder="Your Feedback"></textarea>
 				</div>
-			</div>
+				<div class="col-12">
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</div>
+			</form>
 		</div>
 	</div>
 	<footer class="page-footer font-small black">
