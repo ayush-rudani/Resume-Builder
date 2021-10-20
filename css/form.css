@@ -114,23 +114,8 @@ div[class*="panel"] {
   box-shadow: 0px 0px 5px rgb(204, 204, 204);
 }
 
-#accordionWork .accordion-header{
-  position: relative;
+.accordion-header{
   display:none;
-}
-
-#accordionWork .delete-item{
-  z-index: 10;
-  position: absolute;
-  top: 0.75em;
-  right: 2.5em;
-  font-size: 18px;
-  border: none;
-  background-color: transparent;
-}
-
-#accordionWork .delete-item:hover{
-  color:red;
 }
 
 /* Scroll Bar  */
