@@ -19,7 +19,7 @@ _**This project makes use of :**_
 3. JavaScript
 4. Bootstrap
 
-<br>
+
 
 ### Watch Demo Video :
 
