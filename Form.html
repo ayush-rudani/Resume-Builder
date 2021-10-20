@@ -7,65 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="icon" href="/images/RB_Logo.png" type="image/x-icon">
     <title>Resume</title>
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="/css/form.css">
 </head>
 
 <body>
-    <!-- NavBar -->
-    <!-- <nav class="navbar navbar-default navbar-static-top fixed-top navbar-expand-lg navbar-light" id="nav">
-        <div class="container">
-            <a class="navbar-brand  float-left" href="#">
-             
-                <img src="images/RB.svg" alt="" height="50px">
-            </a>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a href="#!" id="b1" class="btn btn-rounded-3 ">Log In</a>
-                </li>
-            </ul>
-        </div>
-        </div>
-    </nav> -->
-    <!-- NavBar End -->
 
     <!-- NavBar -->
-    <nav class="navbar navbar-default navbar-static-top fixed-top navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-default navbar-static-top fixed-top navbar-expand-lg navbar-light container-fluid NavBar"
+        id="nav">
         <div class="container">
             <a class="navbar-brand mx-auto" href="#">
-                <!-- <h2>Resume</h2> -->
                 <img src="images/RB.svg" alt="" height="50px">
             </a>
-
             <div class="collapse navbar-collapse" id="nav-list">
-                <!-- <ul class="navbar-nav mx-auto mt-2 mt-lg-0 ">
-                    <li class="nav-item mx-3">
-                        <a class="nav-link" href="index.html">Create CV</a>
-                    </li>
-                    <li class="nav-item mx-3">
-                        <a class="nav-link" href="#">CV Templates</a>
-                    </li>
-                    <li class="nav-item mx-3">
-                        <a class="nav-link" href="#">Resources</a>
-                    </li>
-                    <li class="nav-item mx-3">
-                        <a class="nav-link" href="#">FAQ</a>
-                    </li>
-                </ul> -->
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="#!" id="b1" class="btn btn-rounded-3 ">Log In</a>
-                    </li>
-                </ul>
             </div>
         </div>
     </nav>
     <!-- NavBar End -->
 
+
+
     <div class="container-fluid p-0">
 
-        <form id="form1">
+
+
+        <!-- **********     FORM - 1    ********** -->
+
+        <form id="form1" class="step step-1 active">
+
             <div class="container mt-5">
                 <h1 class="d-flex justify-content-center m-5" style="font-weight: 600;">Personal Details</h1>
             </div>
@@ -156,16 +128,19 @@
 
             </div>
 
-            <div class="container d-block text-center">
-                <button class="btn " id="nstp">Next Step</button>
+            <div class="btn-box container d-block text-center" style="width:850px;">
+                <button type="button" class="next_btn" id="next1">Next Step<i
+                        class="bi bi-arrow-right-circle ms-3"></i></button>
             </div>
 
         </form>
 
+        <!-- **********     FORM - 1 END   ********** -->
 
 
 
-        <form id="form2">
+        <!-- **********     FORM - 2    ********** -->
+        <form id="form2" class="step step-2">
 
             <div class="container mt-5">
                 <h1 class="d-flex justify-content-center m-5" style="font-weight: 600;">My experiences</h1>
@@ -421,26 +396,31 @@
                 </div>
             </div>
 
-            <div class="container d-block text-center">
-                <button class="btn " id="nstp">Next Step</button>
+            <div class="btn_box container d-block text-center" style="width:850px;">
+                <button type="button" class="prev_btn" id="back2"><i class="bi bi-arrow-left-circle me-3"></i>Previous
+                    Step</button>
+                <button type="button" class="next_btn" id="next2">Next Step<i
+                        class="bi bi-arrow-right-circle ms-3"></i></button>
             </div>
 
         </form>
+        <!-- **********     FORM - 2 END    ********** -->
     </div>
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
 
 <script>
     $(document).ready(function () {
 
+
         function slideTog(el) {
-            $(el).next().slideToggle(500);
+            $(el).next().slideToggle(350);
         }
         $(".flip1, .flip2, .flip3, .flip4, .flip5, .flip6, .flip7").click(function () {
             slideTog(this);
@@ -457,6 +437,46 @@
                 </div>`;
             obj.append(node);
         });
+
+
+
+        //**************** Form Steps ****************//
+
+
+        let steps = Array.from(document.querySelectorAll('form.step'));
+        // console.log(steps);
+        let next_btn = document.querySelectorAll('form .next_btn');
+        // console.log(next_btn);
+        let prev_btn = document.querySelectorAll('form .prev_btn');
+
+        // let form = document.querySelector('form')
+
+        next_btn.forEach(button => {
+            button.addEventListener('click', () => {
+                changeStep('next');
+            })
+        })
+        prev_btn.forEach(button => {
+            button.addEventListener('click', () => {
+                changeStep('prev');
+            })
+        })
+
+        function changeStep(btn) {
+            let index = 0;
+            let active = document.querySelector('form.step.active')
+            index = steps.indexOf(active);
+            steps[index].classList.remove('active');
+            if (btn === 'next') {
+                if (index < steps.length - 1)
+                    index++;
+            }
+            else if (btn === 'prev') {
+                index--;
+            }
+            steps[index].classList.add('active');
+            // console.log(index);
+        }
 
 
     });

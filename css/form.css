@@ -10,7 +10,7 @@
 }
 #b1:hover {
   /* background: #03c4ff; */
-  box-shadow: 3px 3px 3px rgb(206, 206, 206);
+  box-shadow: 1px 1px 5px rgb(206, 206, 206);
 }
 
 #nav-list li:hover {
@@ -20,7 +20,7 @@
 
 #nav {
   /* margin-top: 50px; */
-  background-color: rgb(200, 200, 200);
+  background-color: #32e479;
   /* top: -5%; */
   /* left: -5%; */
   /* transform: rotate(2deg); */
@@ -70,13 +70,37 @@ body {
   /* box-shadow: 3px 3px 3px rgb(206, 206, 206); */
 }
 
-#nstp {
+/* ------------------------------- */
+/* Steps */
+.step {
+  display: none;
+}
+.step.active {
+  display: block;
+}
+
+/* ------------------------------- */
+
+/* #nstp {
   border: 1px solid #4294ff;
   border-radius: 6px;
   color: white;
   background-color: #5691ff;
   padding: 10px;
   width: 200px;
+  height: 50px;
+  margin-bottom: 50px;
+} */
+
+.next_btn,
+.prev_btn {
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 6px;
+  color: white;
+  background-color: #626ccc;
+  padding: 10px;
+  margin: 20px;
+  width: 180px;
   height: 50px;
   margin-bottom: 50px;
 }
@@ -94,6 +118,7 @@ div[class*="panel"] {
 
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -102,10 +127,10 @@ div[class*="panel"] {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #7ba9ff;
+  background: #cecece;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #5779b8;
+  background: #7c7c7c;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,30 +8,34 @@
     <title>Progress Bar</title>
 </head>
 <style>
-    :root{
-        --line-width:280px;
+    :root {
+        --line-width: 280px;
     }
-    h1{
-        text-align:center;
+
+    h1 {
+        text-align: center;
     }
-    .container{
+
+    .container {
         margin-top: 50px;
         display: flex;
         width: 100%;
         align-items: center;
         justify-content: space-around;
     }
-    .circle{
-        position:relative;
+
+    .circle {
+        position: relative;
         border: 4px solid grey;
         padding: 15px 20px;
         border-radius: 50%;
     }
-    .circle::after{
+
+    .circle::after {
         position: absolute;
-        top:50%;
+        top: 50%;
         transform: translateY(-50%);
-        border:3px solid gray;
+        border: 3px solid gray;
         content: "";
         width: var(--line-width);
         height: 0px;
@@ -38,17 +43,20 @@
         transition: 0.4s ease;
         margin-left: 20px;
     }
-    .circle:last-child::after{
+
+    .circle:last-child::after {
         display: none;
     }
-    .active{
+
+    .active {
         border-color: purple;
     }
-    .active2::after{
+
+    .active2::after {
         position: absolute;
-        top:50%;
+        top: 50%;
         transform: translateY(-50%);
-        border:3px solid purple;
+        border: 3px solid purple;
         content: "";
         width: var(--line-width);
         height: 0px;
@@ -56,35 +64,42 @@
         transition: 0.4s ease;
         margin-left: 20px;
     }
-    .active2:last-child::after{
+
+    .active2:last-child::after {
         display: none;
     }
-    .btns{
+
+    .btns {
         margin-top: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .btns button{
+
+    .btns button {
         margin: 0 10px;
         padding: 10px 25px;
         border-radius: 5%;
-        border:1px solid purple;
+        border: 1px solid purple;
         background-color: rgb(250, 37, 144);
     }
-    .btns button:hover{
+
+    .btns button:hover {
         cursor: pointer;
         background-color: black;
-        color:white;
+        color: white;
     }
-    .btns button:active{
+
+    .btns button:active {
         transform: scale(0.97);
     }
-    button:disabled{
-        color:black;
+
+    button:disabled {
+        color: black;
         opacity: 0.85;
     }
 </style>
+
 <body>
     <div class="header">
         <h1>Progress Bar</h1>
@@ -109,54 +124,57 @@
     </div>
 </body>
 <script>
-    function responsive(){
-    let width = document.querySelectorAll('.circle')[1].offsetLeft - document.querySelectorAll('.circle')[0].offsetLeft - 57;
-    document.documentElement.style.setProperty('--line-width',width+'px');
+    function responsive() {
+        let width = document.querySelectorAll('.circle')[1].offsetLeft - document.querySelectorAll('.circle')[0].offsetLeft - 57;
+        document.documentElement.style.setProperty('--line-width', width + 'px');
     }
 
-    window.setInterval(responsive,1000);
+    window.setInterval(responsive, 1000);
 
     let next = document.querySelector('#next');
     let prev = document.querySelector('#prev');
     let counter = 1;
-    next.addEventListener('click',()=>{
-        if(counter !== document.getElementsByClassName('circle').length){
-            counter++; 
+    next.addEventListener('click', () => {
+        if (counter !== document.getElementsByClassName('circle').length) {
+            counter++;
         }
         update();
     })
-    prev.addEventListener('click',()=>{
-        if(counter !== 1){
-            counter--; 
+    prev.addEventListener('click', () => {
+        if (counter !== 1) {
+            counter--;
         }
         update();
     })
-    function update(){
+    function update() {
         let circles = document.querySelectorAll('.circle');
-        circles.forEach((ele,ind)=>{
-            if(ind < counter){
+        circles.forEach((ele, ind) => {
+            if (ind < counter) {
                 ele.classList.add('active');
-                if(ind>=1){
-                document.getElementsByClassName('circle')[ind-1].classList.add('active2');}
+                if (ind >= 1) {
+                    document.getElementsByClassName('circle')[ind - 1].classList.add('active2');
+                }
             }
-            else{
+            else {
                 ele.classList.remove('active');
-                if(ind>=1){
-                document.getElementsByClassName('circle')[ind-1].classList.remove('active2');}
+                if (ind >= 1) {
+                    document.getElementsByClassName('circle')[ind - 1].classList.remove('active2');
+                }
             }
         });
-        if(counter == 1){
+        if (counter == 1) {
             prev.disabled = true;
         }
-        else{
+        else {
             prev.disabled = false;
         }
-        if(document.querySelectorAll('.active').length == document.querySelectorAll('.circle').length){
+        if (document.querySelectorAll('.active').length == document.querySelectorAll('.circle').length) {
             next.disabled = true;
         }
-        else{
+        else {
             next.disabled = false;
         }
     }
 </script>
+
 </html>
