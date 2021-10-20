@@ -3,8 +3,8 @@
 ## Description
 
 <h2>Online Resume Builder</h2>
-<!-- This online resume builder simplifies the work of making a resume for job seekers by help them in creating a professional resume. Individuals must simply complete a form that includes questions from all needed fields, including personal questions, educational questions, traits, interests, and skills, among others. The answers given by the users are saved, and the system generates a well-structured resume automatically with costomisable templates. Users can produce resumes in any format and file type. -->
-* This online resume builder assists job searchers in building a professional resume, making the task of creating a resume easier. Individuals must simply fill out a form that includes questions from all required sections, such as personal questions, educational questions, qualities, interests, and skills. Users' responses are kept, and the system generates a well-structured resume with __customisable templates__ automatically. Users have the option of creating resumes in any format or file type. *
+
+- This online resume builder assists job searchers in building a professional resume, making the task of creating a resume easier. Individuals must simply fill out a form that includes questions from all required sections, such as personal questions, educational questions, qualities, interests, and skills. Users' responses are kept, and the system generates a well-structured resume with **customisable templates** automatically. Users have the option of creating resumes in any format or file type.\*
 
 <br><br>
 
@@ -23,3 +23,4 @@ _This project makes use of :_
 "[Resume Builder](https://drive.google.com/file/d/1X8XSruU315Ziyao32fiOv2zgZ8U-nqOP/view)"
 
 <!-- <b><h3>Video Link : </b>https://drive.google.com/file/d/1X8XSruU315Ziyao32fiOv2zgZ8U-nqOP/view</h3> -->
+<!-- This online resume builder simplifies the work of making a resume for job seekers by help them in creating a professional resume. Individuals must simply complete a form that includes questions from all needed fields, including personal questions, educational questions, traits, interests, and skills, among others. The answers given by the users are saved, and the system generates a well-structured resume automatically with costomisable templates. Users can produce resumes in any format and file type. -->
