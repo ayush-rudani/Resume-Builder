@@ -28,13 +28,13 @@ nav li a:hover {
   border-radius: 30px;
 }
 .gradient {
-  background-image: url("/images/img1.jpg");
+  background-image: url('../images/img1.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
   width: 100%;
-  background-transparent: 0.2;
+  /* background-transparent: 0.2; */
   /*background:rgb(0,97,242);
 background:linear-gradient(135deg,rgba(0,97,242,1)0%,rgba(105,0,199,1)100%);*/
   clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
