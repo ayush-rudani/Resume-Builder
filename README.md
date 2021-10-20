@@ -19,9 +19,11 @@ _**This project makes use of :**_
 3. JavaScript
 4. Bootstrap
 
+<br>
+
 ### Watch Demo Video :
 
-(Partial Project)<br>
+(Partial Project)
 "[Resume Builder](https://drive.google.com/file/d/1X8XSruU315Ziyao32fiOv2zgZ8U-nqOP/view)"
 
 <!-- <b><h3>Video Link : </b>https://drive.google.com/file/d/1X8XSruU315Ziyao32fiOv2zgZ8U-nqOP/view</h3> -->
