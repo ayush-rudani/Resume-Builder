@@ -116,12 +116,12 @@ div[class*="panel"] {
   box-shadow: 0px 0px 5px rgb(204, 204, 204);
 }
 
-#accordionWork .accordion-header {
+.accordion-header {
   position: relative;
   display: none;
 }
 
-#accordionWork .delete-item {
+.delete-item {
   z-index: 10;
   position: absolute;
   top: 0.75em;
@@ -131,7 +131,7 @@ div[class*="panel"] {
   background-color: transparent;
 }
 
-#accordionWork .delete-item:hover {
+.delete-item:hover {
   color: red;
 }
 

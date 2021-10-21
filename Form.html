@@ -169,46 +169,70 @@
 
                             <div class="panel1 p-1">
                                 <hr>
-                                <div class="row mx-2 mb-5">
 
-                                    <div class="col-md-6 ">
-                                        <label for="degree" class="form-label">Degree</label>
-                                        <input type="text" class="form-control" id="degree" placeholder="e.g. B.Tech ">
-                                    </div>
 
-                                    <div class="col-md-6">
-                                        <label for="city" class="form-label">City/Town</label>
-                                        <input type="text" class="form-control" id="city"
-                                            placeholder="e.g. San francico">
-                                    </div>
+                                <div class="accordion" id="accordionEdu">
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header" id="eheading1">
+                                        <button class="delete-item" onclick="delEdu(event)"><i
+                                            class="bi bi-trash" onclick="delEdu2(event)"></i></button>
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ecollapse1" aria-expanded="true" aria-controls="ecollapse1">
+                                          Educational Qualification
+                                        </button>
+                                      </h2>
+                                      <div id="ecollapse1" class="accordion-collapse collapse show" aria-labelledby="eheading1" data-bs-parent="#accordionEdu">
+                                        <div class="accordion-body">
+                                          
 
-                                    <div class="col-12 mt-3">
-                                        <label for="School" class="form-label">School</label>
-                                        <input type="text" class="form-control" id="School"
-                                            placeholder="e.g. International Academy.">
-                                    </div>
-                                    <div class="col-6 mt-3">
-                                        <div class="d-flex flex-row">
-                                            <div class="me-4 mt-2">
-                                                <label for="" class="form-label">Start Date</label>
-                                                <input class="date" type="date" id="edu_start">
+                                            <div class="row mx-2 mb-5">
+
+                                                <div class="col-md-6 ">
+                                                    <label for="degree" class="form-label">Degree</label>
+                                                    <input type="text" class="form-control" id="degree" placeholder="e.g. B.Tech ">
+                                                </div>
+            
+                                                <div class="col-md-6">
+                                                    <label for="city" class="form-label">City/Town</label>
+                                                    <input type="text" class="form-control" id="city"
+                                                        placeholder="e.g. San francico">
+                                                </div>
+            
+                                                <div class="col-12 mt-3">
+                                                    <label for="School" class="form-label">School</label>
+                                                    <input type="text" class="form-control" id="School"
+                                                        placeholder="e.g. International Academy.">
+                                                </div>
+                                                <div class="col-6 mt-3">
+                                                    <div class="d-flex flex-row">
+                                                        <div class="me-4 mt-2">
+                                                            <label for="" class="form-label">Start Date</label>
+                                                            <input class="date" type="date" id="edu_start">
+                                                        </div>
+            
+                                                        <div class="ms-4 mt-2">
+                                                            <label for="" class="form-label">End Date</label>
+                                                            <input class="date" type="date" id="edu_end">
+                                                        </div>
+                                                    </div>
+                                                </div>
+            
+                                                <div class="mt-4">
+                                                    <label for="edu_description" class="form-label">Description</label>
+                                                    <textarea class="form-control" id="edu_description" rows="3"></textarea>
+                                                </div>
                                             </div>
 
-                                            <div class="ms-4 mt-2">
-                                                <label for="" class="form-label">End Date</label>
-                                                <input class="date" type="date" id="edu_end">
-                                            </div>
+
                                         </div>
+                                      </div>
                                     </div>
+                                  </div>
 
-                                    <div class="mt-4">
-                                        <label for="edu_description" class="form-label">Description</label>
-                                        <textarea class="form-control" id="edu_description" rows="3"></textarea>
-                                    </div>
-                                </div>
+                                
+                                
 
                                 <div class="my-5 d-flex justify-content-center"><button type="button"
-                                        class="btn btn-outline-secondary" style="width:90%;"><i
+                                        class="btn btn-outline-secondary" style="width:90%;" id="add_edu"><i
                                             class="bi bi-plus-circle me-3"></i>Add another
                                         education</button>
                                 </div>
@@ -235,17 +259,17 @@
 
                                     <div class="accordion" id="accordionWork">
                                         <div class="accordion-item">
-                                            <h2 class="accordion-header" id="heading1">
+                                            <h2 class="accordion-header" id="wheading1">
                                                 <button class="delete-item" onclick="delWork(event)"><i
                                                         class="bi bi-trash" onclick="delWork2(event)"></i></button>
                                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                                    data-bs-target="#collapse1" aria-expanded="true"
-                                                    aria-controls="collapse1" onclick="makeVisible()">
+                                                    data-bs-target="#wcollapse1" aria-expanded="true"
+                                                    aria-controls="wcollapse1" onclick="wmakeVisible()">
                                                     Work Experience
                                                 </button>
                                             </h2>
-                                            <div id="collapse1" class="accordion-collapse collapse show"
-                                                aria-labelledby="heading1" data-bs-parent="#accordionWork">
+                                            <div id="wcollapse1" class="accordion-collapse collapse show"
+                                                aria-labelledby="wheading1" data-bs-parent="#accordionWork">
                                                 <div class="accordion-body">
 
 
