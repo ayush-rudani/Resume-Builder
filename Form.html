@@ -347,36 +347,61 @@
                             <div class="panel3 p-1">
                                 <hr>
 
-                                <div class="list row mx-2 mb-5">
 
-                                    <div class="col-12 mt-3">
-                                        <div class="d-flex flex-row">
 
-                                            <div class="col-md-6">
-                                                <label for="skill1" class="form-label">Skill</label>
-                                                <input type="text" class="form-control" id="skill1"
-                                                    placeholder="e.g. photoshop, Python, DBMS">
-                                            </div>
+                                <div class="accordion" id="accordionSkill">
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header" id="sheading1">
+                                        <button class="delete-item" onclick="delSkill(event)"><i
+                                            class="bi bi-trash" onclick="delSkill2(event)"></i></button>
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#scollapse1" aria-expanded="true" aria-controls="scollapse1" onclick="smakeVisible()">
+                                          Skill
+                                        </button>
+                                      </h2>
+                                      <div id="scollapse1" class="accordion-collapse collapse show" aria-labelledby="sheading1" data-bs-parent="#accordionSkill">
+                                        <div class="accordion-body">
+                                          
+                                            
 
-                                            <div class="col-6  ms-3">
-                                                <label for="" class="form-label">Level</label>
-                                                <select id="skill1_level" class="form-select">
-                                                    <option selected>Select level</option>
-                                                    <option>Beginner</option>
-                                                    <option>Intermediate</option>
-                                                    <option>Skillful</option>
-                                                    <option>Expert</option>
-                                                    <option>Experienced</option>
-                                                </select>
-                                            </div>
+                                            <div class="list row mx-2 mb-5">
+            
+                                                <div class="col-12 mt-3">
+                                                    <div class="d-flex flex-row">
+            
+                                                        <div class="col-md-6">
+                                                            <label for="skill1" class="form-label">Skill</label>
+                                                            <input type="text" class="form-control" id="skill1"
+                                                                placeholder="e.g. photoshop, Python, DBMS">
+                                                        </div>
+            
+                                                        <div class="col-6  ms-3">
+                                                            <label for="" class="form-label">Level</label>
+                                                            <select id="skill1_level" class="form-select">
+                                                                <option selected>Select level</option>
+                                                                <option>Beginner</option>
+                                                                <option>Intermediate</option>
+                                                                <option>Skillful</option>
+                                                                <option>Expert</option>
+                                                                <option>Experienced</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
                                         </div>
+                                      </div>
                                     </div>
+                                  </div>
+
+
+
 
                                     <!-- New Skills -->
 
                                 </div>
                                 <div class="my-5 d-flex justify-content-center"><button type="button"
-                                        class="btn btn-outline-secondary" style="width:90%;" id="addSkill"><i
+                                        class="btn btn-outline-secondary" style="width:90%;" id="add_skill"><i
                                             class="bi bi-plus-circle me-3"></i>Add
                                         another
                                         skill</button>
