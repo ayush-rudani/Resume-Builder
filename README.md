@@ -4,7 +4,7 @@
 
 <h2>Online Resume Builder</h2>
 
-- This online resume builder assists job searchers in building a professional resume, making the task of creating a resume easier. Individuals must simply fill out a form that includes questions from all required sections, such as personal questions, educational questions, qualities, interests, and skills. Users' responses are kept, and the system generates a well-structured resume with **customisable templates** automatically. Users have the option of creating resumes in any format or file type.\*
+*This online resume builder assists job searchers in building a professional resume, making the task of creating a resume easier. Individuals must simply fill out a form that includes questions from all required sections, such as personal questions, educational questions, qualities, interests, and skills. Users' responses are kept, and the system generates a well-structured resume with **customisable templates** automatically. Users have the option of creating resumes in any format or file type.*
 
 <br>
 
@@ -19,7 +19,7 @@ _**This project makes use of :**_
 3. JavaScript
 4. Bootstrap
 
-<br>
+
 
 ### Watch Demo Video :
 
