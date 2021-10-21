@@ -424,19 +424,39 @@
                             <div class="panel4 p-1">
                                 <hr>
 
+                                <div class="accordion" id="accordionInt">
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header" id="iheading1">
+                                        <button class="delete-item" onclick="delInt(event)"><i
+                                            class="bi bi-trash" onclick="delInt2(event)"></i></button>
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#icollapse1" aria-expanded="true" aria-controls="icollapse1" onclick="imakeVisible()">
+                                          Hobby
+                                        </button>
+                                      </h2>
+                                      <div id="icollapse1" class="accordion-collapse collapse show" aria-labelledby="iheading1" data-bs-parent="#accordionInt">
+                                        <div class="accordion-body">
+                                          
+
+
+                                            <div class="col-12">
+                                                <!-- <label for="hobby1" class="form-label">Hobby</label> -->
+                                                <input type="text" class="form-control" id="hobby1"
+                                                    placeholder="e.g. Reading, Writing">
+                                            </div>
+
+
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
                                 <div class="list row mx-2 mb-5">
 
-                                    <div class="col-12 mt-4">
-                                        <label for="hobby1" class="form-label">Hobby</label>
-                                        <input type="text" class="form-control" id="hobby1"
-                                            placeholder="e.g. Reading, Writing">
-                                    </div>
 
-                                    <!-- New Hobby -->
 
                                 </div>
                                 <div class="my-5 d-flex justify-content-center"><button type="button"
-                                        class="btn btn-outline-secondary" id="addHobby" style="width:90%;"><i
+                                        class="btn btn-outline-secondary" style="width:90%;" id="add_interest"><i
                                             class="bi bi-plus-circle me-3"></i>Add
                                         another
                                         hobby</button>
@@ -517,16 +537,16 @@
         });
 
 
-        $('#addHobby').click(function () {
-            let obj = $('div.panel4').children("div.list");
-            let curr_len = obj.length;
-            let node =
-                `<div class="col-12 mt-4">
-                     <label for='hobby${curr_len + 1}' class="form-label">Hobby</label>
-                    <input type="text" class="form-control" id="hobby${curr_len + 1}" placeholder="e.g. Reading, Writing">
-                </div>`;
-            obj.append(node);
-        });
+        // $('#addHobby').click(function () {
+        //     let obj = $('div.panel4').children("div.list");
+        //     let curr_len = obj.length;
+        //     let node =
+        //         `<div class="col-12 mt-4">
+        //              <label for='hobby${curr_len + 1}' class="form-label">Hobby</label>
+        //             <input type="text" class="form-control" id="hobby${curr_len + 1}" placeholder="e.g. Reading, Writing">
+        //         </div>`;
+        //     obj.append(node);
+        // });
 
 
 

@@ -1,7 +1,7 @@
 let edu = 0;
 let skill = 0;
 let work = 0;
-
+let interest = 0;
 
 // Work Experience
 
@@ -70,6 +70,30 @@ function delSkill2(event) {
   event.preventDefault();
   if ($("#accordionSkill .accordion-item").length > 1) {
     smakeVisible();
+    event.target.parentElement.parentElement.parentElement.remove();
+  }
+  event.stopPropagation();
+}
+
+// Interests
+
+function imakeVisible() {
+  $("#accordionInt .accordion-header").css("display", "block");
+}
+
+function delInt(event) {
+  event.preventDefault();
+  if ($("#accordionInt .accordion-item").length > 1) {
+    imakeVisible();
+    event.target.parentElement.parentElement.remove();
+  }
+  event.stopPropagation();
+}
+
+function delInt2(event) {
+  event.preventDefault();
+  if ($("#accordionInt .accordion-item").length > 1) {
+    imakeVisible();
     event.target.parentElement.parentElement.parentElement.remove();
   }
   event.stopPropagation();
@@ -187,6 +211,46 @@ $(document).ready(function () {
     for (let i = 0; i < count; i++) {
       if (document.getElementById("accordionSkill").getElementsByClassName("accordion-item")[i].getElementsByClassName("accordion-collapse")[0].classList.contains("show")){
         document.getElementById("accordionSkill").getElementsByClassName("accordion-button")[i].click();
+      }
+    }
+  });
+  
+
+  // Interests
+  
+
+  $('.fc4').click(function(){
+    interest = 1;
+    $('.fc4').off('click');
+  })
+  let interestAdder = $("#accordionInt").html();
+  let interestCounter = 1;
+
+  $("#add_interest").click(function () {
+    interestCounter++;
+    if ($("#accordionInt .accordion-item").length > 0) {
+      $("#accordionInt .accordion-header").css("display", "block");
+      let count = $("#accordionInt .accordion-item").length;
+      if (document.getElementById("accordionInt").getElementsByClassName("accordion-item")[count - 1].getElementsByClassName("accordion-collapse")[0].classList.contains("show")){
+        document.getElementById("accordionInt").getElementsByClassName("accordion-item")[count - 1].getElementsByClassName("accordion-button")[0].click();
+      }
+    }
+    $("#accordionInt").append(interestAdder);
+
+    $("#accordionInt .accordion-header").last().attr("id", "iheading" + interestCounter);
+    $("#accordionInt .accordion-collapse").last().attr("aria-labelledby", "iheading" + interestCounter);
+    $("#accordionInt .accordion-collapse").last().attr("id", "icollapse" + interestCounter);
+    $("#accordionInt .accordion-button").last().attr("data-bs-target", "#icollapse" + interestCounter);
+    $("#accordionInt .accordion-button").last().attr("aria-controls", "icollapse" + interestCounter);
+  });
+
+  $(".fc4").mouseleave(function () {
+    if(interest == 0){return;}
+    imakeVisible();
+    let count = $("#accordionInt .accordion-item").length;
+    for (let i = 0; i < count; i++) {
+      if (document.getElementById("accordionInt").getElementsByClassName("accordion-item")[i].getElementsByClassName("accordion-collapse")[0].classList.contains("show")){
+        document.getElementById("accordionInt").getElementsByClassName("accordion-button")[i].click();
       }
     }
   });
