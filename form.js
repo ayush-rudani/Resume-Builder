@@ -129,13 +129,18 @@ $(document).ready(function () {
 
   $(".fc2").mouseleave(function () {
     if(work == 0){return;}
-    wmakeVisible();
-    let count = $("#accordionWork .accordion-item").length;
-    for (let i = 0; i < count; i++) {
-      if (document.getElementById("accordionWork").getElementsByClassName("accordion-item")[i].getElementsByClassName("accordion-collapse")[0].classList.contains("show")){
-        document.getElementById("accordionWork").getElementsByClassName("accordion-button")[i].click();
-      }
-    }
+    let timer = window.setTimeout(function(){
+      wmakeVisible();
+      let count = $("#accordionWork .accordion-item").length;
+      for (let i = 0; i < count; i++) {
+        if (document.getElementById("accordionWork").getElementsByClassName("accordion-item")[i].getElementsByClassName("accordion-collapse")[0].classList.contains("show")){
+          document.getElementById("accordionWork").getElementsByClassName("accordion-button")[i].click();
+        }
+      }},5000);
+      $(".fc2").mouseenter(function(){
+        window.clearTimeout(timer);
+        $(".fc2").unbind('mouseenter');
+      });
   });
 
 
@@ -168,13 +173,18 @@ $(document).ready(function () {
 
   $(".fc1").mouseleave(function () {
     if(edu == 0){return;}
-    emakeVisible();
-    let count = $("#accordionEdu .accordion-item").length;
-    for (let i = 0; i < count; i++) {
-      if (document.getElementById("accordionEdu").getElementsByClassName("accordion-item")[i].getElementsByClassName("accordion-collapse")[0].classList.contains("show")){
-        document.getElementById("accordionEdu").getElementsByClassName("accordion-button")[i].click();
-      }
-    }
+    let timer = window.setTimeout(function(){
+      emakeVisible();
+      let count = $("#accordionEdu .accordion-item").length;
+      for (let i = 0; i < count; i++) {
+        if (document.getElementById("accordionEdu").getElementsByClassName("accordion-item")[i].getElementsByClassName("accordion-collapse")[0].classList.contains("show")){
+          document.getElementById("accordionEdu").getElementsByClassName("accordion-button")[i].click();
+        }
+      }},5000);
+      $(".fc1").mouseenter(function(){
+        window.clearTimeout(timer);
+        $(".fc1").unbind('mouseenter');
+      });
   });
   
   // Skill
@@ -206,13 +216,18 @@ $(document).ready(function () {
 
   $(".fc3").mouseleave(function () {
     if(skill == 0){return;}
-    smakeVisible();
-    let count = $("#accordionSkill .accordion-item").length;
-    for (let i = 0; i < count; i++) {
-      if (document.getElementById("accordionSkill").getElementsByClassName("accordion-item")[i].getElementsByClassName("accordion-collapse")[0].classList.contains("show")){
-        document.getElementById("accordionSkill").getElementsByClassName("accordion-button")[i].click();
-      }
-    }
+    let timer = window.setTimeout(function(){
+      smakeVisible();
+      let count = $("#accordionSkill .accordion-item").length;
+      for (let i = 0; i < count; i++) {
+        if (document.getElementById("accordionSkill").getElementsByClassName("accordion-item")[i].getElementsByClassName("accordion-collapse")[0].classList.contains("show")){
+          document.getElementById("accordionSkill").getElementsByClassName("accordion-button")[i].click();
+        }
+      }},5000);
+      $(".fc3").mouseenter(function(){
+        window.clearTimeout(timer);
+        $(".fc3").unbind('mouseenter');
+      });
   });
   
 
@@ -246,13 +261,18 @@ $(document).ready(function () {
 
   $(".fc4").mouseleave(function () {
     if(interest == 0){return;}
-    imakeVisible();
-    let count = $("#accordionInt .accordion-item").length;
-    for (let i = 0; i < count; i++) {
-      if (document.getElementById("accordionInt").getElementsByClassName("accordion-item")[i].getElementsByClassName("accordion-collapse")[0].classList.contains("show")){
-        document.getElementById("accordionInt").getElementsByClassName("accordion-button")[i].click();
-      }
-    }
+    let timer = window.setTimeout(function(){
+      imakeVisible();
+      let count = $("#accordionInt .accordion-item").length;
+      for (let i = 0; i < count; i++) {
+        if (document.getElementById("accordionInt").getElementsByClassName("accordion-item")[i].getElementsByClassName("accordion-collapse")[0].classList.contains("show")){
+          document.getElementById("accordionInt").getElementsByClassName("accordion-button")[i].click();
+        }
+      }},5000);
+      $(".fc4").mouseenter(function(){
+        window.clearTimeout(timer);
+        $(".fc4").unbind('mouseenter');
+      });
   });
 
 
