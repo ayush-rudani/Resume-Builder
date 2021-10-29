@@ -5,8 +5,17 @@ let interest = 0;
 
 // Work Experience
 
+function updateWork(){
+  for(let i = 0;i<$('#accordionWork .accordion-item').length;i++){
+  let a = ($(`#accordionWork .accordion-item:nth-child(${i+1}) .job_title`).val().trim()=='')?'Work Experience':$(`#accordionWork .accordion-item:nth-child(${i+1}) .job_title`).val().trim();
+    let c = ($(`#accordionWork .accordion-item:nth-child(${i+1}) .employer`).val().trim()=='')?'':' at ' +$(`#accordionWork .accordion-item:nth-child(${i+1}) .employer`).val().trim();
+    $(`#accordionWork .accordion-item:nth-child(${i+1}) .accordion-button`).html(a + c);
+  }
+}
+
 function wmakeVisible() {
   $("#accordionWork .accordion-header").css("display", "block");
+  updateWork();
 }
 
 function delWork(event) {
@@ -109,22 +118,55 @@ $(document).ready(function () {
   let workAdder = $("#accordionWork").html();
   let workCounter = 1;
 
-  $("#add_work").click(function () {
-    workCounter++;
-    if ($("#accordionWork .accordion-item").length > 0) {
-      $("#accordionWork .accordion-header").css("display", "block");
-      let count = $("#accordionWork .accordion-item").length;
-      if (document.getElementById("accordionWork").getElementsByClassName("accordion-item")[count - 1].getElementsByClassName("accordion-collapse")[0].classList.contains("show")){
-        document.getElementById("accordionWork").getElementsByClassName("accordion-item")[count - 1].getElementsByClassName("accordion-button")[0].click();
-      }
-    }
-    $("#accordionWork").append(workAdder);
 
-    $("#accordionWork .accordion-header").last().attr("id", "wheading" + workCounter);
-    $("#accordionWork .accordion-collapse").last().attr("aria-labelledby", "wheading" + workCounter);
-    $("#accordionWork .accordion-collapse").last().attr("id", "wcollapse" + workCounter);
-    $("#accordionWork .accordion-button").last().attr("data-bs-target", "#wcollapse" + workCounter);
-    $("#accordionWork .accordion-button").last().attr("aria-controls", "wcollapse" + workCounter);
+
+  $("#add_work").click(function () {
+    if($("#accordionWork .accordion-item:last-child .job_title").val().trim()=='' || $("#accordionWork .accordion-item:last-child .work_city").val().trim()=='' || $("#accordionWork .accordion-item:last-child .employer").val().trim()==''){
+        if($("#accordionWork .accordion-item:last-child .job_title").val().trim()==''){
+          $("#accordionWork .accordion-item:last-child .job_title").val('');
+          $("#accordionWork .accordion-item:last-child .job_title").css('border','1.5px solid red');
+        }
+        else{
+          $("#accordionWork .accordion-item:last-child .job_title").css('border','2px solid rgb(206, 212, 218)');
+        }
+        if($("#accordionWork .accordion-item:last-child .work_city").val().trim()==''){
+          $("#accordionWork .accordion-item:last-child .work_city").val('');
+          $("#accordionWork .accordion-item:last-child .work_city").css('border','1.5px solid red');
+        }
+        else{
+          $("#accordionWork .accordion-item:last-child .work_city").css('border','2px solid rgb(206, 212, 218)');
+        }
+        if($("#accordionWork .accordion-item:last-child .employer").val().trim()==''){
+          $("#accordionWork .accordion-item:last-child .employer").val('');
+          $("#accordionWork .accordion-item:last-child .employer").css('border','1.5px solid red');
+        }
+        else{
+          $("#accordionWork .accordion-item:last-child .employer").css('border','2px solid rgb(206, 212, 218)');
+        }
+    }
+    else{
+      $("#accordionWork .accordion-item:last-child .employer").css('border','2px solid rgb(206, 212, 218)');
+      $("#accordionWork .accordion-item:last-child .job_title").css('border','2px solid rgb(206, 212, 218)');
+      $("#accordionWork .accordion-item:last-child .work_city").css('border','2px solid rgb(206, 212, 218)');
+      updateWork();
+      workCounter++;
+      if ($("#accordionWork .accordion-item").length > 0) {
+        $("#accordionWork .accordion-header").css("display", "block");
+        let count = $("#accordionWork .accordion-item").length;
+        if (document.getElementById("accordionWork").getElementsByClassName("accordion-item")[count - 1].getElementsByClassName("accordion-collapse")[0].classList.contains("show")){
+          document.getElementById("accordionWork").getElementsByClassName("accordion-item")[count - 1].getElementsByClassName("accordion-button")[0].click();
+        }
+      }
+      $("#accordionWork").append(workAdder);
+
+      $("#accordionWork .accordion-header").last().attr("id", "wheading" + workCounter);
+      $("#accordionWork .accordion-collapse").last().attr("aria-labelledby", "wheading" + workCounter);
+      $("#accordionWork .accordion-collapse").last().attr("id", "wcollapse" + workCounter);
+      $("#accordionWork .accordion-button").last().attr("data-bs-target", "#wcollapse" + workCounter);
+      $("#accordionWork .accordion-button").last().attr("aria-controls", "wcollapse" + workCounter);
+      
+
+    }
   });
 
   $(".fc2").mouseleave(function () {
