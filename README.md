@@ -46,7 +46,6 @@ _**WDW Termwork Project** "[Resume Builder](https://github.com/R-Ayush777/WDW_Pr
 
 <!-- ## Contributors -->
 
-<br>
 
 <a href="https://github.com/R-Ayush777/WDW_Project_CE104_CE108_CE144/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=R-Ayush777/WDW_Project_CE104_CE108_CE144" />
