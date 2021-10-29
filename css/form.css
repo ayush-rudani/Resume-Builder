@@ -113,7 +113,7 @@ div[class*="panel"] {
 
 .flip-card {
   /* border: 1px solid rgb(189, 189, 189); */
-  box-shadow: 0px 0px 5px rgb(204, 204, 204);
+  box-shadow: 0px 0px 3px rgb(204, 204, 204);
 }
 
 .accordion-header {
