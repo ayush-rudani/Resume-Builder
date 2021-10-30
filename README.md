@@ -1,16 +1,13 @@
 # WDW_Project_CE104_CE108_CE144
 
-## Description
+<!-- ## Description -->
 
 <h2>Online Resume Builder</h2>
 
-_This online resume builder assists job searchers in building a professional resume, making the task of creating a resume easier. Individuals must simply fill out a form that includes questions from all required sections, such as personal questions, educational questions, qualities, interests, and skills. Users' responses are kept, and the system generates a well-structured resume with **customisable templates** automatically. Users have the option of creating resumes in any format or file type._
+This online resume builder assists job searchers in building a professional resume, making the task of creating a resume easier. Individuals must simply fill out a form that includes questions from all required sections, such as personal questions, educational questions, qualities, interests, and skills. Users' responses are kept, and the system generates a well-structured resume with **customisable templates** automatically. Users have the option of creating resumes in any format or file type.
 
 <br>
 
-_**WDW Termwork Project** "[Resume Builder](https://github.com/R-Ayush777/WDW_Project_CE104_CE108_CE144)"<br>Created by <br>[Ayush Rudani ( CE104 )](https://github.com/R-Ayush777)<br>[Devansh Shah ( CE108 )](https://github.com/shahdevansh28)<br>[Murtaza Mister ( CE144 )](https://github.com/MurtazaMister)_
-
-<br>
 
 <!-- _**This project makes use of :**_
 
@@ -26,13 +23,20 @@ _**WDW Termwork Project** "[Resume Builder](https://github.com/R-Ayush777/WDW_Pr
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![jquey](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
 
-
 <br>
+<hr>
 
+
+<h3><b>WDW Termwork Project</b></h3>
+
+<!-- [Resume Builder](https://github.com/R-Ayush777/WDW_Project_CE104_CE108_CE144) -->
+_**Created by :-**_ <br>[Ayush Rudani ( CE104 )](https://github.com/R-Ayush777)<br>[Devansh Shah ( CE108 )](https://github.com/shahdevansh28)<br>[Murtaza Mister ( CE144 )](https://github.com/MurtazaMister)
+
+<hr> 
 
 ## Watch Demo Video :-
 
-(Partial Project)
+(Partial Project Link)
 "[Resume Builder](https://drive.google.com/file/d/1X8XSruU315Ziyao32fiOv2zgZ8U-nqOP/view)"
 
 <br>
