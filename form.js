@@ -4,6 +4,15 @@ let work = 0;
 let interest = 0;
 
 
+function toggChk(el) {
+  // console.log(el);
+  let ele = $(el).parent('div').parent('div').prev().find("input")[0];
+  // console.log(typeof (ele));
+  // console.log(ele);
+  ele.disabled = !ele.disabled;
+}
+
+
 //  ********** Work Experience  **********
 
 function updateWork() {
@@ -38,7 +47,6 @@ function updateEdu() {
   for (let i = 0; i < $('#accordionEdu .accordion-item').length; i++) {
     let a;
   }
-
 }
 
 function emakeVisible() {
@@ -63,7 +71,6 @@ function delEdu2(event) {
 function smakeVisible() {
   $("#accordionSkill .accordion-header").css("display", "block");
 }
-
 
 function delSkill2(event) {
   event.preventDefault();

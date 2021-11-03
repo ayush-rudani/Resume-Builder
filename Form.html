@@ -220,6 +220,16 @@
                                                                 <label for="" class="form-label">End Date</label>
                                                                 <input class="date edu_end" type="date" id="edu_end">
                                                             </div>
+
+                                                            <div class="ms-4 mt-5">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox"
+                                                                        value="" id="" onclick="toggChk(this)">
+                                                                    <label class="form-check-label"
+                                                                        for="flexCheckChecked">Present</label>
+                                                                </div>
+                                                            </div>
+
                                                         </div>
                                                     </div>
 
@@ -295,6 +305,7 @@
                                                             <input type="text" class="form-control employer"
                                                                 id="employer" placeholder="e.g. PwC">
                                                         </div>
+
                                                         <div class="col-6 mt-3">
                                                             <div class="d-flex flex-row">
                                                                 <div class="me-4 mt-2">
@@ -308,6 +319,16 @@
                                                                     <input class="date Work1_end" type="date"
                                                                         id="Work1_end">
                                                                 </div>
+
+                                                                <div class="ms-4 mt-5">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            value="" id="" onclick="toggChk(this)">
+                                                                        <label class="form-check-label"
+                                                                            for="flexCheckChecked">Present</label>
+                                                                    </div>
+                                                                </div>
+
                                                             </div>
                                                         </div>
 
@@ -528,14 +549,12 @@
 <script>
     $(document).ready(function () {
 
-
         function slideTog(el) {
             $(el).next().slideToggle(300);
         }
         $(".flip1, .flip2, .flip3, .flip4, .flip5, .flip6, .flip7").click(function () {
             slideTog(this);
         });
-
 
         // $('#addHobby').click(function () {
         //     let obj = $('div.panel4').children("div.list");
@@ -547,8 +566,6 @@
         //         </div>`;
         //     obj.append(node);
         // });
-
-
 
         //**************** Form Steps ****************//
 
@@ -588,10 +605,18 @@
             // console.log(index);
         }
 
-
     });
 
 
 </script>
 
 </html>
+
+<!-- <div class="ms-3 mt-4">
+                                                                    <div class="form-check">
+                                                                        <input class="form-check-input" type="checkbox"
+                                                                            value="" id="flexCheckChecked" checked>
+                                                                        <label class="form-check-label"
+                                                                            for="flexCheckChecked">Present</label>
+                                                                    </div>
+                                                                </div> -->
