@@ -28,10 +28,11 @@ function delWork2(event) {
   event.stopPropagation();
 }
 
+//  **********    **********    **********    **********    **********
+
 
 
 //  ********** Education and Qualifications **********
-
 
 function updateEdu() {
   for (let i = 0; i < $('#accordionEdu .accordion-item').length; i++) {
@@ -53,7 +54,11 @@ function delEdu2(event) {
   event.stopPropagation();
 }
 
-// Skills
+//  **********    **********    **********    **********    **********
+
+
+
+//  ********** Skills **********
 
 function smakeVisible() {
   $("#accordionSkill .accordion-header").css("display", "block");
@@ -69,10 +74,11 @@ function delSkill2(event) {
   event.stopPropagation();
 }
 
+//  **********    **********    **********    **********    **********
+
+
 
 //  ********** Interests  **********
-
-
 
 function imakeVisible() {
   $("#accordionInt .accordion-header").css("display", "block");
@@ -87,11 +93,11 @@ function delInt2(event) {
   event.stopPropagation();
 }
 
+//  **********    **********    **********    **********    **********
+
 
 
 //  ********** Work Experience  **********
-
-
 
 $('.fc2').click(function () {
   work = 1;
@@ -99,8 +105,6 @@ $('.fc2').click(function () {
 })
 let workAdder = $("#accordionWork").html();
 let workCounter = 1;
-
-
 
 $("#add_work").click(function (e) {
   let isValid = true;
@@ -153,10 +157,11 @@ $(".fc2").mouseleave(function () {
   });
 });
 
+//  **********    **********    **********    **********    **********
+
 
 
 //  ********** Education and Qualifications **********
-
 
 $('.fc1').click(function () {
   edu = 1;
@@ -216,10 +221,11 @@ $(".fc1").mouseleave(function () {
   });
 });
 
+//  **********    **********    **********    **********    **********
+
 
 
 //  ********** Skills **********
-
 
 $('.fc3').click(function () {
   skill = 1;
@@ -277,9 +283,11 @@ $(".fc3").mouseleave(function () {
   });
 });
 
+//  **********    **********    **********    **********    **********
+
+
 
 //  ********** Interests  **********
-
 
 $('.fc4').click(function () {
   interest = 1;
@@ -337,4 +345,6 @@ $(".fc4").mouseleave(function () {
     $(".fc4").unbind('mouseenter');
   });
 });
+
+//  **********    **********    **********    **********    **********
 
