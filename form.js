@@ -4,6 +4,8 @@ let work = 0;
 let interest = 0;
 
 
+//  **********    **********    **********    **********    **********
+
 function toggChk(el) {
   // console.log(el);
   let ele = $(el).parent('div').parent('div').prev().find("input")[0];
@@ -11,6 +13,23 @@ function toggChk(el) {
   // console.log(ele);
   ele.disabled = !ele.disabled;
 }
+
+
+function validate_chg_color(el) {
+  let isValid = true;
+  if ($.trim($(el).val()) == '' || $.trim($(el).val()) == 'Select level') {
+    isValid = false;
+    $(el).css({ "border": "1.5px solid red" });
+  }
+  else {
+    $(el).css({ "border": "1.5px solid rgb(206, 212, 218)" });
+  }
+  return isValid;
+}
+
+//  **********    **********    **********    **********    **********
+
+
 
 
 //  **********  ********** Work Experience  **********  **********
@@ -48,15 +67,7 @@ let workCounter = 1;
 
 $("#add_work").click(function (e) {
   let isValid = true;
-  $("#accordionWork .accordion-item:last-child").find("input").each(function () {
-    if ($.trim($(this).val()) == '') {
-      isValid = false;
-      $(this).css({ 'border': "1.5px solid red" });
-    }
-    else {
-      $(this).css({ "border": "1.5px solid rgb(206, 212, 218)" });
-    }
-  });
+  $("#accordionWork .accordion-item:last-child").find("input").each(function () { isValid = validate_chg_color(this); });
 
   if (isValid == false) {
     e.preventDefault();
@@ -139,15 +150,7 @@ let eduCounter = 1;
 
 $("#add_edu").click(function (e) {
   let isValid = true;
-  $('#accordionEdu .accordion-item:last-child').find('input').each(function () {
-    if ($.trim($(this).val()) == '') {
-      isValid = false;
-      $(this).css({ "border": "1.5px solid red" });
-    }
-    else {
-      $(this).css({ "border": "1.5px solid rgb(206, 212, 218)" });
-    }
-  });
+  $('#accordionEdu .accordion-item:last-child').find('input').each(function () { isValid = validate_chg_color(this); });
 
   if (isValid == false) {
     e.preventDefault();
@@ -217,15 +220,7 @@ let skillCounter = 1;
 
 $("#add_skill").click(function (e) {
   let isValid = true;
-  $("#accordionSkill .accordion-item:last-child").find("input, select").each(function () {
-    if ($.trim($(this).val()) == '' || $.trim($(this).val()) == 'Select level') {
-      isValid = false;
-      $(this).css({ "border": "1.5px solid red" });
-    }
-    else {
-      $(this).css({ "border": "1.5px solid rgb(206, 212, 218)" });
-    }
-  })
+  $("#accordionSkill .accordion-item:last-child").find("input, select").each(function () { isValid = validate_chg_color(this); });
   if (isValid == false) {
     e.preventDefault();
   }
@@ -268,6 +263,7 @@ $(".fc3").mouseleave(function () {
 
 
 
+
 //  **********  ********** Interests  **********  **********
 
 function imakeVisible() {
@@ -293,15 +289,7 @@ let interestCounter = 1;
 $("#add_interest").click(function () {
   let isValid = true;
   console.log("isValid");
-  $("#accordionInt .accordion-item:last-child").find('input').each(function () {
-    if ($.trim($(this).val()) == '') {
-      isValid = false;
-      $(this).css({ "border": "1.5px solid red" });
-    }
-    else {
-      $(this).css({ "border": "1.5px solid rgb(206, 212, 218)" });
-    }
-  });
+  $("#accordionInt .accordion-item:last-child").find('input').each(function () { isValid = validate_chg_color(this); });
   if (isValid == false) {
     e.preventDefault();
   }
