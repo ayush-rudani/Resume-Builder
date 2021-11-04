@@ -30,6 +30,25 @@ function validate_chg_color(el) {
 //  **********    **********    **********    **********    **********
 
 
+//  **********    **********  Form - 1  Validation  **********    **********    **********
+
+$('#next1').click(function (e) {
+  console.log(e);
+  let isValid = true;
+  $('#form1').find('input').each(function () {
+    if ($(this).attr('id') == 'linkedIn' || $(this).attr('id') == 'Website') { }
+    else {
+      isValid = validate_chg_color(this);
+    }
+  });
+  if (isValid == false) {
+    e.preventDefault();
+  }
+
+});
+
+//  **********    **********    **********    **********    **********
+
 
 
 //  **********  ********** Work Experience  **********  **********
@@ -329,3 +348,8 @@ $(".fc4").mouseleave(function () {
 });
 
 //  **********    **********    **********    **********    **********
+
+
+  // if ($('#form1').find('#fname').val().trim() == '' || $('#form1').find('#lname').val().trim() == '' || $('#form1').find('#email').val().trim() == '' || $('#form1').find('#cnumber').val().trim() == '' || $('#form1').find('#address').val().trim() == '' || $('#form1').find('#city').val().trim() == '' || $('#form1').find('#state').val().trim() == '' || $('#form1').find('#zip').val().trim() == '' || $('#form1').find('#gender').val().trim() == '' || $('#form1').find('#bdate').val().trim() == '') {
+
+  // }
