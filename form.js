@@ -13,12 +13,14 @@ function toggChk(el) {
 }
 
 
-//  ********** Work Experience  **********
+//  **********  ********** Work Experience  **********  **********
 
 function updateWork() {
   for (let i = 0; i < $('#accordionWork .accordion-item').length; i++) {
     let a = ($(`#accordionWork .accordion-item:nth-child(${i + 1}) .job_title`).val().trim() == '') ? 'Work Experience' : $(`#accordionWork .accordion-item:nth-child(${i + 1}) .job_title`).val().trim();
+
     let c = ($(`#accordionWork .accordion-item:nth-child(${i + 1}) .employer`).val().trim() == '') ? '' : ' at ' + $(`#accordionWork .accordion-item:nth-child(${i + 1}) .employer`).val().trim();
+
     $(`#accordionWork .accordion-item:nth-child(${i + 1}) .accordion-button`).html(a + c);
   }
 }
@@ -36,75 +38,6 @@ function delWork2(event) {
   }
   event.stopPropagation();
 }
-
-//  **********    **********    **********    **********    **********
-
-
-
-//  ********** Education and Qualifications **********
-
-function updateEdu() {
-  for (let i = 0; i < $('#accordionEdu .accordion-item').length; i++) {
-    let a;
-  }
-}
-
-function emakeVisible() {
-  $("#accordionEdu .accordion-header").css("display", "block");
-}
-
-function delEdu2(event) {
-  event.preventDefault();
-  if ($("#accordionEdu .accordion-item").length > 1) {
-    emakeVisible();
-    event.target.parentElement.parentElement.parentElement.remove();
-  }
-  event.stopPropagation();
-}
-
-//  **********    **********    **********    **********    **********
-
-
-
-//  ********** Skills **********
-
-function smakeVisible() {
-  $("#accordionSkill .accordion-header").css("display", "block");
-}
-
-function delSkill2(event) {
-  event.preventDefault();
-  if ($("#accordionSkill .accordion-item").length > 1) {
-    smakeVisible();
-    event.target.parentElement.parentElement.parentElement.remove();
-  }
-  event.stopPropagation();
-}
-
-//  **********    **********    **********    **********    **********
-
-
-
-//  ********** Interests  **********
-
-function imakeVisible() {
-  $("#accordionInt .accordion-header").css("display", "block");
-}
-
-function delInt2(event) {
-  event.preventDefault();
-  if ($("#accordionInt .accordion-item").length > 1) {
-    imakeVisible();
-    event.target.parentElement.parentElement.parentElement.remove();
-  }
-  event.stopPropagation();
-}
-
-//  **********    **********    **********    **********    **********
-
-
-
-//  ********** Work Experience  **********
 
 $('.fc2').click(function () {
   work = 1;
@@ -168,7 +101,33 @@ $(".fc2").mouseleave(function () {
 
 
 
-//  ********** Education and Qualifications **********
+
+//  **********  ********** Education and Qualifications **********  **********
+
+function updateEdu() {
+  for (let i = 0; i < $('#accordionEdu .accordion-item').length; i++) {
+
+    let a = ($(`#accordionEdu .accordion-item:nth-child(${i + 1}) .degree`).val().trim() == '') ? 'Education' : $(`#accordionEdu .accordion-item:nth-child(${i + 1}) .degree`).val().trim();
+
+    let c = ($(`#accordionEdu .accordion-item:nth-child(${i + 1}) .School`).val().trim() == '') ? '' : ' at ' + $(`#accordionEdu .accordion-item:nth-child(${i + 1}) .School`).val().trim();
+
+    $(`#accordionEdu .accordion-item:nth-child(${i + 1}) .accordion-button`).html(a + c);
+  }
+}
+
+function emakeVisible() {
+  $("#accordionEdu .accordion-header").css("display", "block");
+}
+
+function delEdu2(event) {
+  event.preventDefault();
+  if ($("#accordionEdu .accordion-item").length > 1) {
+    emakeVisible();
+    event.target.parentElement.parentElement.parentElement.remove();
+  }
+  event.stopPropagation();
+}
+
 
 $('.fc1').click(function () {
   edu = 1;
@@ -194,6 +153,7 @@ $("#add_edu").click(function (e) {
     e.preventDefault();
   }
   else {
+
     eduCounter++;
     if ($("#accordionEdu .accordion-item").length > 0) {
       $("#accordionEdu .accordion-header").css("display", "block");
@@ -232,7 +192,21 @@ $(".fc1").mouseleave(function () {
 
 
 
-//  ********** Skills **********
+
+//  **********  ********** Skills **********  **********
+
+function smakeVisible() {
+  $("#accordionSkill .accordion-header").css("display", "block");
+}
+
+function delSkill2(event) {
+  event.preventDefault();
+  if ($("#accordionSkill .accordion-item").length > 1) {
+    smakeVisible();
+    event.target.parentElement.parentElement.parentElement.remove();
+  }
+  event.stopPropagation();
+}
 
 $('.fc3').click(function () {
   skill = 1;
@@ -294,7 +268,20 @@ $(".fc3").mouseleave(function () {
 
 
 
-//  ********** Interests  **********
+//  **********  ********** Interests  **********  **********
+
+function imakeVisible() {
+  $("#accordionInt .accordion-header").css("display", "block");
+}
+
+function delInt2(event) {
+  event.preventDefault();
+  if ($("#accordionInt .accordion-item").length > 1) {
+    imakeVisible();
+    event.target.parentElement.parentElement.parentElement.remove();
+  }
+  event.stopPropagation();
+}
 
 $('.fc4').click(function () {
   interest = 1;
@@ -354,4 +341,3 @@ $(".fc4").mouseleave(function () {
 });
 
 //  **********    **********    **********    **********    **********
-
