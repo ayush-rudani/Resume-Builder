@@ -217,8 +217,18 @@ $(".fc1").mouseleave(function () {
 
 //  **********  ********** Skills **********  **********
 
+function updateSkill() {
+  for (let i = 0; i < $('#accordionSkill .accordion-item').length; i++) {
+
+    let a = ($(`#accordionSkill .accordion-item:nth-child(${i + 1}) .skill`).val().trim() == '') ? 'Skill' : $(`#accordionSkill .accordion-item:nth-child(${i + 1}) .skill`).val().trim();
+
+    $(`#accordionSkill .accordion-item:nth-child(${i + 1}) .accordion-button`).html(a);
+  }
+}
+
 function smakeVisible() {
   $("#accordionSkill .accordion-header").css("display", "block");
+  updateSkill();
 }
 
 function delSkill2(event) {
@@ -244,6 +254,7 @@ $("#add_skill").click(function (e) {
     e.preventDefault();
   }
   else {
+    updateSkill();
     skillCounter++;
     if ($("#accordionSkill .accordion-item").length > 0) {
       $("#accordionSkill .accordion-header").css("display", "block");
@@ -285,8 +296,18 @@ $(".fc3").mouseleave(function () {
 
 //  **********  ********** Interests  **********  **********
 
+function updateInterest() {
+  for (let i = 0; i < $('#accordionInt .accordion-item').length; i++) {
+
+    let a = ($(`#accordionInt .accordion-item:nth-child(${i + 1}) .hobby`).val().trim() == '') ? 'Hobby' : $(`#accordionInt .accordion-item:nth-child(${i + 1}) .hobby`).val().trim();
+
+    $(`#accordionInt .accordion-item:nth-child(${i + 1}) .accordion-button`).html(a);
+  }
+}
+
 function imakeVisible() {
   $("#accordionInt .accordion-header").css("display", "block");
+  updateInterest();
 }
 
 function delInt2(event) {
@@ -313,6 +334,7 @@ $("#add_interest").click(function () {
     e.preventDefault();
   }
   else {
+    updateInterest();
     interestCounter++;
     if ($("#accordionInt .accordion-item").length > 0) {
       $("#accordionInt .accordion-header").css("display", "block");
