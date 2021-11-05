@@ -383,7 +383,7 @@ $(".fc4").mouseleave(function () {
               data.forEach((ele)=>{
                 $('#country').append(`<option value="${ele.country_name}">${ele.country_name}</option>`);
               })
-              // getStates();
+              getStates();
           },
           error: function(error){
               console.log(error);
@@ -403,7 +403,7 @@ $(".fc4").mouseleave(function () {
             data.forEach((ele)=>{
               $('#state').append(`<option value="${ele.state_name}">${ele.state_name}</option>`);
             })
-            // getCities();
+            getCities();
           },
           error: function(error){
               console.log(error);
