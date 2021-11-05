@@ -355,6 +355,8 @@ $(".fc4").mouseleave(function () {
   // }
 
 
+  // Country, state and city
+
   let auth_token;
   $(document).ready(function(){
       $.ajax({
@@ -433,3 +435,26 @@ $(".fc4").mouseleave(function () {
           }
       })
   }
+
+  // Image
+
+  $('.imgContainer').click(function(){
+    $('#inpImg').click();
+})
+$('#inpImg').change(function(){
+    const file = this.files[0];
+    if(file){
+        const reader = new FileReader();
+        $('#previewText').css('display','none');
+        $('#image').css('display','block');
+        reader.addEventListener('load',function(){
+            $('#image').attr('src',this.result);
+        })
+        reader.readAsDataURL(file);
+    }
+    else{
+        document.getElementById('previewText').style.display = null;
+        document.getElementById('image').style.display = null;
+        $('#image').attr('src','');
+    }
+})

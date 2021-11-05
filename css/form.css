@@ -1,6 +1,38 @@
 /* body {
 } */
 
+/* image start */
+
+.imgContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border: 2px solid #dddddd;
+  cursor: pointer;
+}
+#previewText{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#previewText:hover{
+  background-color: #dddddd66;
+}
+#image{
+  display: none;
+  width: 150px;
+  height: 150px;
+}
+#inpImg{
+  display: none;
+}
+
+/* image end */
+
 #b1 {
   border: 0px solid #a1a1a1;
   background-color: #205bff00;
