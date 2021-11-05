@@ -83,26 +83,35 @@
                         <input type="text" class="form-control" id="address" placeholder="1234 Main St">
                     </div>
 
-                    <div class="col-md-6 mt-3">
-                        <label for="inputCity" class="form-label">City</label>
-                        <input type="text" class="form-control" id="city">
+                    
+                    <div class="col-md-5 mt-3">
+                        <label for="inputState" class="form-label">Country</label>
+                        <select class="form-select" id="country" onchange="getStates()">
+                            <option selected>Country</option>
+                        </select>
                     </div>
 
                     <div class="col-md-4 mt-3">
                         <label for="inputState" class="form-label">State</label>
-                        <select id="state" class="form-select">
-                            <option selected>Choose...</option>
-                            <option>...</option>
+                        <select class="form-select" id="state" onchange="getCities()">
+                            <option selected>State</option>
                         </select>
                     </div>
 
-                    <div class="col-md-2 mt-3">
-                        <label for="inputZip" class="form-label">Zip</label>
-                        <input type="text" class="form-control" id="zip">
+                    <div class="col-md-3 mt-3">
+                        <label for="inputCity" class="form-label">City</label>
+                        <select class="form-select" id="city">
+                            <option selected>City</option>
+                        </select>
                     </div>
 
+                    
                     <div class="row">
-                        <div class="col-md-2 mt-3">
+                        <div class="col-md-4 mt-3">
+                            <label for="inputZip" class="form-label">Zip</label>
+                            <input type="text" class="form-control" id="zip">
+                        </div>
+                        <div class="col-md-4 mt-3">
                             <label for="gender" class="form-label">Gender</label>
                             <select id="gender" class="form-select">
                                 <option>Male</option>
