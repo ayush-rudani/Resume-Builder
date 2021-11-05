@@ -446,6 +446,7 @@ $('#inpImg').change(function(){
     if(file){
         const reader = new FileReader();
         $('#previewText').css('display','none');
+        $('.imgContainer').css('border','none');
         $('#image').css('display','block');
         reader.addEventListener('load',function(){
             $('#image').attr('src',this.result);
@@ -455,6 +456,7 @@ $('#inpImg').change(function(){
     else{
         document.getElementById('previewText').style.display = null;
         document.getElementById('image').style.display = null;
+        document.getElementsByClassName('imgContainer')[0].style.border = null;
         $('#image').attr('src','');
     }
 })

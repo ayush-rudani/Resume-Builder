@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 150px;
+  width: 120px;
   height: 150px;
   border: 2px solid #dddddd;
   cursor: pointer;
@@ -24,7 +24,7 @@
 }
 #image{
   display: none;
-  width: 150px;
+  width: 120px;
   height: 150px;
 }
 #inpImg{
