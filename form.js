@@ -380,16 +380,20 @@ $(".fc4").mouseleave(function () {
 // Country, state and city
 
 let auth_token;
+$('#country').click(function(){
+  getCountries();
+  $('#country').unbind('click');
+})
+
 $(document).ready(function () {
   $.ajax({
     type: 'get',
     url: 'https://www.universal-tutorial.com/api/getaccesstoken',
     success: function (data) {
       auth_token = data.auth_token;
-      getCountries();
     },
     error: function (error) {
-      // console.log(error);
+      console.log(error);
     },
     headers: {
       "Accept": "application/json",
@@ -410,7 +414,7 @@ function getCountries() {
       getStates();
     },
     error: function (error) {
-      // console.log(error);
+      console.log(error);
     },
     headers: {
       "Authorization": "Bearer " + auth_token,
@@ -430,7 +434,7 @@ function getStates() {
       getCities();
     },
     error: function (error) {
-      // console.log(error);
+      console.log(error);
     },
     headers: {
       "Authorization": "Bearer " + auth_token,
@@ -449,7 +453,7 @@ function getCities() {
       })
     },
     error: function (error) {
-      // console.log(error);
+      console.log(error);
     },
     headers: {
       "Authorization": "Bearer " + auth_token,
