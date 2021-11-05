@@ -32,8 +32,8 @@ function validate_chg_color(el) {
 
 //  **********    **********  Form - 1  Validation  **********    **********    **********
 
-$('#next1').click(function (e) {
-  console.log(e);
+function validate_form1(btn) {
+  // console.log(btn);
   let isValid = true;
   $('#form1').find('input').each(function () {
     if ($(this).attr('id') == 'linkedIn' || $(this).attr('id') == 'Website') { }
@@ -42,10 +42,10 @@ $('#next1').click(function (e) {
     }
   });
   if (isValid == false) {
-    e.preventDefault();
+    btn.preventDefault();
   }
-
-});
+  return isValid;
+}
 
 //  **********    **********    **********    **********    **********
 
@@ -328,7 +328,7 @@ let interestCounter = 1;
 
 $("#add_interest").click(function () {
   let isValid = true;
-  console.log("isValid");
+  // console.log("isValid");
   $("#accordionInt .accordion-item:last-child").find('input').each(function () { isValid = validate_chg_color(this); });
   if (isValid == false) {
     e.preventDefault();
@@ -372,113 +372,113 @@ $(".fc4").mouseleave(function () {
 //  **********    **********    **********    **********    **********
 
 
-  // if ($('#form1').find('#fname').val().trim() == '' || $('#form1').find('#lname').val().trim() == '' || $('#form1').find('#email').val().trim() == '' || $('#form1').find('#cnumber').val().trim() == '' || $('#form1').find('#address').val().trim() == '' || $('#form1').find('#city').val().trim() == '' || $('#form1').find('#state').val().trim() == '' || $('#form1').find('#zip').val().trim() == '' || $('#form1').find('#gender').val().trim() == '' || $('#form1').find('#bdate').val().trim() == '') {
+// if ($('#form1').find('#fname').val().trim() == '' || $('#form1').find('#lname').val().trim() == '' || $('#form1').find('#email').val().trim() == '' || $('#form1').find('#cnumber').val().trim() == '' || $('#form1').find('#address').val().trim() == '' || $('#form1').find('#city').val().trim() == '' || $('#form1').find('#state').val().trim() == '' || $('#form1').find('#zip').val().trim() == '' || $('#form1').find('#gender').val().trim() == '' || $('#form1').find('#bdate').val().trim() == '') {
 
-  // }
+// }
 
 
-  // Country, state and city
+// Country, state and city
 
-  let auth_token;
-  $(document).ready(function(){
-      $.ajax({
-          type: 'get',
-          url: 'https://www.universal-tutorial.com/api/getaccesstoken',
-          success: function(data){
-              auth_token = data.auth_token;
-              getCountries();
-          },
-          error: function(error){
-              console.log(error);
-          },
-          headers: {
-              "Accept": "application/json",
-              "api-token": "QFZCxL-P9DDVZzxIYTti85dbkTb-RZYqW4fG39dTvmeLJ9TCRmVj-UQSruPENKH3MCw",
-              "user-email": "murtazamister1@gmail.com"
-          }
-      })
+let auth_token;
+$(document).ready(function () {
+  $.ajax({
+    type: 'get',
+    url: 'https://www.universal-tutorial.com/api/getaccesstoken',
+    success: function (data) {
+      auth_token = data.auth_token;
+      getCountries();
+    },
+    error: function (error) {
+      // console.log(error);
+    },
+    headers: {
+      "Accept": "application/json",
+      "api-token": "QFZCxL-P9DDVZzxIYTti85dbkTb-RZYqW4fG39dTvmeLJ9TCRmVj-UQSruPENKH3MCw",
+      "user-email": "murtazamister1@gmail.com"
+    }
   })
-  function getCountries(){
-      $.ajax({
-          type: 'get',
-          url: 'https://www.universal-tutorial.com/api/countries',
-          success: function(data){
-            $('#country').empty();
-              data.forEach((ele)=>{
-                $('#country').append(`<option value="${ele.country_name}">${ele.country_name}</option>`);
-              })
-              getStates();
-          },
-          error: function(error){
-              console.log(error);
-          },
-          headers: {
-              "Authorization": "Bearer "+auth_token,
-              "Accept": "application/json"
-          }
-      })
-  }
-  function getStates(){
-      $.ajax({
-          type: 'get',
-          url: 'https://www.universal-tutorial.com/api/states/'+$('#country').val(),
-          success: function(data){
-            $('#state').empty();
-            data.forEach((ele)=>{
-              $('#state').append(`<option value="${ele.state_name}">${ele.state_name}</option>`);
-            })
-            getCities();
-          },
-          error: function(error){
-              console.log(error);
-          },
-          headers: {
-              "Authorization": "Bearer "+auth_token,
-              "Accept": "application/json"
-          }
-      })
-  }
-  function getCities(){
-      $.ajax({
-          type: 'get',
-          url: 'https://www.universal-tutorial.com/api/cities/'+$('#state').val(),
-          success: function(data){
-            $('#city').empty();
-            data.forEach((ele)=>{
-              $('#city').append(`<option value="${ele.city_name}">${ele.city_name}</option>`);
-            })
-          },
-          error: function(error){
-              console.log(error);
-          },
-          headers: {
-              "Authorization": "Bearer "+auth_token,
-              "Accept": "application/json"
-          }
-      })
-  }
-
-  // Image
-
-  $('.imgContainer').click(function(){
-    $('#inpImg').click();
 })
-$('#inpImg').change(function(){
-    const file = this.files[0];
-    if(file){
-        const reader = new FileReader();
-        $('#previewText').css('display','none');
-        $('.imgContainer').css('border','none');
-        $('#image').css('display','block');
-        reader.addEventListener('load',function(){
-            $('#image').attr('src',this.result);
-        })
-        reader.readAsDataURL(file);
+function getCountries() {
+  $.ajax({
+    type: 'get',
+    url: 'https://www.universal-tutorial.com/api/countries',
+    success: function (data) {
+      $('#country').empty();
+      data.forEach((ele) => {
+        $('#country').append(`<option value="${ele.country_name}">${ele.country_name}</option>`);
+      })
+      getStates();
+    },
+    error: function (error) {
+      // console.log(error);
+    },
+    headers: {
+      "Authorization": "Bearer " + auth_token,
+      "Accept": "application/json"
     }
-    else{
-        document.getElementById('previewText').style.display = null;
-        document.getElementById('image').style.display = null;
-        document.getElementsByClassName('imgContainer')[0].style.border = null;
-        $('#image').attr('src','');
+  })
+}
+function getStates() {
+  $.ajax({
+    type: 'get',
+    url: 'https://www.universal-tutorial.com/api/states/' + $('#country').val(),
+    success: function (data) {
+      $('#state').empty();
+      data.forEach((ele) => {
+        $('#state').append(`<option value="${ele.state_name}">${ele.state_name}</option>`);
+      })
+      getCities();
+    },
+    error: function (error) {
+      // console.log(error);
+    },
+    headers: {
+      "Authorization": "Bearer " + auth_token,
+      "Accept": "application/json"
     }
+  })
+}
+function getCities() {
+  $.ajax({
+    type: 'get',
+    url: 'https://www.universal-tutorial.com/api/cities/' + $('#state').val(),
+    success: function (data) {
+      $('#city').empty();
+      data.forEach((ele) => {
+        $('#city').append(`<option value="${ele.city_name}">${ele.city_name}</option>`);
+      })
+    },
+    error: function (error) {
+      // console.log(error);
+    },
+    headers: {
+      "Authorization": "Bearer " + auth_token,
+      "Accept": "application/json"
+    }
+  })
+}
+
+// Image
+
+$('.imgContainer').click(function () {
+  $('#inpImg').click();
+})
+$('#inpImg').change(function () {
+  const file = this.files[0];
+  if (file) {
+    const reader = new FileReader();
+    $('#previewText').css('display', 'none');
+    $('.imgContainer').css('border', 'none');
+    $('#image').css('display', 'block');
+    reader.addEventListener('load', function () {
+      $('#image').attr('src', this.result);
+    })
+    reader.readAsDataURL(file);
+  }
+  else {
+    document.getElementById('previewText').style.display = null;
+    document.getElementById('image').style.display = null;
+    document.getElementsByClassName('imgContainer')[0].style.border = null;
+    $('#image').attr('src', '');
+  }
 })

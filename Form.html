@@ -88,7 +88,7 @@
                         <input type="text" class="form-control" id="address" placeholder="1234 Main St">
                     </div>
 
-                    
+
                     <div class="col-md-5 mt-3">
                         <label for="inputState" class="form-label">Country</label>
                         <select class="form-select" id="country" onchange="getStates()">
@@ -110,7 +110,7 @@
                         </select>
                     </div>
 
-                    
+
                     <div class="row">
                         <div class="col-md-4 mt-3">
                             <label for="inputZip" class="form-label">Zip</label>
@@ -558,8 +558,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 
-
-
 <script>
     $(document).ready(function () {
 
@@ -594,14 +592,15 @@
 
         next_btn.forEach(button => {
             button.addEventListener('click', () => {
-                changeStep('next');
-            })
-        })
+                if (validate_form1(this))
+                    changeStep('next');
+            });
+        });
         prev_btn.forEach(button => {
             button.addEventListener('click', () => {
                 changeStep('prev');
-            })
-        })
+            });
+        });
 
         function changeStep(btn) {
             let index = 0;
@@ -609,18 +608,15 @@
             index = steps.indexOf(active);
             steps[index].classList.remove('active');
             if (btn === 'next') {
-                if (index < steps.length - 1)
+                if ((index < steps.length - 1))
                     index++;
             }
-            else if (btn === 'prev') {
+            else if (btn === 'prev')
                 index--;
-            }
             steps[index].classList.add('active');
-            // console.log(index);
         }
 
     });
-
 
 </script>
 
