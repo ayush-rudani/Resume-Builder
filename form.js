@@ -12,18 +12,33 @@ function toggChk(el) {
   // console.log(typeof (ele));
   // console.log(ele);
   ele.disabled = !ele.disabled;
+
+  console.log($(el).is(':checked'));
+  if ($(el).is(':checked'))
+    $(ele).parent('div').css({ 'display': 'none' });
+  else
+    $(ele).parent('div').css({ 'display': 'block' });
+
 }
 
 
 function validate_chg_color(el) {
   let isValid = true;
-  if ($.trim($(el).val()) == '' || $.trim($(el).val()) == 'Select level') {
+
+  if ($(el).attr('type') == 'checkbox') { }
+
+  else if ($.trim($(el).val()) == '' || $.trim($(el).val()) == 'Select level') {
+    // if ($(el).attr('type') == 'checkbox') { isvalid = true; }
+    // else {
     isValid = false;
     $(el).css({ "border": "1.5px solid red" });
+    // }
   }
+
   else {
     $(el).css({ "border": "1.5px solid rgb(206, 212, 218)" });
   }
+
   return isValid;
 }
 
@@ -110,22 +125,22 @@ $("#add_work").click(function (e) {
   }
 });
 
-$(".fc2").mouseleave(function () {
-  if (work == 0) { return; }
-  let timer = window.setTimeout(function () {
-    wmakeVisible();
-    let count = $("#accordionWork .accordion-item").length;
-    for (let i = 0; i < count; i++) {
-      if (document.getElementById("accordionWork").getElementsByClassName("accordion-item")[i].getElementsByClassName("accordion-collapse")[0].classList.contains("show")) {
-        document.getElementById("accordionWork").getElementsByClassName("accordion-button")[i].click();
-      }
-    }
-  }, 5000);
-  $(".fc2").mouseenter(function () {
-    window.clearTimeout(timer);
-    $(".fc2").unbind('mouseenter');
-  });
-});
+// $(".fc2").mouseleave(function () {
+//   if (work == 0) { return; }
+//   let timer = window.setTimeout(function () {
+//     wmakeVisible();
+//     let count = $("#accordionWork .accordion-item").length;
+//     for (let i = 0; i < count; i++) {
+//       if (document.getElementById("accordionWork").getElementsByClassName("accordion-item")[i].getElementsByClassName("accordion-collapse")[0].classList.contains("show")) {
+//         document.getElementById("accordionWork").getElementsByClassName("accordion-button")[i].click();
+//       }
+//     }
+//   }, 5000);
+//   $(".fc2").mouseenter(function () {
+//     window.clearTimeout(timer);
+//     $(".fc2").unbind('mouseenter');
+//   });
+// });
 
 //  **********    **********    **********    **********    **********
 
@@ -193,22 +208,22 @@ $("#add_edu").click(function (e) {
   }
 });
 
-$(".fc1").mouseleave(function () {
-  if (edu == 0) { return; }
-  let timer = window.setTimeout(function () {
-    emakeVisible();
-    let count = $("#accordionEdu .accordion-item").length;
-    for (let i = 0; i < count; i++) {
-      if (document.getElementById("accordionEdu").getElementsByClassName("accordion-item")[i].getElementsByClassName("accordion-collapse")[0].classList.contains("show")) {
-        document.getElementById("accordionEdu").getElementsByClassName("accordion-button")[i].click();
-      }
-    }
-  }, 5000);
-  $(".fc1").mouseenter(function () {
-    window.clearTimeout(timer);
-    $(".fc1").unbind('mouseenter');
-  });
-});
+// $(".fc1").mouseleave(function () {
+//   if (edu == 0) { return; }
+//   let timer = window.setTimeout(function () {
+//     emakeVisible();
+//     let count = $("#accordionEdu .accordion-item").length;
+//     for (let i = 0; i < count; i++) {
+//       if (document.getElementById("accordionEdu").getElementsByClassName("accordion-item")[i].getElementsByClassName("accordion-collapse")[0].classList.contains("show")) {
+//         document.getElementById("accordionEdu").getElementsByClassName("accordion-button")[i].click();
+//       }
+//     }
+//   }, 5000);
+//   $(".fc1").mouseenter(function () {
+//     window.clearTimeout(timer);
+//     $(".fc1").unbind('mouseenter');
+//   });
+// });
 
 //  **********    **********    **********    **********    **********
 
@@ -380,7 +395,7 @@ $(".fc4").mouseleave(function () {
 // Country, state and city
 
 let auth_token;
-$('#country').click(function(){
+$('#country').click(function () {
   getCountries();
   $('#country').unbind('click');
 })
