@@ -3,6 +3,15 @@ let skill = 0;
 let work = 0;
 let interest = 0;
 
+//This is for color palet
+$(document).ready(function () {
+  $('.one').css("border", "3px solid white");
+  $('.pelement').click(function () {
+    $('.pelement').css("border", "3px solid transparent");
+    $(this).css("border", "3px solid white");
+    $('.left_side').css("background-color", $(this).css("background-color"));
+  })
+});
 
 //  **********    **********    **********    **********    **********
 
@@ -12,7 +21,6 @@ function toggChk(el) {
   // console.log(typeof (ele));
   // console.log(ele);
   ele.disabled = !ele.disabled;
-
   console.log($(el).is(':checked'));
   if ($(el).is(':checked'))
     $(ele).parent('div').css({ 'display': 'none' });
@@ -25,16 +33,13 @@ function toggChk(el) {
 function validate_chg_color(el) {
   let isValid = true;
 
-  if ($(el).attr('type') == 'checkbox') { }
-
+  if ($(el).attr('type') == 'checkbox') {
+    console.log($(el).attr('type'));
+  }
   else if ($.trim($(el).val()) == '' || $.trim($(el).val()) == 'Select level') {
-    // if ($(el).attr('type') == 'checkbox') { isvalid = true; }
-    // else {
     isValid = false;
     $(el).css({ "border": "1.5px solid red" });
-    // }
   }
-
   else {
     $(el).css({ "border": "1.5px solid rgb(206, 212, 218)" });
   }
@@ -101,9 +106,10 @@ let workCounter = 1;
 
 $("#add_work").click(function (e) {
   let isValid = true;
-  $("#accordionWork .accordion-item:last-child").find("input").each(function () { isValid = validate_chg_color(this); });
+  let finalValid = true;
+  $("#accordionWork .accordion-item:last-child").find("input").each(function () { isValid = validate_chg_color(this); if (!isValid) { finalValid = false; } });
 
-  if (isValid == false) {
+  if (!finalValid) {
     e.preventDefault();
   }
   else {
@@ -184,9 +190,10 @@ let eduCounter = 1;
 
 $("#add_edu").click(function (e) {
   let isValid = true;
-  $('#accordionEdu .accordion-item:last-child').find('input').each(function () { isValid = validate_chg_color(this); });
+  let finalValid = true;
+  $('#accordionEdu .accordion-item:last-child').find('input').each(function () { isValid = validate_chg_color(this); if (!isValid) { finalValid = false; } });
 
-  if (isValid == false) {
+  if (!finalValid) {
     e.preventDefault();
   }
   else {
@@ -264,8 +271,9 @@ let skillCounter = 1;
 
 $("#add_skill").click(function (e) {
   let isValid = true;
-  $("#accordionSkill .accordion-item:last-child").find("input, select").each(function () { isValid = validate_chg_color(this); });
-  if (isValid == false) {
+  let finalValid = true;
+  $("#accordionSkill .accordion-item:last-child").find("input, select").each(function () { isValid = validate_chg_color(this); if (!isValid) { finalValid = false; } });
+  if (!finalValid) {
     e.preventDefault();
   }
   else {
@@ -343,9 +351,9 @@ let interestCounter = 1;
 
 $("#add_interest").click(function () {
   let isValid = true;
-  // console.log("isValid");
-  $("#accordionInt .accordion-item:last-child").find('input').each(function () { isValid = validate_chg_color(this); });
-  if (isValid == false) {
+  let finalValid = true;
+  $("#accordionInt .accordion-item:last-child").find('input').each(function () { isValid = validate_chg_color(this); if (!isValid) { finalValid = false; } });
+  if (!finalValid) {
     e.preventDefault();
   }
   else {
@@ -386,13 +394,90 @@ $(".fc4").mouseleave(function () {
 
 //  **********    **********    **********    **********    **********
 
+// ********************** *********************** Languages ********************* ************************
+
+function updateLang() {
+  for (let i = 0; i < $('#accordionLang .accordion-item').length; i++) {
+
+    let a = ($(`#accordionLang .accordion-item:nth-child(${i + 1}) .lang`).val().trim() == '') ? 'Language' : $(`#accordionLang .accordion-item:nth-child(${i + 1}) .lang`).val().trim();
+
+    $(`#accordionLang .accordion-item:nth-child(${i + 1}) .accordion-button`).html(a);
+  }
+}
+
+function lmakeVisible() {
+  $("#accordionLang .accordion-header").css("display", "block");
+  updateLang();
+}
+
+function delLang2(event) {
+  event.preventDefault();
+  if ($("#accordionLang .accordion-item").length > 1) {
+    lmakeVisible();
+    event.target.parentElement.parentElement.parentElement.remove();
+  }
+  event.stopPropagation();
+}
+
+$('.fc6').click(function () {
+  lang = 1;
+  $('.fc6').off('click');
+})
+let langAdder = $("#accordionLang").html();
+let langCounter = 1;
+
+$("#add_lang").click(function (e) {
+  let isValid = true;
+  let finalValid = true;
+  $("#accordionLang .accordion-item:last-child").find('input').each(function () { isValid = validate_chg_color(this); if (!isValid) { finalValid = false; } });
+  if (!finalValid) {
+    e.preventDefault();
+  }
+  else {
+    updateLang();
+    langCounter++;
+    if ($("#accordionLang .accordion-item").length > 0) {
+      $("#accordionLang .accordion-header").css("display", "block");
+      let count = $("#accordionLang .accordion-item").length;
+      if (document.getElementById("accordionLang").getElementsByClassName("accordion-item")[count - 1].getElementsByClassName("accordion-collapse")[0].classList.contains("show")) {
+        document.getElementById("accordionLang").getElementsByClassName("accordion-item")[count - 1].getElementsByClassName("accordion-button")[0].click();
+      }
+    }
+    $("#accordionLang").append(langAdder);
+    $("#accordionLang .accordion-header").last().attr("id", "lheading" + langCounter);
+    $("#accordionLang .accordion-collapse").last().attr("aria-labelledby", "lheading" + langCounter);
+    $("#accordionLang .accordion-collapse").last().attr("id", "lcollapse" + langCounter);
+    $("#accordionLang .accordion-button").last().attr("data-bs-target", "#lcollapse" + langCounter);
+    $("#accordionLang .accordion-button").last().attr("aria-controls", "lcollapse" + langCounter);
+  }
+});
+
+$(".fc6").mouseleave(function () {
+  if (lang == 0) { return; }
+  let timer = window.setTimeout(function () {
+    lmakeVisible();
+    let count = $("#accordionLang .accordion-item").length;
+    for (let i = 0; i < count; i++) {
+      if (document.getElementById("accordionLang").getElementsByClassName("accordion-item")[i].getElementsByClassName("accordion-collapse")[0].classList.contains("show")) {
+        document.getElementById("accordionLang").getElementsByClassName("accordion-button")[i].click();
+      }
+    }
+  }, 5000);
+  $(".fc6").mouseenter(function () {
+    window.clearTimeout(timer);
+    $(".fc6").unbind('mouseenter');
+  });
+});
+
+
+// ********************** *********************** ********************* ************************
 
 // if ($('#form1').find('#fname').val().trim() == '' || $('#form1').find('#lname').val().trim() == '' || $('#form1').find('#email').val().trim() == '' || $('#form1').find('#cnumber').val().trim() == '' || $('#form1').find('#address').val().trim() == '' || $('#form1').find('#city').val().trim() == '' || $('#form1').find('#state').val().trim() == '' || $('#form1').find('#zip').val().trim() == '' || $('#form1').find('#gender').val().trim() == '' || $('#form1').find('#bdate').val().trim() == '') {
 
 // }
 
 
-// Country, state and city
+//  **********    **********    Country, state and city API   **********    **********
 
 let auth_token;
 $('#country').click(function () {
@@ -477,7 +562,7 @@ function getCities() {
   })
 }
 
-// Image
+//  **********    **********    Profile Images    **********    **********
 
 $('.imgContainer').click(function () {
   $('#inpImg').click();
@@ -501,3 +586,143 @@ $('#inpImg').change(function () {
     $('#image').attr('src', '');
   }
 })
+
+//  **********    **********    **********    **********    **********
+
+
+
+//  **********    **********    Genrating CV    **********    **********
+
+function genrateCV() {
+  //console.log("Hello");
+  //Profile Image
+  $('nav').css({ 'display': 'block' });
+
+  document.getElementById('profilepic').innerHTML = document.getElementById('inpImg').value;
+  //First Name
+  document.getElementById('fnameT').innerHTML = document.getElementById('fname').value;
+
+  //Last Name
+  document.getElementById('lnameT').innerHTML = document.getElementById('lname').value;
+
+  //Contact
+  document.getElementById('cnumberT').innerHTML = document.getElementById('cnumber').value;
+
+  //Email
+  document.getElementById('emailT').innerHTML = document.getElementById('email').value;
+
+  //Website
+  document.getElementById('websiteT').innerHTML = document.getElementById('Website').value;
+
+  //LinkdIn
+  document.getElementById('linkedInT').innerHTML = document.getElementById('linkedIn').value;
+
+  //Country
+  document.getElementById('countryT').innerHTML = document.getElementById('country').value;
+
+  //State
+  document.getElementById('stateT').innerHTML = document.getElementById('state').value;
+
+  //City
+  document.getElementById('cityT').innerHTML = document.getElementById('city').value;
+
+  //Education
+  function eduselector() {
+    let str_edu = "";
+    for (let i = 0; i < $('#accordionEdu .accordion-item').length; i++) {
+      let edu_deg = $(`#accordionEdu .accordion-item:nth-child(${i + 1}) .degree`).val();
+      let edu_city = $(`#accordionEdu .accordion-item:nth-child(${i + 1}) .city`).val();
+      let edu_des = $(`#accordionEdu .accordion-item:nth-child(${i + 1}) .edu_description`).val();
+      let edu_scl = $(`#accordionEdu .accordion-item:nth-child(${i + 1}) .School`).val();
+      str_edu = str_edu + `<li>
+			<p style="font-size:30px;">${edu_deg}<h5 style="font-size:24px;">${edu_scl},${edu_city}</h5></p>
+      <p style="color:#ffffff;">${edu_des}</p>
+			</li>`;
+    }
+    document.getElementById("eduT").innerHTML = str_edu;
+  }
+  eduselector();
+
+
+  //Work Experience
+
+  function expselector() {
+    let str_exp = "";
+    for (let i = 0; i < $('#accordionWork .accordion-item').length; i++) {
+      let exp_title = $(`#accordionWork .accordion-item:nth-child(${i + 1}) .job_title`).val();
+      let exp_city = $(`#accordionWork .accordion-item:nth-child(${i + 1}) .work_city`).val();
+      let exp_des = $(`#accordionWork .accordion-item:nth-child(${i + 1}) .work_description`).val();
+      let exp_emp = $(`#accordionWork .accordion-item:nth-child(${i + 1}) .employer`).val();
+      str_exp = str_exp + `<li>
+			<p style="font-size:30px;">${exp_title}<h5 style="font-size:24px;">${exp_emp},${exp_city}</h5></p>
+      <p style="color:#ffffff;">${exp_des}</p>
+			</li>`;
+    }
+    document.getElementById("expT").innerHTML = str_exp;
+  }
+  expselector();
+
+  //Skills
+
+  let skills = document.getElementsByClassName("skill");
+  let str_skill = "";
+  for (let s of skills) {
+    str_skill = str_skill + `<li>${s.value}</li>`;
+  }
+  document.getElementById("skillT").innerHTML = str_skill;
+
+
+
+  //Interests
+
+
+  let hob = document.getElementsByClassName("hobby");
+  let str_hob = "";
+  for (let h of hob) {
+    str_hob = str_hob + `<li>${h.value}</li>`;
+  }
+  document.getElementById("hobbyT").innerHTML = str_hob;
+
+  //Language
+  let lan = document.getElementsByClassName("lang");
+  let str_lan = "";
+  for (let l of lan) {
+    str_lan = str_lan + `<li>${l.value}</li>`;
+  }
+  document.getElementById("lanT").innerHTML = str_lan;
+
+  document.getElementById('form3').style.display = 'none';
+  document.getElementById('target').style.display = 'block';
+}
+
+
+// Template cards on Click
+
+
+// let q = $('#form3 .card');
+// console.log(q);
+// let temp_cards = Array.from(document.querySelectorAll('#form3 .card'));
+// console.log(temp_cards);
+// temp_cards.forEach(function () {
+//   $(this).click(function () {
+//     console.log(this[0]);
+//     $(this).find('input').prop('checked', true);
+//   });
+// })
+// $('#form3 .card').Array.form().each((ele) => {
+//   console.log(ele);
+//   ele.click(function () {
+//     ele.css('border', '1.5px solid red');
+//     ele.find('input').prop('checked', true);
+//   })
+// });
+
+function checker(ele) {
+  for (let i = 0; i < $('#form3 .card').length; i++) {
+    // $(`#form3 .card:nth-child(${i+1})`).css('border','1px solid rgba(0,0,0,.125)');
+    $(`#form3 .card:nth-child(${i + 1})`).css('background-color', 'white');
+  }
+  // $(ele).css('border', '10px solid green');
+  $(ele).css('background-color', '#80808088');
+  $(ele).find('input').prop('checked', true);
+}

@@ -18,7 +18,6 @@
 </head>
 
 <body>
-
     <!-- NavBar -->
     <nav class="navbar navbar-default navbar-static-top fixed-top navbar-expand-lg navbar-light container-fluid NavBar"
         id="nav">
@@ -516,14 +515,16 @@
                                 <div class="row mx-2 mb-5">
                                     <div class="mt-4">
                                         <label for="achv_description" class="form-label">Description</label>
-                                        <textarea class="form-control" id="achv_description" rows=6"></textarea>
+                                        <textarea class="form-control" id="achv_description" rows=6></textarea>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- Flip card 5 End-->
 
-                        <div class="fc5 my-3">
+
+
+                        <!-- <div class="fc5 my-3">
                             <div class="flip5 card card-body">
                                 <select class="form-select mx-4 py-2" style="width:95%;"
                                     aria-label="Default select example">
@@ -534,10 +535,61 @@
                                 </select>
                             </div>
                             <div class="panel5"></div>
-                        </div>
-
+                            </div> -->
                     </div>
+                    <!-- Flip card 6 -->
+                    <div class="fc6">
+                        <div class="flip-card card-container p-2 mb-4 bg-white">
 
+                            <div class="flip6 card-body">
+                                <h4 class="mx-4 my-0 p-2">Known Languages</h4>
+                            </div>
+
+                            <div class="panel3 p-1">
+                                <hr>
+
+                                <div class="accordion" id="accordionLang">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="lheading1">
+                                            <a class="delete-item" onclick="delLang2(event)"><i
+                                                    class="bi bi-trash"></i></a>
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#lcollapse1" aria-expanded="true"
+                                                aria-controls="lcollapse1" onclick="lmakeVisible()">
+                                                Language
+                                            </button>
+                                        </h2>
+                                        <div id="lcollapse1" class="accordion-collapse collapse show"
+                                            aria-labelledby="lheading1" data-bs-parent="#accordionLang">
+                                            <div class="accordion-body">
+
+                                                <div class="list row mx-2 mb-5">
+
+                                                    <div class="col-12 mt-3">
+                                                        <div class="d-flex flex-row">
+                                                            <input type="text" class="form-control lang" id="lang"
+                                                                placeholder="e.g. English, French, German">
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Add Languages -->
+
+                                </div>
+                                <div class="my-5 d-flex justify-content-center"><button type="button"
+                                        class="btn btn-outline-secondary" style="width:90%;" id="add_lang"><i
+                                            class="bi bi-plus-circle me-3"></i>Add another language</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Flip card 6 end -->
                 </div>
             </div>
 
@@ -546,10 +598,327 @@
                     Step</button>
                 <button type="button" class="next_btn" id="next2">Next Step<i
                         class="bi bi-arrow-right-circle ms-3"></i></button>
+                <!--
+                <button type="button" onclick="genrateCV()" class="next_btn" id="generatecv">Genrate CV<i
+                        class="bi bi-arrow-right-circle ms-3"></i></button>
+                -->
             </div>
 
         </form>
         <!-- **********     FORM - 2 END    ********** -->
+
+
+        <!-- **********     FORM - 3    ********** -->
+
+        <form id="form3" class="step step-3">
+            <div class="container mt-5">
+                <h1 class="d-flex justify-content-center m-5 text-align-center" style="font-weight: 600;">Select
+                    Template</h1>
+            </div>
+
+            <div class="card-container shadow mb-5 p-3 mb-5 bg-white" style="width:65%; margin:auto" id="card">
+                <div class="d-flex mt-3 mx-3">
+                    <h6>Select Template</h6>
+                </div>
+                <hr style="width:95%; margin: 10px;" , size="3" class="bg-secondary">
+                <div class="flip-cards d-flex flex-row justify-content-center align-items-center m-4">
+
+                    <div class="container">
+
+                        <div class="row my-5 justify-content-around">
+                            <div class="col d-flex justify-content-center align-items-center">
+                                <!-- template 1 -->
+                                <div class="card p-1" style="width:23rem" onclick="checker(this)">
+                                    <img src="images/T1.PNG" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <div class="btn_box container d-block text-center">
+                                            <h5 class="card-title">Stanford</h5>
+                                            <input class="form-check-input" type="radio" name="selected_template"
+                                                id="template_1">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  -->
+                            </div>
+                            <div class="col d-flex justify-content-center align-items-center">
+                                <!-- template 2 -->
+                                <div class="card p-1" style="width:23rem" onclick="checker(this)">
+                                    <img src="images/T2.PNG" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <div class="btn_box container d-block text-center">
+                                            <h5 class="card-title">Harvard</h5>
+                                            <input class="form-check-input" type="radio" name="selected_template"
+                                                id="template_2">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  -->
+                            </div>
+                        </div>
+
+                        <div class="row my-5">
+                            <div class="col d-flex justify-content-center align-items-center">
+                                <!-- template 3 -->
+                                <div class="card p-1" style="width:23rem" onclick="checker(this)">
+                                    <img src="images/T3.PNG" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <div class="btn_box container d-block text-center">
+                                            <h5 class="card-title">Harvard</h5>
+                                            <input class="form-check-input" type="radio" name="selected_template"
+                                                id="template_3">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  -->
+                            </div>
+                            <div class="col d-flex justify-content-center align-items-center">
+                                <!-- template 4 -->
+                                <div class="card p-1" style="width:23rem" onclick="checker(this)">
+                                    <img src="images/T4.PNG" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <div class="btn_box container d-block text-center">
+                                            <h5 class="card-title">Auckland</h5>
+                                            <input class="form-check-input" type="radio" name="selected_template"
+                                                id="template_4">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <button type="button" onclick="genrateCV()" class="next_btn" id="generatecv">Genrate CV<i
+                    class="bi bi-arrow-right-circle ms-3"></i></button>
+        </form>
+        </form>
+
+
+
+        <!-- **********     FORM - 3 END    ********** -->
+
+
+
+
+    </div>
+
+
+    <!--Template-->
+
+    <div class="container" id="target">
+        <div class="palette">
+            <span class="pelement one"></span>
+            <span class="pelement two"></span>
+            <span class="pelement three"></span>
+            <span class="pelement four"></span>
+            <span class="pelement five"></span>
+        </div>
+        <div class="row">
+            <div class="col-md-4 left_side">
+                <div class="profileText">
+                    <div class="imgBx">
+                        <img src="mdp.png" alt="Max" id="profilepic">
+                    </div>
+                    <h2><span id="fnameT">Venkat</span> <span id="lnameT">Rastogi</span></h2> <br> <span id="role">Web
+                        Developer</span>
+                </div>
+                <div class="contactInfo">
+                    <h3 class="title">Contact Info</h3>
+                    <ul>
+                        <li>
+                            <span class="icon"><i class="fas fa-phone-alt" aria-hidden="true"></i></span>
+                            <span class="text" id="cnumberT">+91 9429142949</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="far fa-envelope" aria-hidden="true"></i></span>
+                            <span class="text" id="emailT">venkat_ras@email.com</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fas fa-globe"></i></span>
+                            <span class="text" id="websiteT">www.mywebsite.com</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fab fa-linkedin"></i></span>
+                            <span class="text" id="linkedInT">linkedin.com/me</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+                            <span class="text" id="cityT">Chennai</span>,<span class="text" id="stateT"> Tamil
+                                Nadu</span>, <span class="text" id="countryT">India</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contactInfo education">
+                    <h3 class="title">Education</h3>
+                    <ul id="eduT">
+                        <li>
+                            <h5>2010-2013</h5>
+                            <h4>Master's Degree in Computer Science</h4>
+                            <h4>University name</h4>
+                        </li>
+                        <li>
+                            <h5>2007-2010</h5>
+                            <h4>Bachelor's Degree in Computer Science</h4>
+                            <h4>University name</h4>
+                        </li>
+                        <li>
+                            <h5>1997-2007</h5>
+                            <h4>Matriculation</h4>
+                            <h4>University name</h4>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contactInfo language">
+                    <h3 class="title">Languages</h3>
+                    <ul id="lanT">
+                        <li>
+                            <span class="text">English</span>
+                            <span class="percent">
+                                <div style="width: 90%;"></div>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="text">Hindi</span>
+                            <span class="percent">
+                                <div style="width: 80%;"></div>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="text">Gujarati</span>
+                            <span class="percent">
+                                <div style="width: 60%;"></div>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-8 right_side">
+                <div class="about">
+                    <h2 class="title2">Objective</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt atque hic incidunt id,
+                        minus
+                        corporis. Aspernatur voluptas quidem dolore. Quam excepturi harum suscipit officia
+                        recusandae
+                        aut consequuntur ipsa vitae. Cumque delectus nostrum, sed minus, consequatur officia
+                        autem
+                        adipisci sint reiciendis nulla ut voluptatum illo? Neque sapiente sint quisquam dolorum
+                        officia?
+                        <br><br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quaerat deleniti aliquid
+                        fuga
+                        distinctio modi ad, iure nobis deserunt, nisi pariatur dicta, cum quo a animi earum
+                        nihil quia
+                        tempora.
+                    </p>
+                </div>
+                <div class="about">
+                    <h2 class="title2">Experience</h2>
+                    <ul id="expT">
+                        <div class="box">
+                            <div class="year_company">
+                                <h5>2019-present</h5>
+                                <h5>Company Name</h5>
+                            </div>
+                            <div class="text">
+                                <h4>Senior UX Designer</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed veniam voluptate
+                                    non
+                                    facere, eveniet beatae unde harum quos earum? Eveniet!</p>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="year_company">
+                                <h5>2015-2019</h5>
+                                <h5>Company Name</h5>
+                            </div>
+                            <div class="text">
+                                <h4>UX/UI Designer</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed veniam voluptate
+                                    non
+                                    facere, eveniet beatae unde harum quos earum? Eveniet!</p>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="year_company">
+                                <h5>2012-2015</h5>
+                                <h5>Company Name</h5>
+                            </div>
+                            <div class="text">
+                                <h4>Junior UX Designer</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed veniam voluptate
+                                    non
+                                    facere, eveniet beatae unde harum quos earum? Eveniet!</p>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="about skills">
+                    <h2 class="title2">Professional Skills</h2>
+                    <ul id="skillT">
+                        <div class="box">
+                            <h4>Html</h4>
+                            <div class="percent">
+                                <div style="width:82%"></div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <h4>CSS</h4>
+                            <div class="percent">
+                                <div style="width:76%"></div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <h4>JavaScript</h4>
+                            <div class="percent">
+                                <div style="width:89%"></div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <h4>Photoshop</h4>
+                            <div class="percent">
+                                <div style="width:63%"></div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <h4>Illustrator</h4>
+                            <div class="percent">
+                                <div style="width:54%"></div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <h4>Lightroom</h4>
+                            <div class="percent">
+                                <div style="width:70%"></div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="about interest">
+                    <h2 class="title2">Interest</h2>
+                    <ul id="hobbyT">
+                        <li>Gaming</li>
+                        <li>Singing</li>
+                        <li>Reading</li>
+                        <li>Cooking</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div>
+                <button class="dwnld">Download as pdf</button>
+            </div>
+        </div>
     </div>
 
 
