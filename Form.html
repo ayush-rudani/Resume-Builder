@@ -6,15 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="form.js" defer></script>
+    <script src="transfer.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="icon" href="images/RB_Logo.png" type="image/x-icon">
     <title>Resume</title>
     <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="./templates/template1.css">
+    <!-- <link rel="stylesheet" href="./templates/template2.css"> -->
+
 </head>
 
 <body>
@@ -32,9 +38,7 @@
     <!-- NavBar End -->
 
 
-
     <div class="container-fluid p-0">
-
 
         <!-- **********     FORM - 1    ********** -->
 
@@ -79,7 +83,7 @@
 
                     <div class="col-md-6">
                         <label for="cnumber" class="form-label">Phone Number</label>
-                        <input type="text" class="form-control" id="cnumber" placeholder="xxxxxxxxxx">
+                        <input type="text" class="form-control" id="number" placeholder="xxxxxxxxxx">
                     </div>
 
                     <div class="col-12 mt-3">
@@ -126,7 +130,7 @@
 
                         <div class="col-md-4 mt-3">
                             <label for="bdate" class="form-label">Birth Date</label>
-                            <input type="date" class="date" id="bdate">
+                            <input type="date" class="date" id="dob">
                         </div>
                     </div>
 
@@ -137,7 +141,7 @@
 
                     <div class="col-6 mt-3">
                         <label for="Website" class="form-label">Website</label>
-                        <input type="text" class="form-control" id="Website">
+                        <input type="text" class="form-control" id="website">
                     </div>
 
                 </div>
@@ -210,15 +214,15 @@
                                                             placeholder="e.g. B.Tech ">
                                                     </div>
 
-                                                    <div class="col-md-6">
-                                                        <label for="city" class="form-label">City/Town</label>
+                                                    <!-- <div class="col-md-6">
+                                                        <label for="city" class="form-label"></label>
                                                         <input type="text" class="form-control city" id="city"
                                                             placeholder="e.g. San francico">
-                                                    </div>
+                                                    </div> -->
 
                                                     <div class="col-12 mt-3">
                                                         <label for="School" class="form-label">School/University</label>
-                                                        <input type="text" class="form-control School" id="School"
+                                                        <input type="text" class="form-control school" id="school"
                                                             placeholder="e.g. International Academy.">
                                                     </div>
                                                     <div class="col-6 mt-3">
@@ -231,13 +235,14 @@
 
                                                             <div class="ms-4 mt-2">
                                                                 <label for="" class="form-label">End Date</label>
-                                                                <input class="date edu_end" type="date" id="edu_end">
+                                                                <input class="date end_date" type="date" id="edu_end">
                                                             </div>
 
                                                             <div class="ms-4 mt-5">
                                                                 <div class="form-check">
-                                                                    <input class="form-check-input" type="checkbox"
-                                                                        value="" id="" onclick="toggChk(this)">
+                                                                    <input class="end_date_toggle form-check-input"
+                                                                        type="checkbox" value="" id=""
+                                                                        onclick="toggChk(this)">
                                                                     <label class="form-check-label"
                                                                         for="flexCheckChecked">Present</label>
                                                                 </div>
@@ -245,13 +250,12 @@
 
                                                         </div>
                                                     </div>
-
-                                                    <div class="mt-4">
+                                                    <!-- <div class="mt-4">
                                                         <label for="edu_description"
                                                             class="form-label">Description</label>
                                                         <textarea class="form-control edu_description"
                                                             id="edu_description" rows="3"></textarea>
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -329,14 +333,15 @@
 
                                                                 <div class="ms-4 mt-2">
                                                                     <label for="" class="form-label">End Date</label>
-                                                                    <input class="date Work1_end" type="date"
+                                                                    <input class="date end_date" type="date"
                                                                         id="Work1_end">
                                                                 </div>
 
                                                                 <div class="ms-4 mt-5">
                                                                     <div class="form-check">
-                                                                        <input class="form-check-input" type="checkbox"
-                                                                            value="" id="" onclick="toggChk(this)">
+                                                                        <input class="form-check-input end_date_toggle"
+                                                                            type="checkbox" value="" id=""
+                                                                            onclick="toggChk(this)">
                                                                         <label class="form-check-label"
                                                                             for="flexCheckChecked">Present</label>
                                                                     </div>
@@ -628,7 +633,7 @@
                         <div class="row my-5 justify-content-around">
                             <div class="col d-flex justify-content-center align-items-center">
                                 <!-- template 1 -->
-                                <div class="card p-1" style="width:23rem" onclick="checker(this)">
+                                <div class="card p-1" style="width:23rem" onclick=" templateRadioSelector(this)">
                                     <img src="images/T1.PNG" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <div class="btn_box container d-block text-center">
@@ -642,7 +647,7 @@
                             </div>
                             <div class="col d-flex justify-content-center align-items-center">
                                 <!-- template 2 -->
-                                <div class="card p-1" style="width:23rem" onclick="checker(this)">
+                                <div class="card p-1" style="width:23rem" onclick=" templateRadioSelector(this)">
                                     <img src="images/T2.PNG" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <div class="btn_box container d-block text-center">
@@ -659,7 +664,7 @@
                         <div class="row my-5">
                             <div class="col d-flex justify-content-center align-items-center">
                                 <!-- template 3 -->
-                                <div class="card p-1" style="width:23rem" onclick="checker(this)">
+                                <div class="card p-1" style="width:23rem" onclick=" templateRadioSelector(this)">
                                     <img src="images/T3.PNG" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <div class="btn_box container d-block text-center">
@@ -673,7 +678,7 @@
                             </div>
                             <div class="col d-flex justify-content-center align-items-center">
                                 <!-- template 4 -->
-                                <div class="card p-1" style="width:23rem" onclick="checker(this)">
+                                <div class="card p-1" style="width:23rem" onclick=" templateRadioSelector(this)">
                                     <img src="images/T4.PNG" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <div class="btn_box container d-block text-center">
@@ -690,24 +695,19 @@
                     </div>
                 </div>
             </div>
-            <button type="button" onclick="genrateCV()" class="next_btn" id="generatecv">Genrate CV<i
+            <button type="button" onclick="template_selector()" class="next_btn" id="generatecv">Generate CV<i
                     class="bi bi-arrow-right-circle ms-3"></i></button>
         </form>
-        </form>
-
-
 
         <!-- **********     FORM - 3 END    ********** -->
-
-
-
 
     </div>
 
 
-    <!--Template-->
+    <!-- **********     Templates    ********** -->
 
-    <div class="container" id="target">
+
+    <div class="t1 container-fluid" style="background-color: aliceblue; display: none;" id="Template_1">
         <div class="palette">
             <span class="pelement one"></span>
             <span class="pelement two"></span>
@@ -715,46 +715,46 @@
             <span class="pelement four"></span>
             <span class="pelement five"></span>
         </div>
-        <div class="row">
-            <div class="col-md-4 left_side">
+        <div class="container" id="target">
+            <div class="left_side">
                 <div class="profileText">
                     <div class="imgBx">
-                        <img src="mdp.png" alt="Max" id="profilepic">
+                        <img src="mdp.png" id="profilepic" alt="Max">
                     </div>
-                    <h2><span id="fnameT">Venkat</span> <span id="lnameT">Rastogi</span></h2> <br> <span id="role">Web
-                        Developer</span>
+                    <h2 id="t_name">Venkat Rastogi</h2> <br>
+                    <span id="t_dob"></span>
+                    <span id="t_gender"></span>
                 </div>
                 <div class="contactInfo">
                     <h3 class="title">Contact Info</h3>
                     <ul>
                         <li>
                             <span class="icon"><i class="fas fa-phone-alt" aria-hidden="true"></i></span>
-                            <span class="text" id="cnumberT">+91 9429142949</span>
+                            <span class="text" id="t_number">+91 9429142949</span>
                         </li>
                         <li>
-                            <span class="icon"><i class="far fa-envelope" aria-hidden="true"></i></span>
-                            <span class="text" id="emailT">venkat_ras@email.com</span>
+                            <span class="icon"><i class="far fa-envelope"></i></span>
+                            <span class="text" id="t_email">venkat_ras@email.com</span>
                         </li>
                         <li>
                             <span class="icon"><i class="fas fa-globe"></i></span>
-                            <span class="text" id="websiteT">www.mywebsite.com</span>
+                            <span class="text" id="t_website">www.mywebsite.com</span>
                         </li>
                         <li>
                             <span class="icon"><i class="fab fa-linkedin"></i></span>
-                            <span class="text" id="linkedInT">linkedin.com/me</span>
+                            <span class="text" id="t_linkedIn">linkedin.com/me</span>
                         </li>
                         <li>
                             <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
-                            <span class="text" id="cityT">Chennai</span>,<span class="text" id="stateT"> Tamil
-                                Nadu</span>, <span class="text" id="countryT">India</span>
+                            <span class="text" id="t_address">Chennai, Tamil Nadu, India</span>
                         </li>
                     </ul>
                 </div>
 
                 <div class="contactInfo education">
                     <h3 class="title">Education</h3>
-                    <ul id="eduT">
-                        <li>
+                    <ul>
+                        <!-- <li>
                             <h5>2010-2013</h5>
                             <h4>Master's Degree in Computer Science</h4>
                             <h4>University name</h4>
@@ -768,158 +768,378 @@
                             <h5>1997-2007</h5>
                             <h4>Matriculation</h4>
                             <h4>University name</h4>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
 
                 <div class="contactInfo language">
                     <h3 class="title">Languages</h3>
-                    <ul id="lanT">
+                    <ul>
                         <li>
                             <span class="text">English</span>
-                            <span class="percent">
-                                <div style="width: 90%;"></div>
-                            </span>
                         </li>
                         <li>
                             <span class="text">Hindi</span>
-                            <span class="percent">
-                                <div style="width: 80%;"></div>
-                            </span>
                         </li>
                         <li>
                             <span class="text">Gujarati</span>
-                            <span class="percent">
-                                <div style="width: 60%;"></div>
-                            </span>
                         </li>
                     </ul>
                 </div>
             </div>
 
 
-
-            <div class="col-md-8 right_side">
+            <div class="right_side">
                 <div class="about">
-                    <h2 class="title2">Objective</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt atque hic incidunt id,
-                        minus
-                        corporis. Aspernatur voluptas quidem dolore. Quam excepturi harum suscipit officia
-                        recusandae
-                        aut consequuntur ipsa vitae. Cumque delectus nostrum, sed minus, consequatur officia
-                        autem
-                        adipisci sint reiciendis nulla ut voluptatum illo? Neque sapiente sint quisquam dolorum
-                        officia?
+                    <h2 class="title2">Profile</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt atque hic incidunt id, minus
+                        corporis. Aspernatur voluptas quidem dolore. Quam excepturi harum suscipit officia recusandae
+                        aut consequuntur ipsa vitae. Cumque delectus nostrum, sed minus, consequatur officia autem
+                        adipisci sint reiciendis nulla ut voluptatum illo? Neque sapiente sint quisquam dolorum officia?
                         <br><br>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quaerat deleniti aliquid
-                        fuga
-                        distinctio modi ad, iure nobis deserunt, nisi pariatur dicta, cum quo a animi earum
-                        nihil quia
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quaerat deleniti aliquid fuga
+                        distinctio modi ad, iure nobis deserunt, nisi pariatur dicta, cum quo a animi earum nihil quia
                         tempora.
                     </p>
                 </div>
                 <div class="about">
                     <h2 class="title2">Experience</h2>
-                    <ul id="expT">
-                        <div class="box">
-                            <div class="year_company">
-                                <h5>2019-present</h5>
-                                <h5>Company Name</h5>
-                            </div>
-                            <div class="text">
-                                <h4>Senior UX Designer</h4>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed veniam voluptate
-                                    non
-                                    facere, eveniet beatae unde harum quos earum? Eveniet!</p>
-                            </div>
+                    <div class="box">
+                        <div class="year_company">
+                            <h5>2019-present</h5>
+                            <!-- <h5>Company Name</h5> -->
                         </div>
+                        <div class="text">
+                            <!-- <h4>Senior UX Designer</h4> -->
+                            <h4>Company Name</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed veniam voluptate non
+                                facere, eveniet beatae unde harum quos earum? Eveniet!</p>
+                        </div>
+                    </div>
 
-                        <div class="box">
-                            <div class="year_company">
-                                <h5>2015-2019</h5>
-                                <h5>Company Name</h5>
-                            </div>
-                            <div class="text">
-                                <h4>UX/UI Designer</h4>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed veniam voluptate
-                                    non
-                                    facere, eveniet beatae unde harum quos earum? Eveniet!</p>
-                            </div>
+                    <div class="box">
+                        <div class="year_company">
+                            <h5>2015-2019</h5>
+                            <!-- <h5>Company Name</h5> -->
                         </div>
+                        <div class="text">
+                            <!-- <h4>UX/UI Designer</h4> -->
+                            <h4>Company Name</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed veniam voluptate non
+                                facere, eveniet beatae unde harum quos earum? Eveniet!</p>
+                        </div>
+                    </div>
 
-                        <div class="box">
-                            <div class="year_company">
-                                <h5>2012-2015</h5>
-                                <h5>Company Name</h5>
-                            </div>
-                            <div class="text">
-                                <h4>Junior UX Designer</h4>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed veniam voluptate
-                                    non
-                                    facere, eveniet beatae unde harum quos earum? Eveniet!</p>
-                            </div>
+                    <div class="box">
+                        <div class="year_company">
+                            <h5>2012-2015</h5>
+                            <!-- <h5>Company Name</h5> -->
                         </div>
-                    </ul>
+                        <div class="text">
+                            <!-- <h4>Junior UX Designer</h4> -->
+                            <h4>Company Name</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed veniam voluptate non
+                                facere, eveniet beatae unde harum quos earum? Eveniet!</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="about skills">
                     <h2 class="title2">Professional Skills</h2>
-                    <ul id="skillT">
-                        <div class="box">
-                            <h4>Html</h4>
-                            <div class="percent">
-                                <div style="width:82%"></div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <h4>CSS</h4>
-                            <div class="percent">
-                                <div style="width:76%"></div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <h4>JavaScript</h4>
-                            <div class="percent">
-                                <div style="width:89%"></div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <h4>Photoshop</h4>
-                            <div class="percent">
-                                <div style="width:63%"></div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <h4>Illustrator</h4>
-                            <div class="percent">
-                                <div style="width:54%"></div>
-                            </div>
-                        </div>
-                        <div class="box">
-                            <h4>Lightroom</h4>
-                            <div class="percent">
-                                <div style="width:70%"></div>
-                            </div>
-                        </div>
-                    </ul>
+                    <div class="box">
+                        <h4>Html</h4>
+                        <h4>CSS</h4>
+                        <h4>JavaScript</h4>
+                        <h4>Photoshop</h4>
+                        <h4>Illustrator</h4>
+                        <h4>Lightroom</h4>
+                    </div>
                 </div>
 
                 <div class="about interest">
                     <h2 class="title2">Interest</h2>
-                    <ul id="hobbyT">
+                    <ul>
                         <li>Gaming</li>
                         <li>Singing</li>
                         <li>Reading</li>
                         <li>Cooking</li>
                     </ul>
                 </div>
-
+                <div class="about achievements">
+                    <h2 class="title2">Achievements</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt atque hic incidunt id, minus
+                        corporis. Aspernatur voluptas quidem dolore. Quam excepturi harum suscipit officia recusandae
+                        aut consequuntur ipsa vitae. Cumque delectus nostrum, sed minus, consequatur officia autem
+                        adipisci sint reiciendis nulla ut voluptatum illo? Neque sapiente sint quisquam dolorum officia?
+                        <br><br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quaerat deleniti aliquid fuga
+                        distinctio modi ad, iure nobis deserunt, nisi pariatur dicta, cum quo a animi earum nihil quia
+                        tempora.
+                    </p>
+                </div>
             </div>
-            <div>
-                <button class="dwnld">Download as pdf</button>
+        </div>
+        <div>
+            <button class="dwnld">Download as pdf</button>
+        </div>
+    </div>
+
+    <!-- **********     Template-2      ********** -->
+
+    <div class="container-fluid" id="template_2" style="display: none;">
+        <div class="palette">
+            <span class="pelement one"></span>
+            <span class="pelement two"></span>
+            <span class="pelement three"></span>
+            <span class="pelement four"></span>
+            <span class="pelement five"></span>
+        </div>
+        <div class="upper">
+            Curriculum Vitae
+        </div>
+        <div class="lower">
+            <div class="lower_left">
+                <img src="mdp.png" alt="Max" id="profilepic">
+                <div class="header personal">
+                    <div class="title">Personal</div>
+                    <div class="content">
+                        <div class="con">
+                            <div class="heading">Name</div>
+                            <div class="value">Venkat Rastogi</div>
+                        </div>
+                        <div class="con">
+                            <div class="heading">Address</div>
+                            <div class="value">Chennai, Tamil Nadu, India</div>
+                        </div>
+                        <div class="con">
+                            <div class="heading">Phone number</div>
+                            <div class="value">+919947382613</div>
+                        </div>
+                        <div class="con">
+                            <div class="heading">Email</div>
+                            <div class="value">venkat_ras@email.com</div>
+                        </div>
+                        <div class="con">
+                            <div class="heading">Linked in</div>
+                            <div class="value">linkedin.com/me</div>
+                        </div>
+                        <div class="con">
+                            <div class="heading">Website</div>
+                            <div class="value">www.mywebsite.com</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header skills">
+                    <div class="title">Skills</div>
+                    <div class="content">
+                        <div class="skill">HTML</div>
+                        <div class="percent">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="skill">CSS</div>
+                        <div class="percent">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="skill">JavaScript</div>
+                        <div class="percent">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="skill">Photoshop</div>
+                        <div class="percent">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="skill">Illustrator</div>
+                        <div class="percent">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="skill">Lightroom</div>
+                        <div class="percent">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header interests">
+                    <div class="title">Interests</div>
+                    <div class="content">
+                        <div class="con">Gaming</div>
+                        <div class="con">Singing</div>
+                        <div class="con">Reading</div>
+                        <div class="con">Cooking</div>
+                        <div class="con">Exercising</div>
+                        <div class="con">Swimming</div>
+                    </div>
+                </div>
+
+                <div class="header languages">
+                    <div class="title">Languages</div>
+                    <div class="content">
+                        <div class="con">
+                            <div class="lang">English</div>
+                            <div class="percent">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="con">
+                            <div class="lang">Hindi</div>
+                            <div class="percent">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="con">
+                            <div class="lang">Gujarati</div>
+                            <div class="percent">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <div class="con">
+                            <div class="lang">French</div>
+                            <div class="percent">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lower_right">
+                <div class="header profile">
+                    <div class="hr title">Profile</div>
+                    <div class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ea numquam itaque deserunt,
+                        quidem quaerat unde soluta pariatur similique exercitationem molestias nesciunt aut velit,
+                        ratione mollitia, quod enim voluptatibus placeat delectus. Eaque assumenda, officia ut
+                        obcaecati, voluptates voluptas a laborum minus molestias magnam deserunt impedit sequi
+                        dicta? Similique, possimus fuga.
+                    </div>
+                </div>
+                <div class="education header vr">
+                    <div class="hr title">Educational Qualifications</div>
+                    <div class="content">
+                        <div class="con">
+                            <h4 class="time">2010-2013</h4>
+                            <h4 class="degree">Master's degree in Computer Science</h4>
+                            <h4 class="uni">University Name</h4>
+                        </div>
+                        <div class="con">
+                            <h4 class="time">2006-2010</h4>
+                            <h4 class="degree">Bachelor's degree in Computer Science</h4>
+                            <h4 class="uni">University Name</h4>
+                        </div>
+                        <div class="con">
+                            <h4 class="time">1997-2007</h4>
+                            <h4 class="degree">Matriculation</h4>
+                            <h4 class="uni">University Name</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience header vr">
+                    <div class="hr title">Experience</div>
+                    <div class="content">
+                        <div class="con">
+                            <div class="time">
+                                <h4>2019-present</h4>
+                                <h4>Company Name</h4>
+                            </div>
+                            <div class="exp">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas est dolorem, eveniet
+                                velit exercitationem repudiandae iste suscipit nihil, eligendi sed nam molestiae
+                                ducimus labore officia expedita. Ullam voluptates officiis debitis consectetur
+                                soluta minus quidem quisquam reprehenderit odio, facilis doloribus excepturi cum
+                                voluptatem explicabo sint incidunt commodi! Beatae nostrum debitis labore.
+                            </div>
+                        </div>
+                        <div class="con">
+                            <div class="time">
+                                <h4>2015-2019</h4>
+                                <h4>Company Name</h4>
+                            </div>
+                            <div class="exp">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem necessitatibus odit
+                                eius nam nisi beatae aut esse omnis nostrum ratione consequuntur, cumque dignissimos
+                                assumenda culpa et illum? Sunt consequuntur, autem doloremque ducimus quo unde
+                                molestias cumque at quaerat maiores consequatur eum reiciendis ut rerum hic tempore
+                                debitis magnam dicta numquam!
+                            </div>
+                        </div>
+                        <div class="con">
+                            <div class="time">
+                                <h4>2012-2015</h4>
+                                <h4>Company Name</h4>
+                            </div>
+                            <div class="exp">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eaque aperiam
+                                voluptates non magni iusto expedita sapiente error qui, perferendis suscipit. Iste
+                                rerum cupiditate excepturi ea ipsam modi dolorum totam?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="achievements header vr">
+                    <div class="hr title">Achievements</div>
+                    <div class="content">
+                        <div class="con">
+                            <div class="time">
+                                <h4>2017</h4>
+                            </div>
+                            <div class="val">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt accusamus
+                                pariatur voluptatem minima dolor tenetur iste unde vitae ratione. Facere nisi,
+                                distinctio aperiam aliquid cupiditate eum repudiandae laudantium iste nobis!
+                            </div>
+                        </div>
+                        <div class="con">
+                            <div class="time">
+                                <h4>2010</h4>
+                            </div>
+                            <div class="val">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius fugit tempore optio,
+                                nostrum exercitationem minus ea animi ipsa sequi dolor?
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    </center>
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -929,7 +1149,6 @@
 
 <script>
     $(document).ready(function () {
-
         function slideTog(el) {
             $(el).next().slideToggle(300);
         }
@@ -937,27 +1156,14 @@
             slideTog(this);
         });
 
-        // $('#addHobby').click(function () {
-        //     let obj = $('div.panel4').children("div.list");
-        //     let curr_len = obj.length;
-        //     let node =
-        //         `<div class="col-12 mt-4">
-        //              <label for='hobby${curr_len + 1}' class="form-label">Hobby</label>
-        //             <input type="text" class="form-control" id="hobby${curr_len + 1}" placeholder="e.g. Reading, Writing">
-        //         </div>`;
-        //     obj.append(node);
-        // });
 
         //**************** Form Steps ****************//
 
 
         let steps = Array.from(document.querySelectorAll('form.step'));
-        // console.log(steps);
         let next_btn = document.querySelectorAll('form .next_btn');
-        // console.log(next_btn);
         let prev_btn = document.querySelectorAll('form .prev_btn');
 
-        // let form = document.querySelector('form')
 
         next_btn.forEach(button => {
             button.addEventListener('click', () => {
