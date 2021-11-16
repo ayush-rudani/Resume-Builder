@@ -1,11 +1,9 @@
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap'); */
 * {
   box-sizing: border-box;
 }
-.t1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+#achv_description{
+  white-space: pre-wrap;
 }
 
 /**********        Form CSS Starts from Here      ********* */

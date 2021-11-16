@@ -75,7 +75,7 @@ function updateWork() {
   for (let i = 0; i < $('#accordionWork .accordion-item').length; i++) {
     let a = ($(`#accordionWork .accordion-item:nth-child(${i + 1}) .job_title`).val().trim() == '') ? 'Work Experience' : $(`#accordionWork .accordion-item:nth-child(${i + 1}) .job_title`).val().trim();
 
-    let c = ($(`#accordionWork .accordion-item:nth-child(${i + 1}) .employer`).val().trim() == '') ? '' : ' at ' + $(`#accordionWork .accordion-item:nth-child(${i + 1}) .employer`).val().trim();
+    let c = ($(`#accordionWork .accordion-item:nth-child(${i + 1}) .company_name`).val().trim() == '') ? '' : ' at ' + $(`#accordionWork .accordion-item:nth-child(${i + 1}) .company_name`).val().trim();
 
     $(`#accordionWork .accordion-item:nth-child(${i + 1}) .accordion-button`).html(a + c);
   }
@@ -625,5 +625,15 @@ $(document).ready(function () {
     $('.t1 .left_side').css("background-color", $(this).css("background-color"));
     $('.t1 .right_side .about .text h4').css("color", appender(addStr($(this).css("background-color"), 3, "a"), ", 0.82"));
     $('.t1 .right_side .percent div').css("background-color", appender(addStr($(this).css("background-color"), 3, "a"), ", 0.65"));
+  })
+})
+
+// ********************************* Template 2 ****************************************
+$(document).ready(function(){
+  $('.t2 .two').css("border","3px solid white");
+  $('.t2 .pelement').click(function(){
+     $('.t2 .pelement').css("border","3px solid transparent");
+     $(this).css("border","3px solid white");
+     $('.t2 .upper').css("background-color",$(this).css("background-color"));
   })
 })
