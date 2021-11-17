@@ -2,13 +2,20 @@ function template_selector() {
     if ($('#template_1').prop('checked') == true) {
         generateCV('Template_1');
     }
-    else {
-        generateCV('template_2');
+    else if ($('#template_2').prop('checked') == true) {
+        generateCV('Template_2');
+    }
+    else if ($('#template_3').prop('checked') == true) {
+        generateCV('Template_3');
+    }
+    else{
+        alert("Please select a template.");
     }
 }
-function generateCV(temp) {
+
+function generateCV(template) {
     document.getElementById('form3').style.display = 'none';
-    document.getElementById(temp).style.display = 'flex';
+    document.getElementById(template).style.display = 'flex';
     document.getElementById('nav').style.display = 'none';
 
 
@@ -18,7 +25,7 @@ function generateCV(temp) {
     let reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onloadend = function () {
-        document.getElementById('profilepic').src = reader.result;
+        document.getElementById(`${template}`).getElementsByClassName('profilepic')[0].src = reader.result;
     };
 
     //  **********    **********    **********    **********    **********
@@ -28,25 +35,25 @@ function generateCV(temp) {
     // ************************************ First Form *******************************
 
     let dob = new Date($('#dob').val());
-    $('#t_name').html($('#fname').val() + " " + $('#lname').val());
-    $('#t_gender').html("Gender: " + $('#gender').val());
-    $('#t_dob').html("DOB: " + dob.getDate() + " / " + (dob.getMonth() + 1) + " / " + dob.getFullYear());
-    $('#t_email').html($('#email').val());
-    $('#t_number').html($('#number').val());
-    $('#t_address').html($('#address').val() + "<br>" + $('#zip').val() + "<br>" + $('#city').val() + ", " + $('#state').val() + ", " + $('#country').val());
+    $(`#${template} #t_name`).html($('#fname').val() + " " + $('#lname').val());
+    $(`#${template} #t_gender`).html($('#gender').val());
+    $(`#${template} #t_dob`).html(dob.getDate() + " / " + (dob.getMonth() + 1) + " / " + dob.getFullYear());
+    $(`#${template} #t_email`).html($('#email').val());
+    $(`#${template} #t_number`).html($('#number').val());
+    $(`#${template} #t_address`).html($('#address').val() + "<br>" + $('#zip').val() + "<br>" + $('#city').val() + ", " + $('#state').val() + ", " + $('#country').val());
 
     if ($('#website').val().trim() == "") {
-        $('#t_website').parent().css('display', 'none');
+        $(`#${template} #t_website`).parent().css('display', 'none');
     }
     else {
-        $('#t_website').html($('#website').val());
+        $(`#${template} #t_website`).html($('#website').val());
     }
 
     if ($('#linkedIn').val().trim() == "") {
-        $('#t_linkedIn').parent().css('display', 'none');
+        $(`#${template} #t_linkedIn`).parent().css('display', 'none');
     }
     else {
-        $('#t_linkedIn').html($('#linkedIn').val());
+        $(`#${template} #t_linkedIn`).html($('#linkedIn').val());
     }
 
     //  **********    **********    **********    **********    **********
@@ -78,11 +85,27 @@ function generateCV(temp) {
         if (degree == "" || school == "" || srt_date == NaN || end_date == NaN) {
             continue;
         }
-        $('.t1 .left_side .education ul').append(`<li>
+
+        if (template == "Template_1") {
+            $('.t1 .left_side .education ul').append(`<li>
             <h5>${srt_date} - ${end_date}</h5>
             <h4>${degree}</h4>
             <h4>${school}</h4>
-        </li>`);
+            </li>`);
+        }
+        else if (template == 'Template_2') {
+            $('.t2 .lower_right .education .content').append(`
+            <div class="con">
+                <h4 class="time">${srt_date} - ${end_date}</h4>
+                <h4 class="degree">${degree}</h4>
+                <h4 class="uni">${school}</h4>
+            </div>`)
+        }
+        else if (template == 'Template_3') {
+            $('.t3 .education').append(`<p class="degree">${degree}&nbsp; (${srt_date}-${end_date})</p><p class="par-4">${school}</p>`)
+        }
+
+
     }
 
 
@@ -109,18 +132,31 @@ function generateCV(temp) {
         if (job_title == "" || company_name == "" || srt_date == NaN || end_date == NaN) {
             continue;
         }
-        $('.t1 .right_side .experience').append(
-            `<div class="box">
-            <div class="year_company">
-                <h5>${srt_date} - ${end_date}</h5>
-                <h5>${company_name}</h5>
-            </div>
-            <div class="text">
-                <h4>${job_title}</h4>
-                <p>${work_desc}</p>
-            </div>
-        </div>`
-        )
+
+        if (template == "Template_1") {
+            $('.t1 .right_side .experience').append(
+                `<div class="box">
+                <div class="year_company">
+                    <h5>${srt_date} - ${end_date}</h5>
+                    <h5>${company_name}</h5>
+                </div>
+                <div class="text">
+                    <h4>${job_title}</h4>
+                    <p>${work_desc}</p>
+                </div>
+            </div>`
+            )
+        }
+        else if (template == 'Template_2') {
+            $('.t2 .lower_right .experience .content').append(`<div class="con">
+            <div class="time"><h4>${srt_date}-${end_date}</h4><h4>${company_name}</h4></div>
+            <div class="exp">${work_desc}</div>
+        </div>`)
+        }
+        else if (template == 'Template_3') {
+            $('.t3 .content-box .experience').append(`<p class="job-title">${job_title}&nbsp;(${srt_date}-${end_date})</p>
+            <p class="par-4">${work_desc}</p>`)
+        }
     }
 
     //  **********    Skills    **********
@@ -132,8 +168,15 @@ function generateCV(temp) {
         if (skill == "") {
             continue;
         }
-        $('.t1 .right_side .skills .box').append(`
-            <h4>${skill}</h4>`);
+        if (template == "Template_1") {
+            $('.t1 .right_side .skills .box').append(`<h4>${skill}</h4>`);
+        }
+        else if (template == 'Template_2') {
+            $('.t2 .lower .lower_left .skills .content').append(`<div class="skill">${skill}</div>`)
+        }
+        else if (template == 'Template_3') {
+            $('.t3 .skills').append(`<li><span>${skill}</span></li>`)
+        }
     }
 
 
@@ -146,8 +189,17 @@ function generateCV(temp) {
         if (interest == "") {
             continue;
         }
-        $('.t1 .right_side .interest ul').append(`
-             <li>${interest}</li>`);
+
+        if (template == "Template_1") {
+            $('.t1 .right_side .interest ul').append(`
+            <li>${interest}</li>`);
+        }
+        else if (template == 'Template_2') {
+            $('.t2 .lower .lower_left .interests .content').append(`<div class="con">${interest}</div>`);
+        }
+        else if (template == 'Template_3') {
+            $('.t3 .interest').append(`<li><span>${interest}</span></li>`);
+        }
     }
 
     // <li><span class="text">English</span></li>
@@ -161,7 +213,16 @@ function generateCV(temp) {
         if (lang == "") {
             continue;
         }
-        $('.t1 .left_side .language ul').append(`<li><span class="text">${lang}</span></li>`);
+
+        if (template == "Template_1") {
+            $('.t1 .left_side .language ul').append(`<li><span class="text">${lang}</span></li>`);
+        }
+        else if (template == 'Template_2') {
+            $('.t2 .lower .lower_left .languages .content .con').append(`<div class="lang">${lang}</div>`)
+        }
+        else if (template == 'Template_3') {
+            $('.t3 .content-box .languages').append(`<p class="p3">${lang}</p>`)
+        }
     }
 
 
@@ -169,8 +230,16 @@ function generateCV(temp) {
 
     // let achv = $(`#achv_description`).val().trim();
     let achv = $(`#achv_description`).val().replaceAll("\n", "<br />\r\n");
+
     if (achv !== "") {
-        $('.t1 .right_side .achievements').append(`<p>${achv}</p>`);
+        if (template == "Template_1") {
+            $('.t1 .right_side .achievements').append(`<p>${achv}</p>`);
+        }
+        else if (template == 'Template_2') {
+            $('.t2 .lower_right .achievements .content .con').append(`<div class="val">${achv}</div>`)
+        }
+        else if (template == 'Template_3') {
+        }
     }
 
 

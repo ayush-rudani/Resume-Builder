@@ -11,9 +11,12 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="form.js" defer></script>
     <script src="transfer.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -22,6 +25,7 @@
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="./Templates/template1.css">
     <link rel="stylesheet" href="./Templates/template2.css">
+    <link rel="stylesheet" href="./Templates/template3.css">
 
 </head>
 
@@ -664,27 +668,19 @@
                                 </div>
                                 <!--  -->
                             </div>
-                            <div class="col d-flex justify-content-center align-items-center">
-                                <!-- template 4 -->
-                                <div class="card p-1" style="width:23rem" onclick=" templateRadioSelector(this)">
-                                    <img src="images/T4.PNG" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <div class="btn_box container d-block text-center">
-                                            <h5 class="card-title">Auckland</h5>
-                                            <input class="form-check-input" type="radio" name="selected_template"
-                                                id="template_4">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--  -->
-                            </div>
                         </div>
 
                     </div>
                 </div>
             </div>
-            <button type="button" onclick="template_selector()" class="next_btn" id="generatecv">Generate CV<i
-                    class="bi bi-arrow-right-circle ms-3"></i></button>
+            <!-- <button type="button" onclick="template_selector()" class="next_btn" id="generatecv">Generate CV<i
+                    class="bi bi-arrow-right-circle ms-3"></i></button> -->
+            <div class="btn-box container d-block text-center" style="width:850px;">
+                <button type="button" class="prev_btn" id="back2"><i class="bi bi-arrow-left-circle me-3"></i>Previous
+                    Step</button>
+                <button type="button" onclick="template_selector()" class="next_btn" id="generatecv">Generate CV<i
+                        class="bi bi-arrow-right-circle ms-3"></i></button>
+            </div>
         </form>
 
         <!-- **********     FORM - 3 END    ********** -->
@@ -695,7 +691,13 @@
     <!-- **********     Templates    ********** -->
 
 
-    <div class="t1 container-fluid" style="background-color: aliceblue; display: none;" id="Template_1">
+    <div class="t1 container-fluid template" style="background-color: aliceblue; display: none;" id="Template_1">
+        <a onclick="backToForm('t1')">
+            <div class="back-to-form"><span><i class="fas fa-angle-double-left fa-3x"></i></span><span
+                    style="font-size: 23px; margin-left: 10px; margin-right: 10px;">Back to form</span>
+            </div>
+        </a>
+
         <div class="palette">
             <span class="pelement one"></span>
             <span class="pelement two"></span>
@@ -707,11 +709,11 @@
             <div class="left_side">
                 <div class="profileText">
                     <div class="imgBx">
-                        <img src="mdp.png" id="profilepic" alt="Max">
+                        <img src="mdp.png" class="profilepic" alt="Max">
                     </div>
                     <h2 id="t_name">Venkat Rastogi</h2> <br>
-                    <span id="t_dob"></span>
-                    <span id="t_gender"></span>
+                    <span>DOB:&nbsp;<span id="t_dob"></span></span>
+                    <span>Gender:&nbsp;<span id="t_gender"></span></span>
                 </div>
                 <div class="contactInfo">
                     <h3 class="title">Contact Info</h3>
@@ -865,7 +867,13 @@
 
 
     <!-- **********     Template-2      ********** -->
-    <div class="t2">
+
+    <div class="t2 container-fluid template" style="display:none; background-color: aliceblue;" id="Template_2">
+        <a onclick="backToForm('t2')">
+            <div class="back-to-form"><span><i class="fas fa-angle-double-left fa-3x"></i></span><span
+                    style="font-size: 23px; margin-left: 10px; margin-right: 10px;">Back to form</span>
+            </div>
+        </a>
         <div class="palette">
             <span class="pelement one"></span>
             <span class="pelement two"></span>
@@ -879,33 +887,41 @@
             </div>
             <div class="lower">
                 <div class="lower_left">
-                    <img src="mdp.png" alt="Max">
+                    <img src="./templates/mdp.png" class="profilepic" alt="Max">
                     <div class="header personal">
                         <div class="title">Personal</div>
                         <div class="content">
                             <div class="con">
                                 <div class="heading">Name</div>
-                                <div class="value">Venkat Rastogi</div>
-                            </div>    
+                                <div class="value" id="t_name">Venkat Rastogi</div>
+                            </div>
+                            <div class="con">
+                                <div class="heading">Gender</div>
+                                <div class="value" id="t_gender">Male</div>
+                            </div>
+                            <div class="con">
+                                <div class="heading">DOB</div>
+                                <div class="value" id="t_dob">01/03/2009</div>
+                            </div>
                             <div class="con">
                                 <div class="heading">Address</div>
-                                <div class="value">Chennai, Tamil Nadu, India</div>
+                                <div class="value" id="t_address">Chennai, Tamil Nadu, India</div>
                             </div>
                             <div class="con">
                                 <div class="heading">Phone number</div>
-                                <div class="value">+919947382613</div>
+                                <div class="value" id="t_number">+919947382613</div>
                             </div>
                             <div class="con">
                                 <div class="heading">Email</div>
-                                <div class="value">venkat_ras@email.com</div>
+                                <div class="value" id="t_email">venkat_ras@email.com</div>
                             </div>
                             <div class="con">
                                 <div class="heading">Linked in</div>
-                                <div class="value">linkedin.com/me</div>
+                                <div class="value" id="t_linkedIn">linkedin.com/me</div>
                             </div>
                             <div class="con">
                                 <div class="heading">Website</div>
-                                <div class="value">www.mywebsite.com</div>
+                                <div class="value" id="t_website">www.mywebsite.com</div>
                             </div>
                         </div>
                     </div>
@@ -913,67 +929,24 @@
                     <div class="header skills">
                         <div class="title">Skills</div>
                         <div class="content">
-                            <div class="skill">HTML</div>
-                            <div class="percent">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="content">
+                            <!-- <div class="skill">HTML</div>
                             <div class="skill">CSS</div>
-                            <div class="percent">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="content">
                             <div class="skill">JavaScript</div>
-                            <div class="percent">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="content">
                             <div class="skill">Photoshop</div>
-                            <div class="percent">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="content">
                             <div class="skill">Illustrator</div>
-                            <div class="percent">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="content">
-                            <div class="skill">Lightroom</div>
-                            <div class="percent">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
+                            <div class="skill">Lightroom</div> -->
                         </div>
                     </div>
 
                     <div class="header interests">
                         <div class="title">Interests</div>
                         <div class="content">
-                            <div class="con">Gaming</div>
+                            <!-- <div class="con">Gaming</div>
                             <div class="con">Singing</div>
                             <div class="con">Reading</div>
                             <div class="con">Cooking</div>
                             <div class="con">Exercising</div>
-                            <div class="con">Swimming</div>
+                            <div class="con">Swimming</div> -->
                         </div>
                     </div>
 
@@ -981,39 +954,10 @@
                         <div class="title">Languages</div>
                         <div class="content">
                             <div class="con">
-                                <div class="lang">English</div>
-                                <div class="percent">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                            <div class="con">
+                                <!-- <div class="lang">English</div>
                                 <div class="lang">Hindi</div>
-                                <div class="percent">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                            <div class="con">
                                 <div class="lang">Gujarati</div>
-                                <div class="percent">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                            <div class="con">
-                                <div class="lang">French</div>
-                                <div class="percent">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
+                                <div class="lang">French</div> -->
                             </div>
                         </div>
                     </div>
@@ -1022,13 +966,17 @@
                     <div class="header profile">
                         <div class="hr title">Profile</div>
                         <div class="content">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ea numquam itaque deserunt, quidem quaerat unde soluta pariatur similique exercitationem molestias nesciunt aut velit, ratione mollitia, quod enim voluptatibus placeat delectus. Eaque assumenda, officia ut obcaecati, voluptates voluptas a laborum minus molestias magnam deserunt impedit sequi dicta? Similique, possimus fuga.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ea numquam itaque deserunt,
+                            quidem quaerat unde soluta pariatur similique exercitationem molestias nesciunt aut velit,
+                            ratione mollitia, quod enim voluptatibus placeat delectus. Eaque assumenda, officia ut
+                            obcaecati, voluptates voluptas a laborum minus molestias magnam deserunt impedit sequi
+                            dicta? Similique, possimus fuga.
                         </div>
                     </div>
                     <div class="education header vrr">
                         <div class="hr title">Educational Qualifications</div>
                         <div class="content">
-                            <div class="con">
+                            <!-- <div class="con">
                                 <h4 class="time">2010-2013</h4>
                                 <h4 class="degree">Master's degree in Computer Science</h4>
                                 <h4 class="uni">University Name</h4>
@@ -1042,19 +990,23 @@
                                 <h4 class="time">1997-2007</h4>
                                 <h4 class="degree">Matriculation</h4>
                                 <h4 class="uni">University Name</h4>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="experience header vrr">
                         <div class="hr title">Experience</div>
                         <div class="content">
-                            <div class="con">
+                            <!-- <div class="con">
                                 <div class="time">
                                     <h4>2019-present</h4>
                                     <h4>Company Name</h4>
                                 </div>
                                 <div class="exp">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas est dolorem, eveniet velit exercitationem repudiandae iste suscipit nihil, eligendi sed nam molestiae ducimus labore officia expedita. Ullam voluptates officiis debitis consectetur soluta minus quidem quisquam reprehenderit odio, facilis doloribus excepturi cum voluptatem explicabo sint incidunt commodi! Beatae nostrum debitis labore.
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas est dolorem, eveniet
+                                    velit exercitationem repudiandae iste suscipit nihil, eligendi sed nam molestiae
+                                    ducimus labore officia expedita. Ullam voluptates officiis debitis consectetur
+                                    soluta minus quidem quisquam reprehenderit odio, facilis doloribus excepturi cum
+                                    voluptatem explicabo sint incidunt commodi! Beatae nostrum debitis labore.
                                 </div>
                             </div>
                             <div class="con">
@@ -1063,7 +1015,11 @@
                                     <h4>Company Name</h4>
                                 </div>
                                 <div class="exp">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem necessitatibus odit eius nam nisi beatae aut esse omnis nostrum ratione consequuntur, cumque dignissimos assumenda culpa et illum? Sunt consequuntur, autem doloremque ducimus quo unde molestias cumque at quaerat maiores consequatur eum reiciendis ut rerum hic tempore debitis magnam dicta numquam!
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem necessitatibus odit
+                                    eius nam nisi beatae aut esse omnis nostrum ratione consequuntur, cumque dignissimos
+                                    assumenda culpa et illum? Sunt consequuntur, autem doloremque ducimus quo unde
+                                    molestias cumque at quaerat maiores consequatur eum reiciendis ut rerum hic tempore
+                                    debitis magnam dicta numquam!
                                 </div>
                             </div>
                             <div class="con">
@@ -1072,25 +1028,27 @@
                                     <h4>Company Name</h4>
                                 </div>
                                 <div class="exp">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eaque aperiam voluptates non magni iusto expedita sapiente error qui, perferendis suscipit. Iste rerum cupiditate excepturi ea ipsam modi dolorum totam?
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eaque aperiam
+                                    voluptates non magni iusto expedita sapiente error qui, perferendis suscipit. Iste
+                                    rerum cupiditate excepturi ea ipsam modi dolorum totam?
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="achievements header vrr">
                         <div class="hr title">Achievements</div>
                         <div class="content">
                             <div class="con">
-                                <div class="time"><h4>2017</h4></div>
-                                <div class="val">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt accusamus pariatur voluptatem minima dolor tenetur iste unde vitae ratione. Facere nisi, distinctio aperiam aliquid cupiditate eum repudiandae laudantium iste nobis!
-                                </div>
-                            </div>
-                            <div class="con">
-                                <div class="time"><h4>2010</h4></div>
-                                <div class="val">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius fugit tempore optio, nostrum exercitationem minus ea animi ipsa sequi dolor?
-                                </div>
+                                <!-- <div class="val">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mattis tincidunt
+                                    nibh sed dapibus. Cras vel arcu eu est maximus luctus sagittis in augue. Vestibulum
+                                    molestie non est eu ultricies. Nunc convallis ut eros nec semper. Etiam ut auctor
+                                    eros. Praesent lobortis vestibulum lorem at consectetur. Ut malesuada a magna nec
+                                    sollicitudin. Nulla a luctus mi. Fusce iaculis hendrerit turpis, nec maximus eros
+                                    ullamcorper nec. Quisque id nunc consectetur, facilisis erat non, viverra dolor.
+                                    Aenean nisi turpis, dignissim et elit ut, facilisis pellentesque sem. Integer ac mi
+                                    accumsan metus semper auctor id eget sapien.
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -1100,11 +1058,117 @@
     </div>
 
 
-    <!-- **********     Template-2      ********** -->
+    <!-- **********     Template-3      ********** -->
+    <div class="t3 container-fluid template" style="background-color: aliceblue; display:none;" id="Template_3">
+        <a onclick="backToForm('t3')">
+            <div class="back-to-form"><span><i class="fas fa-angle-double-left fa-3x"></i></span><span
+                    style="font-size: 23px; margin-left: 10px; margin-right: 10px;">Back to form</span>
+            </div>
+        </a>
+        <div class="main">
+            <div class="top-section">
+                <img src="../images/person.jfif" class="profilepic">
+                <p class="fname" id="t_name">Devansh Shah</p>
+                <span>DOB:&nbsp;<span id="t_dob"></span></span><br />
+                <span>Gender:&nbsp;<span id="t_gender"></span></span>
+            </div>
 
-    <div class="t3 container-fluid" style="background-color: aliceblue;" id="Template_2"></div>
+            <div class="clearfix"></div>
+            <div class="col-div-4">
+                <div class="content-box" style="padding-left: 40px;">
+                    <p class="head">Contact</p>
+                    <p class="p3"><i class="fa fa-phone"></i>&nbsp;&nbsp;<span id="t_number"></span></p>
+                    <p class="p3"><i class="fa fa-envelope"></i>&nbsp;&nbsp;<span id="t_email">xyz@gmail.com</span></p>
+                    <p class="p3"><i class="fa fa-home"></i>&nbsp;&nbsp;<span id="t_address"></span></p>
+                    <p class="p3"><i class="fab fa-linkedin"></i>&nbsp;&nbsp;<span id="t_linkedIn"></span></p>
+                    <p class="p3"><i class="fas fa-globe"></i>&nbsp;&nbsp;<span id="t_website"></span></p>
+                    <br />
 
-    </center>
+                    <p class=" head">My Skills</p>
+                    <ul class="skills">
+                        <!-- <li><span>Web Devloper</span></li>
+                        <li><span>Graphic Designer</span></li>
+                        <li><span>Adobe Photoshop</span></li>
+                        <li><span>Adobe Illustrator</span></li>
+                        <li><span>Problem Solving</span></li> -->
+                    </ul>
+                    <br />
+
+                    <div class="languages">
+                        <p class="head">Languages</p>
+                        <!-- <p class="p3">Hindi</p>
+                        <p class="p3">English</p>
+                        <p class="p3">Gujarati</p>
+                        <p class="p3">German</p> -->
+                    </div>
+                    <br />
+
+
+                    <p class="head">Interest</p>
+                    <ul class="interest">
+                        <!-- <li><span>A</span></li>
+                        <li><span>B</span></li>
+                        <li><span>C</span></li>
+                        <li><span>D</span></li>
+                        <li><span>E</span></li> -->
+                    </ul>
+
+                </div>
+            </div>
+            <div class="line"></div>
+
+            <div class="div col-div-8">
+                <div class="content-box">
+                    <p class="head">Objective</p>
+                    <p class="p3" id="objective" style="font-size: 14px; color:#525252;">Lorem Ipsum is simply
+                        dummy
+                        text of
+                        the printing
+                        and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen
+                        book.
+                        It has survived not only five centuries.</p>
+                    <br />
+
+                    <p class="head">Experience</p>
+                    <div class="experience">
+                        <!-- <p class="job-title">Web Devloper (2018-NOW)</p>
+                        <p class="par-4">
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            It has survived not only five centuries.
+                        </p>
+
+                        <p class="job-title">Sotware Devloper (2012-2018)</p>
+                        <p class="par-4">
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            It has survived not only five centuries.
+                        </p>
+
+                        <p class="job-title">Graphic Designer (2010-2012)</p>
+                        <p class="par-4">
+                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            It has survived not only five centuries.
+                        </p> -->
+                    </div>
+                    <br />
+
+                    <p class="head">Eduction</p>
+                    <div class="education">
+                        <!-- <p class="degree">High School (2009-2010)</p>
+                        <p class="par-4">
+                            School Name
+                        </p>
+
+                        <p class="degree">B.TECH (2013-2015)</p>
+                        <p class="par-4">
+                            College Name
+                        </p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -1114,6 +1178,12 @@
 </body>
 
 <script>
+
+    function backToForm(ele) {
+        $(`.${ele}`).css('display', 'none');
+        $('#form3').addClass('active');
+    }
+
     $(document).ready(function () {
         function slideTog(el) {
             $(el).next().slideToggle(300);
@@ -1156,6 +1226,8 @@
                 index--;
             steps[index].classList.add('active');
         }
+
+
 
     });
 

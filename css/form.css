@@ -2,8 +2,28 @@
 * {
   box-sizing: border-box;
 }
-#achv_description{
+#achv_description {
   white-space: pre-wrap;
+}
+
+/* body {
+  position: relative;
+} */
+.back-to-form {
+  position: fixed;
+  top: 10px;
+  left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  border: 1px solid gray;
+  padding: 5px;
+  border-radius: 10px;
+}
+.template.container-fluid {
+  position: absolute;
+  top: 0;
 }
 
 /**********        Form CSS Starts from Here      ********* */
@@ -23,6 +43,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#innerSpan {
+  text-align: center;
+  font-size: 14px;
 }
 #previewText:hover {
   background-color: #dddddd66;
@@ -119,7 +143,6 @@ body {
 }
 
 /* ------------------------------- */
-
 
 .next_btn,
 .prev_btn {
