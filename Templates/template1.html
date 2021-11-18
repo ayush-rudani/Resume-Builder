@@ -16,44 +16,39 @@
     <script src="template1.js"></script>
 </head>
 <body>
-    <div class="t1">
-        <div class="palette">
-            <span class="pelement one"></span>
-            <span class="pelement two"></span>
-            <span class="pelement three"></span>
-            <span class="pelement four"></span>
-            <span class="pelement five"></span>
-        </div>
+    <div class="t1 container-fluid template" style="background-color: aliceblue;" id="Template_1">
         <div class="container" id="target">
             <div class="left_side">
                 <div class="profileText">
                     <div class="imgBx">
-                        <img src="mdp.png" alt="Max">
+                        <img src="mdp.png" class="profilepic" alt="Max">
                     </div>
-                    <h2 id="t_fname">Venkat Rastogi <br> <span>Web Developer</span> </h2>
+                    <h2 id="t_name">Venkat Rastogi</h2> <br>
+                    <span>DOB:&nbsp;<span id="t_dob">16 / 02 / 2007</span></span>
+                    <span>Gender:&nbsp;<span id="t_gender"></span>Male</span>
                 </div>
                 <div class="contactInfo">
                     <h3 class="title">Contact Info</h3>
                     <ul>
                         <li>
                             <span class="icon"><i class="fas fa-phone-alt" aria-hidden="true"></i></span>
-                            <span class="text">+91 9429142949</span>
+                            <span class="text" id="t_number">+91 9429142949</span>
                         </li>
                         <li>
                             <span class="icon"><i class="far fa-envelope"></i></span>
-                            <span class="text">venkat_ras@email.com</span>
+                            <span class="text" id="t_email">venkat_ras@email.com</span>
                         </li>
                         <li>
                             <span class="icon"><i class="fas fa-globe"></i></span>
-                            <span class="text">www.mywebsite.com</span>
+                            <span class="text" id="t_website">www.mywebsite.com</span>
                         </li>
                         <li>
                             <span class="icon"><i class="fab fa-linkedin"></i></span>
-                            <span class="text">linkedin.com/me</span>
+                            <span class="text" id="t_linkedIn">linkedin.com/me</span>
                         </li>
                         <li>
                             <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
-                            <span class="text">Chennai, Tamil Nadu, India</span>
+                            <span class="text" id="t_address">Chennai, Tamil Nadu, India</span>
                         </li>
                     </ul>
                 </div>
@@ -84,21 +79,12 @@
                     <ul>
                         <li>
                             <span class="text">English</span>
-                            <span class="percent">
-                                <div style="width: 90%;"></div>
-                            </span>
                         </li>
                         <li>
                             <span class="text">Hindi</span>
-                            <span class="percent">
-                                <div style="width: 80%;"></div>
-                            </span>
                         </li>
                         <li>
                             <span class="text">Gujarati</span>
-                            <span class="percent">
-                                <div style="width: 60%;"></div>
-                            </span>
                         </li>
                     </ul>
                 </div>
@@ -119,40 +105,42 @@
                     </p>
                 </div>
                 <div class="about">
-                    <h2 class="title2">Experience</h2>
-                    <div class="box">
-                        <div class="year_company">
-                            <h5>2019-present</h5>
-                            <h5>Company Name</h5>
+                    <div class="experience">
+                        <h2 class="title2">Experience</h2>
+                        <div class="box">
+                            <div class="year_company">
+                                <h5>2019-present</h5>
+                                <h5>Company Name</h5>
+                            </div>
+                            <div class="text">
+                                <h4>Senior UX Designer</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed veniam voluptate non
+                                    facere, eveniet beatae unde harum quos earum? Eveniet!</p>
+                            </div>
                         </div>
-                        <div class="text">
-                            <h4>Senior UX Designer</h4>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed veniam voluptate non
-                                facere, eveniet beatae unde harum quos earum? Eveniet!</p>
-                        </div>
-                    </div>
 
-                    <div class="box">
-                        <div class="year_company">
-                            <h5>2015-2019</h5>
-                            <h5>Company Name</h5>
+                        <div class="box">
+                            <div class="year_company">
+                                <h5>2015-2019</h5>
+                                <h5>Company Name</h5>
+                            </div>
+                            <div class="text">
+                                <h4>UX/UI Designer</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed veniam voluptate non
+                                    facere, eveniet beatae unde harum quos earum? Eveniet!</p>
+                            </div>
                         </div>
-                        <div class="text">
-                            <h4>UX/UI Designer</h4>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed veniam voluptate non
-                                facere, eveniet beatae unde harum quos earum? Eveniet!</p>
-                        </div>
-                    </div>
 
-                    <div class="box">
-                        <div class="year_company">
-                            <h5>2012-2015</h5>
-                            <h5>Company Name</h5>
-                        </div>
-                        <div class="text">
-                            <h4>Junior UX Designer</h4>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed veniam voluptate non
-                                facere, eveniet beatae unde harum quos earum? Eveniet!</p>
+                        <div class="box">
+                            <div class="year_company">
+                                <h5>2012-2015</h5>
+                                <h5>Company Name</h5>
+                            </div>
+                            <div class="text">
+                                <h4>Junior UX Designer</h4>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed veniam voluptate non
+                                    facere, eveniet beatae unde harum quos earum? Eveniet!</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -161,39 +149,11 @@
                     <h2 class="title2">Professional Skills</h2>
                     <div class="box">
                         <h4>Html</h4>
-                        <div class="percent">
-                            <div style="width:82%"></div>
-                        </div>
-                    </div>
-                    <div class="box">
                         <h4>CSS</h4>
-                        <div class="percent">
-                            <div style="width:76%"></div>
-                        </div>
-                    </div>
-                    <div class="box">
                         <h4>JavaScript</h4>
-                        <div class="percent">
-                            <div style="width:89%"></div>
-                        </div>
-                    </div>
-                    <div class="box">
                         <h4>Photoshop</h4>
-                        <div class="percent">
-                            <div style="width:63%"></div>
-                        </div>
-                    </div>
-                    <div class="box">
                         <h4>Illustrator</h4>
-                        <div class="percent">
-                            <div style="width:54%"></div>
-                        </div>
-                    </div>
-                    <div class="box">
                         <h4>Lightroom</h4>
-                        <div class="percent">
-                            <div style="width:70%"></div>
-                        </div>
                     </div>
                 </div>
 
@@ -206,10 +166,15 @@
                         <li>Cooking</li>
                     </ul>
                 </div>
+                <div class="about achievements">
+                    <h2 class="title2">Achievements</h2>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum illum architecto nesciunt, nisi iste obcaecati quis. Labore ipsum laudantium deserunt, culpa consequatur beatae dolor exercitationem ea ratione velit, ullam temporibus rerum sequi officiis quas vero praesentium eum accusantium quos. Placeat, sed. Dolor sequi voluptates cumque debitis dignissimos temporibus officiis deleniti.
+                        <br>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, id quae sed in ipsa aspernatur iusto tempore voluptatibus deserunt eos nulla aut eum! Ducimus cum explicabo odio a totam magni quod debitis! Ducimus voluptates repellendus aperiam inventore quis voluptatum, minus incidunt assumenda cupiditate vitae neque, aliquam esse veritatis, sed ipsam.
+                    </p>
+                </div>
             </div>
-        </div>
-        <div>
-            <button class="dwnld">Download as pdf</button>
         </div>
     </div>
     </body>

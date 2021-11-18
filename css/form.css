@@ -5,6 +5,13 @@
 #achv_description {
   white-space: pre-wrap;
 }
+.card.p-1{
+  width: auto;
+}
+.card.p-1 img{
+  height: 500px;
+  width: 400px;
+}
 
 /* body {
   position: relative;

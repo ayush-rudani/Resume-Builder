@@ -243,7 +243,7 @@ p {
 }
 .t1 .interest ul {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 .t1 .interest ul li {
   list-style: none;
@@ -255,6 +255,22 @@ p {
 .t1 .dwnld {
   width: 500px;
   font-size: 25px;
+}
+
+.t1 h4{
+  margin: 5px;
+}
+
+.t1 p{
+  margin: 5px;
+}
+
+.t1 h5{
+  margin: 5px;
+}
+
+.t1 .interest ul{
+  padding: 0px;
 }
 
 @media (max-width: 1000px) {
