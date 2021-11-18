@@ -158,7 +158,7 @@ function updateEdu() {
 
     let a = ($(`#accordionEdu .accordion-item:nth-child(${i + 1}) .degree`).val().trim() == '') ? 'Education' : $(`#accordionEdu .accordion-item:nth-child(${i + 1}) .degree`).val().trim();
 
-    let c = ($(`#accordionEdu .accordion-item:nth-child(${i + 1}) .School`).val().trim() == '') ? '' : ' at ' + $(`#accordionEdu .accordion-item:nth-child(${i + 1}) .School`).val().trim();
+    let c = ($(`#accordionEdu .accordion-item:nth-child(${i + 1}) .school`).val().trim() == '') ? '' : ' from ' + $(`#accordionEdu .accordion-item:nth-child(${i + 1}) .school`).val().trim();
 
     $(`#accordionEdu .accordion-item:nth-child(${i + 1}) .accordion-button`).html(a + c);
   }
@@ -166,6 +166,7 @@ function updateEdu() {
 
 function emakeVisible() {
   $("#accordionEdu .accordion-header").css("display", "block");
+  updateEdu();
 }
 
 function delEdu2(event) {
@@ -195,7 +196,7 @@ $("#add_edu").click(function (e) {
     e.preventDefault();
   }
   else {
-
+    updateEdu();
     eduCounter++;
     if ($("#accordionEdu .accordion-item").length > 0) {
       $("#accordionEdu .accordion-header").css("display", "block");

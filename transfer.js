@@ -40,7 +40,7 @@ function generateCV(template) {
     $(`#${template} #t_dob`).html(dob.getDate() + " / " + (dob.getMonth() + 1) + " / " + dob.getFullYear());
     $(`#${template} #t_email`).html($('#email').val());
     $(`#${template} #t_number`).html($('#number').val());
-    $(`#${template} #t_address`).html($('#address').val() + "<br>" + $('#zip').val() + "<br>" + $('#city').val() + ", " + $('#state').val() + ", " + $('#country').val());
+    $(`#${template} #t_address`).html($('#address').val() + "<br>" + $('#zip').val() + "<br>" + ($('#city').val()==null?"":$('#city').val()+", ") +  $('#state').val() + ", " + $('#country').val());
 
     if ($('#website').val().trim() == "") {
         $(`#${template} #t_website`).parent().css('display', 'none');
@@ -112,7 +112,7 @@ function generateCV(template) {
     //  **********    Work    **********
 
     let work_items = $('#accordionWork .accordion-item').length;
-
+    
     for (let i = 0; i < work_items; i++) {
         let job_title = $(`#accordionWork .accordion-item:nth-child(${i + 1}) .job_title`).val().trim();
         let company_name = $(`#accordionWork .accordion-item:nth-child(${i + 1}) .company_name`).val().trim();
