@@ -183,6 +183,28 @@
 
                 <div class="flip-cards d-flex flex-column m-4">
 
+                    <!-- Flip card 0 -->
+                    <div class="fc0">
+                        <div class="flip-card card-container p-2 mb-4 bg-white ">
+
+                            <div class="flip0 card-body">
+                                <h4 class="mx-4 my-0 p-2">Profile</h4>
+                            </div>
+
+                            <div class="panel0 p-1">
+                                <hr>
+
+                                <div class="row mx-2 mb-5">
+                                    <div class="mt-4">
+                                        <label for="profile" class="form-label">Profile</label>
+                                        <textarea class="form-control" id="profile" rows=6></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Flip card 0 End -->
+
                     <!-- Flip card 1 -->
                     <div class="fc1">
 
@@ -780,17 +802,8 @@
 
 
             <div class="right_side">
-                <div class="about">
+                <div class="about prof">
                     <h2 class="title2">Profile</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt atque hic incidunt id, minus
-                        corporis. Aspernatur voluptas quidem dolore. Quam excepturi harum suscipit officia recusandae
-                        aut consequuntur ipsa vitae. Cumque delectus nostrum, sed minus, consequatur officia autem
-                        adipisci sint reiciendis nulla ut voluptatum illo? Neque sapiente sint quisquam dolorum officia?
-                        <br><br>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quaerat deleniti aliquid fuga
-                        distinctio modi ad, iure nobis deserunt, nisi pariatur dicta, cum quo a animi earum nihil quia
-                        tempora.
-                    </p>
                 </div>
                 <div class="about">
                     <div class="experience">
@@ -965,13 +978,13 @@
                 <div class="lower_right">
                     <div class="header profile">
                         <div class="hr title">Profile</div>
-                        <div class="content">
+                        <!-- <div class="content">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ea numquam itaque deserunt,
                             quidem quaerat unde soluta pariatur similique exercitationem molestias nesciunt aut velit,
                             ratione mollitia, quod enim voluptatibus placeat delectus. Eaque assumenda, officia ut
                             obcaecati, voluptates voluptas a laborum minus molestias magnam deserunt impedit sequi
                             dicta? Similique, possimus fuga.
-                        </div>
+                        </div> -->
                     </div>
                     <div class="education header vrr">
                         <div class="hr title">Educational Qualifications</div>
@@ -1119,8 +1132,8 @@
 
             <div class="div col-div-8">
                 <div class="content-box">
-                    <p class="head">Objective</p>
-                    <p class="p3" id="objective" style="font-size: 14px; color:#525252;">Lorem Ipsum is simply
+                    <p class="head">Profile</p>
+                    <p class="p3 objective" id="objective" style="font-size: 14px; color:#525252;">Lorem Ipsum is simply
                         dummy
                         text of
                         the printing
@@ -1188,7 +1201,7 @@
         function slideTog(el) {
             $(el).next().slideToggle(300);
         }
-        $(".flip1, .flip2, .flip3, .flip4, .flip5, .flip6, .flip7").click(function () {
+        $(".flip0, .flip1, .flip2, .flip3, .flip4, .flip5, .flip6, .flip7").click(function () {
             slideTog(this);
         });
 

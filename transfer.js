@@ -244,4 +244,21 @@ function generateCV(template) {
 
 
     //  **********    **********    **********    **********    **********
+
+    // ******************* Profile *****************8**
+
+    let profile = $(`#profile`).val().replaceAll("\n", "<br />\r\n");
+    if (profile !== "") {
+        if (template == "Template_1") {
+            $('.t1 .right_side .prof').append(`<p>${profile}</p>`);
+        }
+        else if (template == 'Template_2') {
+            $('.t2 .lower_right .profile').append(`<div class="content">${profile}</div>`)
+        }
+        else if (template == 'Template_3') {
+            $('.t3 .objective').html(`${profile}`);
+        }
+    }
+
+    //  **********    **********    **********    **********    **********
 }

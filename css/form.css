@@ -5,6 +5,9 @@
 #achv_description {
   white-space: pre-wrap;
 }
+#profile {
+  white-space: pre-wrap;
+}
 .card.p-1{
   width: auto;
 }
