@@ -8,15 +8,36 @@ function template_selector() {
     else if ($('#template_3').prop('checked') == true) {
         generateCV('Template_3');
     }
-    else{
+    else {
         alert("Please select a template.");
     }
 }
 
 function generateCV(template) {
-    document.getElementById('form3').style.display = 'none';
-    document.getElementById(template).style.display = 'flex';
+    document.getElementById('form3').classList.remove('active');
+    if (template == 'Template_3') { document.getElementById(template).style.display = 'block'; }
+    else { document.getElementById(template).style.display = 'flex'; }
+
     document.getElementById('nav').style.display = 'none';
+
+    // document.body.style.zoom = "50%";
+
+    //  **********    **********  Image(Resume) Download/ PDF   **********    **********    **********
+
+    document.querySelector('#dwnldimage').addEventListener('click', function () {
+        // let template2Image = document.getElementById(template).find('#target');
+        let template2Image = $(`#${template}`).find('#target')[0];
+        html2canvas(template2Image).then(function (canvas) {
+            console.log(canvas);
+            return Canvas2Image.saveAsPNG(canvas);
+        });
+    });
+
+    document.querySelector(`#${template} #printCv`).addEventListener('click', function () {
+        window.print();
+    })
+
+    //  **********    **********    **********    **********    **********
 
 
     //  **********      Profile Image       *********
@@ -40,7 +61,7 @@ function generateCV(template) {
     $(`#${template} #t_dob`).html(dob.getDate() + " / " + (dob.getMonth() + 1) + " / " + dob.getFullYear());
     $(`#${template} #t_email`).html($('#email').val());
     $(`#${template} #t_number`).html($('#number').val());
-    $(`#${template} #t_address`).html($('#address').val() + "<br>" + $('#zip').val() + "<br>" + ($('#city').val()==null?"":$('#city').val()+", ") +  $('#state').val() + ", " + $('#country').val());
+    $(`#${template} #t_address`).html($('#address').val() + "<br>" + $('#zip').val() + "<br>" + ($('#city').val() == null ? "" : $('#city').val() + ", ") + $('#state').val() + ", " + $('#country').val());
 
     if ($('#website').val().trim() == "") {
         $(`#${template} #t_website`).parent().css('display', 'none');
@@ -112,7 +133,7 @@ function generateCV(template) {
     //  **********    Work    **********
 
     let work_items = $('#accordionWork .accordion-item').length;
-    
+
     for (let i = 0; i < work_items; i++) {
         let job_title = $(`#accordionWork .accordion-item:nth-child(${i + 1}) .job_title`).val().trim();
         let company_name = $(`#accordionWork .accordion-item:nth-child(${i + 1}) .company_name`).val().trim();

@@ -2,7 +2,9 @@
 * {
   font-family: "Poppins";
 }
-
+.t3 {
+  display: block;
+}
 .t3 .clearfix {
   clear: both;
 }
@@ -29,8 +31,8 @@
   margin: 0px;
   margin-top: 10px;
 }
-.t3 .top-section span{
-color:#ffffff;
+.t3 .top-section span {
+  color: #ffffff;
 }
 .t3 .position {
   font-size: 20px;

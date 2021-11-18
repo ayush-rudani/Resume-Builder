@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="icon" href="images/RB_Logo.png" type="image/x-icon">
     <title>Resume</title>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+    <script src="https://superal.github.io/canvas2image/canvas2image.js"></script>
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="./Templates/template1.css">
     <link rel="stylesheet" href="./Templates/template2.css">
@@ -700,8 +702,8 @@
             <div class="btn-box container d-block text-center" style="width:850px;">
                 <button type="button" class="prev_btn" id="back2"><i class="bi bi-arrow-left-circle me-3"></i>Previous
                     Step</button>
-                <button type="button" onclick="template_selector()" class="next_btn" id="generatecv">Generate CV<i
-                        class="bi bi-arrow-right-circle ms-3"></i></button>
+                <button type="button" onclick="template_selector()" class="generateCv_btn" id="generatecv">Generate CV
+                    <i class="bi bi-file-earmark-person-fill ms-3"></i></button>
             </div>
         </form>
 
@@ -710,7 +712,7 @@
     </div>
 
 
-    <!-- **********     Templates    ********** -->
+    <!-- **********     Templates-1    ********** -->
 
 
     <div class="t1 container-fluid template" style="background-color: aliceblue; display: none;" id="Template_1">
@@ -873,7 +875,10 @@
             </div>
         </div>
         <div>
-            <button class="dwnld">Download as pdf</button>
+            <button type="button" class="btn btn-primary btn-lg mt-5 mb-5 mx-4" id="dwnldimage">Download Resume as
+                Image</button>
+            <button type="button" class="btn btn-primary btn-lg mt-5 mb-5 mx-4" id="printCv">Download Resume as
+                PDF</button>
         </div>
     </div>
 
@@ -1068,10 +1073,18 @@
                 </div>
             </div>
         </div>
+        <div>
+            <button type="button" class="btn btn-primary btn-lg mt-5 mb-5 mx-4" id="dwnldimage">Download Resume as
+                Image</button>
+            <button type="button" class="btn btn-primary btn-lg mt-5 mb-5 mx-4" id="printCv">Download Resume as
+                PDF</button>
+        </div>
     </div>
 
 
     <!-- **********     Template-3      ********** -->
+
+
     <div class="t3 container-fluid template" style="background-color: aliceblue; display:none;" id="Template_3">
         <a onclick="backToForm('t3')">
             <div class="back-to-form"><span><i class="fas fa-angle-double-left fa-3x"></i></span><span
@@ -1091,7 +1104,8 @@
                 <div class="content-box" style="padding-left: 40px;">
                     <p class="head">Contact</p>
                     <p class="p3"><i class="fa fa-phone"></i>&nbsp;&nbsp;<span id="t_number"></span></p>
-                    <p class="p3"><i class="fa fa-envelope"></i>&nbsp;&nbsp;<span id="t_email">xyz@gmail.com</span></p>
+                    <p class="p3"><i class="fa fa-envelope"></i>&nbsp;&nbsp;<span id="t_email">xyz@gmail.com</span>
+                    </p>
                     <p class="p3"><i class="fa fa-home"></i>&nbsp;&nbsp;<span id="t_address"></span></p>
                     <p class="p3"><i class="fab fa-linkedin"></i>&nbsp;&nbsp;<span id="t_linkedIn"></span></p>
                     <p class="p3"><i class="fas fa-globe"></i>&nbsp;&nbsp;<span id="t_website"></span></p>
@@ -1133,7 +1147,8 @@
             <div class="div col-div-8">
                 <div class="content-box">
                     <p class="head">Profile</p>
-                    <p class="p3 objective" id="objective" style="font-size: 14px; color:#525252;">Lorem Ipsum is simply
+                    <p class="p3 objective" id="objective" style="font-size: 14px; color:#525252;">Lorem Ipsum is
+                        simply
                         dummy
                         text of
                         the printing
@@ -1181,7 +1196,16 @@
                 </div>
             </div>
         </div>
+        <div style="width: auto; margin: auto; text-align: center;">
+            <button type="button" class="btn btn-primary btn-lg mt-5 mb-5 mx-4" id="dwnldimage">Download Resume as
+                Image</button>
+            <button type="button" class="btn btn-primary btn-lg mt-5 mb-5 mx-4" id="printCv">Download Resume as
+                PDF</button>
+        </div>
     </div>
+
+
+
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -1191,11 +1215,9 @@
 </body>
 
 <script>
+    // document.body.style.zoom = "80%";
 
-    function backToForm(ele) {
-        $(`.${ele}`).css('display', 'none');
-        $('#form3').addClass('active');
-    }
+
 
     $(document).ready(function () {
         function slideTog(el) {
@@ -1226,8 +1248,8 @@
             });
         });
 
+        let index = 0;
         function changeStep(btn) {
-            let index = 0;
             let active = document.querySelector('form.step.active')
             index = steps.indexOf(active);
             steps[index].classList.remove('active');
@@ -1241,8 +1263,13 @@
         }
 
 
-
     });
+
+    function backToForm(ele) {
+        $(`.${ele}`).css('display', 'none');
+        // console.log(ele.parent());
+        document.getElementById('form3').classList.add('active');
+    }
 
 </script>
 

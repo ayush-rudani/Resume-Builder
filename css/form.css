@@ -8,12 +8,12 @@
 #profile {
   white-space: pre-wrap;
 }
-.card.p-1{
+.card.p-1 {
   width: auto;
 }
-.card.p-1 img{
-    height: 466px;
-    width: 366px;
+.card.p-1 img {
+  height: 466px;
+  width: 366px;
 }
 
 /* body {
@@ -26,10 +26,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 55px;
+  height: 45px;
   border: 1px solid gray;
   padding: 5px;
   border-radius: 10px;
+  cursor: pointer;
 }
 .template.container-fluid {
   position: absolute;
@@ -155,7 +156,8 @@ body {
 /* ------------------------------- */
 
 .next_btn,
-.prev_btn {
+.prev_btn,
+.generateCv_btn {
   border: 1px solid rgb(200, 200, 200);
   border-radius: 6px;
   color: white;
@@ -165,6 +167,9 @@ body {
   width: 180px;
   height: 50px;
   margin-bottom: 50px;
+}
+.generateCv_btn {
+  background-color: #43c5a4;
 }
 
 div[class*="panel"] {

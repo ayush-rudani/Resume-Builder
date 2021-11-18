@@ -22,14 +22,14 @@
   font-family: "Poppins", sans-serif;
 }
 
-.t1 .profileText span{
-    color: #ffffff;
-    line-height: 0.8em;
-    text-transform: uppercase;
-    font-size: 1em;
-    margin-top: 20px;
-    text-align: center;
-    font-weight: 500;
+.t1 .profileText span {
+  color: #ffffff;
+  line-height: 0.8em;
+  text-transform: uppercase;
+  font-size: 1em;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 500;
 }
 .t1 .palette {
   margin-top: 40px;
@@ -63,7 +63,7 @@
 }
 .t1 .container {
   width: 100%;
-  max-width: 1000px;
+  max-width: 950px;
   background-color: #ffffff;
   min-height: 1000px;
   display: grid;
@@ -71,6 +71,7 @@
   margin: 40px;
   margin-top: 10px;
   margin-bottom: 10px;
+  padding: 0;
 }
 .t1 .container .left_side {
   background-color: #003147;
@@ -149,12 +150,12 @@
   font-weight: 500;
 }
 .t1 .contactInfo.education h4:nth-child(2) {
-    font-size: 16px;
+  font-size: 16px;
   color: #fff;
   font-weight: 500;
 }
 .t1 .contactInfo.education h4 {
-    font-size: 16px;
+  font-size: 16px;
   color: #fff;
   font-weight: 300;
 }
@@ -202,7 +203,7 @@ p {
   min-width: 150px;
 }
 .t1 .about .box .year_company h5 {
-    font-size: 13.28px;
+  font-size: 13.28px;
   text-transform: uppercase;
   color: #848c90;
   font-weight: 600;
@@ -212,14 +213,14 @@ p {
   color: #2a7da2;
   font-size: 16px;
 }
-.t1 .about h4{
-    font-size: 16px;
+.t1 .about h4 {
+  font-size: 16px;
 }
 .t1 .skills .box {
   position: relative;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   margin-bottom: 10px;
 }
@@ -257,19 +258,19 @@ p {
   font-size: 25px;
 }
 
-.t1 h4{
+.t1 h4 {
   margin: 5px;
 }
 
-.t1 p{
+.t1 p {
   margin: 5px;
 }
 
-.t1 h5{
+.t1 h5 {
   margin: 5px;
 }
 
-.t1 .interest ul{
+.t1 .interest ul {
   padding: 0px;
 }
 
