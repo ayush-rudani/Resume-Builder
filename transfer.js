@@ -13,7 +13,27 @@ function template_selector() {
     }
 }
 
+function visibler() {
+    $(`.dwnldimage`).css('display', 'inline-block');
+    $(`.printCv`).css('display', 'inline-block');
+    $(`.back-to-form`).css('display', 'flex');
+    $(`.palette`).css('display', 'block');
+}
+function printer() {
+    $(`.dwnldimage`).css('display', 'none');
+    $(`.printCv`).css('display', 'none');
+    $(`.back-to-form`).css('display', 'none');
+    $(`.palette`).css('display', 'none');
+    window.print();
+    setTimeout(visibler, 500);
+}
+
+for (let i = 0; i < 3; i++) {
+    document.querySelectorAll(`.printCv`)[i].addEventListener('click', printer);
+}
+
 function generateCV(template) {
+
     document.getElementById('form3').classList.remove('active');
     if (template == 'Template_3') { document.getElementById(template).style.display = 'block'; }
     else { document.getElementById(template).style.display = 'flex'; }
@@ -33,29 +53,10 @@ function generateCV(template) {
         });
     });
 
-    function visibler(template){
-        $(`#${template} .dwnldimage`).css('display','inline-block');
-        $(`#${template} .printCv`).css('display','inline-block');
-        $(`#${template} .back-to-form`).css('display','flex');
-        $(`#${template} .palette`).css('display','block');
-    }
-
-    function printer(template){
-        $(`#${template} .dwnldimage`).css('display','none');
-        $(`#${template} .printCv`).css('display','none');
-        $(`#${template} .back-to-form`).css('display','none');
-        $(`#${template} .palette`).css('display','none');
-        window.print();
-        setTimeout(visibler(template),500);
-    }
-
-    $(`#${template} .printCv`).unbind('click');
-    $(`#${template} .printCv`).click(printer(template));
-
     // document.querySelector(`#${template} .printCv`).addEventListener('click', function(){
-        // document.querySelector(`#${template} .printCv`).removeEventListener('click',printer(template));
-        // document.querySelector(`#${template} .printCv`).addEventListener('click',printer(template));
-        // printer(template);
+    // document.querySelector(`#${template} .printCv`).removeEventListener('click',printer(template));
+    // document.querySelector(`#${template} .printCv`).addEventListener('click',printer(template));
+    // printer(template);
     // });
 
     //  **********    **********    **********    **********    **********
