@@ -202,6 +202,9 @@ p {
 .t1 .about .box .year_company {
   width: 150px;
 }
+.t1 .about .box .text{
+  width: 100%;
+}
 .t1 .about .box .year_company h5 {
   font-size: 13.28px;
   text-transform: uppercase;
@@ -274,7 +277,7 @@ p {
   padding: 0px;
 }
 
-.t1 .experience .h5{
+.t1 .experience .h5 {
   margin-right: 25px;
   overflow: hidden;
 }

@@ -110,18 +110,18 @@
 }
 .t2 .lower_left .skills .content {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
   margin-bottom: 10px;
 }
-.t2 .lower_left .skills .content .skill{
+.t2 .lower_left .skills .content .skill {
   margin-bottom: 1px;
 }
 .t2 .interests .content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-.t2 .interests .content .con{
+.t2 .interests .content .con {
   margin-bottom: 1px;
 }
 .t2 .languages {
@@ -201,17 +201,17 @@
 .t2 .achievements h4 {
   font-size: 13px;
 }
-.t2 .achievements .val{
+.t2 .achievements .val {
   overflow: hidden;
 }
-.t2 .achievements .content{
+.t2 .achievements .content {
   display: block;
 }
-.t2 .achievements .con{
+.t2 .achievements .con {
   display: block;
   margin-bottom: 25px;
 }
-.t2 .experience .text{
+.t2 .experience .text {
   font-weight: 700;
 }
 
