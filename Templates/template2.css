@@ -208,10 +208,11 @@
   display: block;
 }
 .t2 .achievements .con{
-  display: grid;
-  grid-template-columns: repeat(1,1fr);
-  min-height: 150px;
+  display: block;
   margin-bottom: 25px;
+}
+.t2 .experience .text{
+  font-weight: 700;
 }
 
 @media (max-width: 840px) {

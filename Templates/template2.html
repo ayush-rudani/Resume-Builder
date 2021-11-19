@@ -11,7 +11,7 @@
     <script src="template2.js"></script>
 </head>
 <body>
-    <div class="t2">
+    <div class="t2 template" style="background-color: aliceblue;" id="Template_2">
         <div class="palette">
             <span class="pelement one"></span>
             <span class="pelement two"></span>
@@ -25,33 +25,41 @@
             </div>
             <div class="lower">
                 <div class="lower_left">
-                    <img src="mdp.png" alt="Max">
+                    <img src="mdp.png" class="profilepic" alt="Max">
                     <div class="header personal">
                         <div class="title">Personal</div>
                         <div class="content">
                             <div class="con">
                                 <div class="heading">Name</div>
-                                <div class="value">Venkat Rastogi</div>
-                            </div>    
+                                <div class="value" id="t_name">Venkat Rastogi</div>
+                            </div>
+                            <div class="con">
+                                <div class="heading">Gender</div>
+                                <div class="value" id="t_gender">Male</div>
+                            </div>
+                            <div class="con">
+                                <div class="heading">DOB</div>
+                                <div class="value" id="t_dob">01/03/2009</div>
+                            </div>
                             <div class="con">
                                 <div class="heading">Address</div>
-                                <div class="value">Chennai, Tamil Nadu, India</div>
+                                <div class="value" id="t_address">Chennai, Tamil Nadu, India</div>
                             </div>
                             <div class="con">
                                 <div class="heading">Phone number</div>
-                                <div class="value">+919947382613</div>
+                                <div class="value" id="t_number">+919947382613</div>
                             </div>
                             <div class="con">
                                 <div class="heading">Email</div>
-                                <div class="value">venkat_ras@email.com</div>
+                                <div class="value" id="t_email">venkat_ras@email.com</div>
                             </div>
                             <div class="con">
                                 <div class="heading">Linked in</div>
-                                <div class="value">linkedin.com/me</div>
+                                <div class="value" id="t_linkedIn">linkedin.com/me</div>
                             </div>
                             <div class="con">
                                 <div class="heading">Website</div>
-                                <div class="value">www.mywebsite.com</div>
+                                <div class="value" id="t_website">www.mywebsite.com</div>
                             </div>
                         </div>
                     </div>
@@ -60,54 +68,11 @@
                         <div class="title">Skills</div>
                         <div class="content">
                             <div class="skill">HTML</div>
-                            <div class="percent">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="content">
                             <div class="skill">CSS</div>
-                            <div class="percent">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="content">
                             <div class="skill">JavaScript</div>
-                            <div class="percent">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="content">
                             <div class="skill">Photoshop</div>
-                            <div class="percent">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="content">
                             <div class="skill">Illustrator</div>
-                            <div class="percent">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                        <div class="content">
                             <div class="skill">Lightroom</div>
-                            <div class="percent">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
                         </div>
                     </div>
 
@@ -128,38 +93,9 @@
                         <div class="content">
                             <div class="con">
                                 <div class="lang">English</div>
-                                <div class="percent">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                            <div class="con">
                                 <div class="lang">Hindi</div>
-                                <div class="percent">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                            <div class="con">
                                 <div class="lang">Gujarati</div>
-                                <div class="percent">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                            <div class="con">
                                 <div class="lang">French</div>
-                                <div class="percent">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -168,10 +104,14 @@
                     <div class="header profile">
                         <div class="hr title">Profile</div>
                         <div class="content">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ea numquam itaque deserunt, quidem quaerat unde soluta pariatur similique exercitationem molestias nesciunt aut velit, ratione mollitia, quod enim voluptatibus placeat delectus. Eaque assumenda, officia ut obcaecati, voluptates voluptas a laborum minus molestias magnam deserunt impedit sequi dicta? Similique, possimus fuga.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error ea numquam itaque deserunt,
+                            quidem quaerat unde soluta pariatur similique exercitationem molestias nesciunt aut velit,
+                            ratione mollitia, quod enim voluptatibus placeat delectus. Eaque assumenda, officia ut
+                            obcaecati, voluptates voluptas a laborum minus molestias magnam deserunt impedit sequi
+                            dicta? Similique, possimus fuga.
                         </div>
                     </div>
-                    <div class="education header vr">
+                    <div class="education header vrr">
                         <div class="hr title">Educational Qualifications</div>
                         <div class="content">
                             <div class="con">
@@ -191,57 +131,44 @@
                             </div>
                         </div>
                     </div>
-                    <div class="experience header vr">
+                    <div class="experience header vrr">
                         <div class="hr title">Experience</div>
                         <div class="content">
                             <div class="con">
-                                <div class="time">
-                                    <h4>2019-present</h4>
-                                    <h4>Company Name</h4>
-                                </div>
-                                <div class="exp">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas est dolorem, eveniet velit exercitationem repudiandae iste suscipit nihil, eligendi sed nam molestiae ducimus labore officia expedita. Ullam voluptates officiis debitis consectetur soluta minus quidem quisquam reprehenderit odio, facilis doloribus excepturi cum voluptatem explicabo sint incidunt commodi! Beatae nostrum debitis labore.
-                                </div>
+                                <div class="time"><h4>2019-present</h4><h4>Company Name</h4></div>
+                                <div class="box"><div class="text">Senior Developer</div><div class="exp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas est dolorem, eveniet velit exercitationem repudiandae iste suscipit nihil, eligendi sed nam molestiae ducimus labore officia expedita. Ullam voluptates officiis debitis consectetur soluta minus quidem quisquam reprehenderit odio, facilis doloribus excepturi cum voluptatem explicabo sint incidunt commodi! Beatae nostrum debitis labore.</div></div>
                             </div>
                             <div class="con">
-                                <div class="time">
-                                    <h4>2015-2019</h4>
-                                    <h4>Company Name</h4>
-                                </div>
-                                <div class="exp">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem necessitatibus odit eius nam nisi beatae aut esse omnis nostrum ratione consequuntur, cumque dignissimos assumenda culpa et illum? Sunt consequuntur, autem doloremque ducimus quo unde molestias cumque at quaerat maiores consequatur eum reiciendis ut rerum hic tempore debitis magnam dicta numquam!
-                                </div>
+                                <div class="time"><h4>2015-2019</h4><h4>Company Name</h4></div>
+                                <div class="box"><div class="text">Junior Developer</div><div class="exp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem necessitatibus odit eius nam nisi beatae aut esse omnis nostrum ratione consequuntur, cumque dignissimos assumenda culpa et illum? Sunt consequuntur, autem doloremque ducimus quo unde molestias cumque at quaerat maiores consequatur eum reiciendis ut rerum hic tempore debitis magnam dicta numquam!</div></div>
                             </div>
                             <div class="con">
-                                <div class="time">
-                                    <h4>2012-2015</h4>
-                                    <h4>Company Name</h4>
-                                </div>
-                                <div class="exp">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eaque aperiam voluptates non magni iusto expedita sapiente error qui, perferendis suscipit. Iste rerum cupiditate excepturi ea ipsam modi dolorum totam?
-                                </div>
+                                <div class="time"><h4>2012-2015</h4><h4>Company Name</h4></div>
+                                <div class="box"><div class="text">Intern</div><div class="exp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta eaque aperiam voluptates non magni iusto expedita sapiente error qui, perferendis suscipit. Iste rerum cupiditate excepturi ea ipsam modi dolorum totam?</div></div>
                             </div>
                         </div>
                     </div>
-                    <div class="achievements header vr">
+                    <div class="achievements header vrr">
                         <div class="hr title">Achievements</div>
                         <div class="content">
                             <div class="con">
-                                <div class="time"><h4>2017</h4></div>
                                 <div class="val">
-                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt accusamus pariatur voluptatem minima dolor tenetur iste unde vitae ratione. Facere nisi, distinctio aperiam aliquid cupiditate eum repudiandae laudantium iste nobis!
-                                </div>
-                            </div>
-                            <div class="con">
-                                <div class="time"><h4>2010</h4></div>
-                                <div class="val">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius fugit tempore optio, nostrum exercitationem minus ea animi ipsa sequi dolor?
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mattis tincidunt
+                                    nibh sed dapibus. Cras vel arcu eu est maximus luctus sagittis in augue. Vestibulum
+                                    molestie non est eu ultricies. Nunc convallis ut eros nec semper. Etiam ut auctor
+                                    eros. Praesent lobortis vestibulum lorem at consectetur. Ut malesuada a magna nec
+                                    sollicitudin. Nulla a luctus mi. Fusce iaculis hendrerit turpis, nec maximus eros
+                                    ullamcorper nec. Quisque id nunc consectetur, facilisis erat non, viverra dolor.
+                                    Aenean nisi turpis, dignissim et elit ut, facilisis pellentesque sem. Integer ac mi
+                                    accumsan metus semper auctor id eget sapien.
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <div>
         </div>
     </div>
 </body>

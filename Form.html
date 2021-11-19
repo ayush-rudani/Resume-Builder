@@ -90,32 +90,32 @@
                     </div>
 
                     <div class="col-md-6">
-                        <label for="cnumber" class="form-label">Phone Number</label>
+                        <label for="number" class="form-label">Phone Number</label>
                         <input type="text" class="form-control" id="number" placeholder="xxxxxxxxxx">
                     </div>
 
                     <div class="col-12 mt-3">
-                        <label for="inputAddress" class="form-label">Address</label>
+                        <label for="address" class="form-label">Address</label>
                         <input type="text" class="form-control" id="address" placeholder="1234 Main St">
                     </div>
 
 
                     <div class="col-md-5 mt-3">
-                        <label for="inputState" class="form-label">Country</label>
+                        <label for="country" class="form-label">Country</label>
                         <select class="form-select" id="country" onchange="getStates()">
                             <option selected>Country</option>
                         </select>
                     </div>
 
                     <div class="col-md-4 mt-3">
-                        <label for="inputState" class="form-label">State</label>
+                        <label for="state" class="form-label">State</label>
                         <select class="form-select" id="state" onchange="getCities()">
                             <option selected>State</option>
                         </select>
                     </div>
 
                     <div class="col-md-3 mt-3">
-                        <label for="inputCity" class="form-label">City</label>
+                        <label for="city" class="form-label">City</label>
                         <select class="form-select" id="city">
                             <option selected>City</option>
                         </select>
@@ -124,7 +124,7 @@
 
                     <div class="row">
                         <div class="col-md-4 mt-3">
-                            <label for="inputZip" class="form-label">Zip</label>
+                            <label for="zip" class="form-label">Zip</label>
                             <input type="text" class="form-control" id="zip">
                         </div>
                         <div class="col-md-4 mt-3">
@@ -137,7 +137,7 @@
                         </div>
 
                         <div class="col-md-4 mt-3">
-                            <label for="bdate" class="form-label">Birth Date</label>
+                            <label for="dob" class="form-label">Birth Date</label>
                             <input type="date" class="date" id="dob">
                         </div>
                     </div>
@@ -148,7 +148,7 @@
                     </div>
 
                     <div class="col-6 mt-3">
-                        <label for="Website" class="form-label">Website</label>
+                        <label for="website" class="form-label">Website</label>
                         <input type="text" class="form-control" id="website">
                     </div>
 
@@ -239,7 +239,7 @@
                                                 <div class="row mx-2 mb-5">
 
                                                     <div class="col-md-6 ">
-                                                        <label for="degree" class="form-label">Degree</label>
+                                                        <label for="" class="form-label">Degree</label>
                                                         <input type="text" class="form-control degree" id="degree"
                                                             placeholder="e.g. B.Tech ">
                                                     </div>
@@ -251,7 +251,7 @@
                                                     </div> -->
 
                                                     <div class="col-12 mt-3">
-                                                        <label for="School" class="form-label">School/University</label>
+                                                        <label for="" class="form-label">School/University</label>
                                                         <input type="text" class="form-control school" id="school"
                                                             placeholder="e.g. International Academy.">
                                                     </div>
@@ -336,7 +336,7 @@
                                                     <div class="row mx-2 mb-5">
 
                                                         <div class="col-md-6 ">
-                                                            <label for="email" class="form-label">Job Title</label>
+                                                            <label for="" class="form-label">Job Title</label>
                                                             <input type="text" class="form-control job_title"
                                                                 id="job_title" placeholder="e.g. Web Devloper">
                                                         </div>
@@ -348,7 +348,7 @@
                                                         </div> -->
 
                                                         <div class="col-12 mt-3">
-                                                            <label for="company" class="form-label">Company Name</label>
+                                                            <label for="" class="form-label">Company Name</label>
                                                             <input type="text" class="form-control company_name"
                                                                 id="company_name" placeholder="e.g. PwC">
                                                         </div>
@@ -441,9 +441,9 @@
                                                         <div class="d-flex flex-row">
 
                                                             <div class="col-md-6">
-                                                                <label for="skill" class="form-label">Skill</label>
+                                                                <label for="" class="form-label">Skill</label>
                                                                 <input type="text" class="form-control skill" id="skill"
-                                                                    placeholder="e.g. photoshop, Python, DBMS">
+                                                                    placeholder="e.g. photoshop, Python, DBMS" onkeydown="adder(event,'skill')">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -499,7 +499,7 @@
                                                 <div class="col-12">
                                                     <!-- <label for="hobby1" class="form-label">Hobby</label> -->
                                                     <input type="text" class="form-control hobby"
-                                                        placeholder="e.g. Reading, Writing">
+                                                        placeholder="e.g. Reading, Writing" onkeydown="adder(event,'hobby')">
                                                 </div>
 
                                             </div>
@@ -589,7 +589,7 @@
                                                     <div class="col-12 mt-3">
                                                         <div class="d-flex flex-row">
                                                             <input type="text" class="form-control lang" id="lang"
-                                                                placeholder="e.g. English, French, German">
+                                                                placeholder="e.g. English, French, German" onkeydown="adder(event,'lang')">
                                                         </div>
                                                     </div>
 
@@ -684,7 +684,7 @@
                                     <img src="images/T3.PNG" class="card-img-top" alt="...">
                                     <div class="card-body">
                                         <div class="btn_box container d-block text-center">
-                                            <h5 class="card-title">Harvard</h5>
+                                            <h5 class="card-title">Edinburgh</h5>
                                             <input class="form-check-input" type="radio" name="selected_template"
                                                 id="template_3">
                                         </div>
@@ -733,7 +733,7 @@
             <div class="left_side">
                 <div class="profileText">
                     <div class="imgBx">
-                        <img src="mdp.png" class="profilepic" alt="Max">
+                        <img src="Templates/mdp.png" class="profilepic" alt="Max">
                     </div>
                     <h2 id="t_name">Venkat Rastogi</h2> <br>
                     <span>DOB:&nbsp;<span id="t_dob"></span></span>
@@ -1107,7 +1107,7 @@
                     <p class="p3"><i class="fa fa-envelope"></i>&nbsp;&nbsp;<span id="t_email">xyz@gmail.com</span>
                     </p>
                     <p class="p3"><i class="fa fa-home"></i>&nbsp;&nbsp;<span id="t_address"></span></p>
-                    <p class="p3"><i class="fab fa-linkedin"></i>&nbsp;&nbsp;<span id="t_linkedIn"></span></p>
+                    <p class="p3" style="overflow:hidden;"><i class="fab fa-linkedin"></i><span id="t_linkedIn"></span></p>
                     <p class="p3"><i class="fas fa-globe"></i>&nbsp;&nbsp;<span id="t_website"></span></p>
                     <br />
 

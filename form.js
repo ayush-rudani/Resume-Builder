@@ -4,7 +4,22 @@ let work = 0;
 let interest = 0;
 let lang = 0;
 
-//This is for color palet
+function adder(event,element){
+  if(event.key==='Enter'){
+    if(element=='skill'){$('#add_skill').click();
+    document.getElementsByClassName('skill')[$('.skill').length-1].focus();}
+    else if(element=='hobby'){
+      $('#add_interest').click();
+      document.getElementsByClassName('hobby')[$('.hobby').length-1].focus();
+    }
+    else{
+      $('#add_lang').click();
+      document.getElementsByClassName('lang')[$('.lang').length-1].focus();
+    }
+  }
+}
+
+//This is for color pelette
 
 $(document).ready(function () {
   $('.one').css("border", "3px solid white");

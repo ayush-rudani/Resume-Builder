@@ -209,6 +209,14 @@ div[class*="panel"] {
   background-color: #80808088;
 }
 
+.back-to-form{
+  background-color: #80808091;
+  border-radius: 25px;
+}
+.back-to-form:hover{
+  background-color: #80808080;
+}
+
 /* Scroll Bar  */
 
 ::-webkit-scrollbar {
