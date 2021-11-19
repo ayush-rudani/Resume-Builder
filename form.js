@@ -4,17 +4,19 @@ let work = 0;
 let interest = 0;
 let lang = 0;
 
-function adder(event,element){
-  if(event.key==='Enter'){
-    if(element=='skill'){$('#add_skill').click();
-    document.getElementsByClassName('skill')[$('.skill').length-1].focus();}
-    else if(element=='hobby'){
-      $('#add_interest').click();
-      document.getElementsByClassName('hobby')[$('.hobby').length-1].focus();
+function adder(event, element) {
+  if (event.key === 'Enter') {
+    if (element == 'skill') {
+      $('#add_skill').click();
+      document.getElementsByClassName('skill')[$('.skill').length - 1].focus();
     }
-    else{
+    else if (element == 'hobby') {
+      $('#add_interest').click();
+      document.getElementsByClassName('hobby')[$('.hobby').length - 1].focus();
+    }
+    else {
       $('#add_lang').click();
-      document.getElementsByClassName('lang')[$('.lang').length-1].focus();
+      document.getElementsByClassName('lang')[$('.lang').length - 1].focus();
     }
   }
 }
@@ -67,17 +69,25 @@ function validate_chg_color(el) {
 //  **********    **********  Form - 1  Validation  **********    **********    **********
 
 function validate_form1(btn) {
+  let finalValid = true;
   let isValid = true;
+  // console.log(document.getElementsByClassName('imgContainer')[0]);
+  let img_div = document.getElementsByClassName('imgContainer')[0];
+  if ($('#inpImg').val() == "") { validate_chg_color(img_div); isValid = false; finalValid = false; }
+  $('#form1').find('select').each(function () {
+    if ($(this).attr('city') == 'city' || $(this).attr('country') == 'country' || $(this).attr('state') == 'state') { isValid = validate_chg_color(this); if (!isValid) { finalValid = false; } }
+  });
   $('#form1').find('input').each(function () {
-    if ($(this).attr('id') == 'linkedIn' || $(this).attr('id') == 'Website') { }
+    if ($(this).attr('id') == 'linkedIn' || $(this).attr('id') == 'website') { }
     else {
       isValid = validate_chg_color(this);
+      if (!isValid) { finalValid = false; }
     }
   });
   if (isValid == false) {
-    btn.preventDefault();
+    // btn.preventDefault();
   }
-  return isValid;
+  return finalValid;
 }
 
 //  **********    **********    **********    **********    **********
@@ -594,6 +604,7 @@ $('#inpImg').change(function () {
     reader.readAsDataURL(file);
   }
   else {
+    // validate_chg_color(this);
     document.getElementById('previewText').style.display = null;
     document.getElementById('image').style.display = null;
     document.getElementsByClassName('imgContainer')[0].style.border = null;
@@ -617,34 +628,3 @@ function templateRadioSelector(ele) {
   $(ele).css('background-color', '#80808088');
   $(ele).find('input').prop('checked', true);
 }
-
-
-// ********************************* Template 1 ****************************************
-
-function addStr(str, index, stringToAdd) {
-  return str.substring(0, index) + stringToAdd + str.substring(index, str.length);
-}
-
-function appender(z, value) {
-  return z.substring(0, z.length - 1) + value + z.substring(z.length - 1);
-}
-
-window.onload = function () {
-  document.getElementsByClassName("one")[0].click();
-};
-
-$(document).ready(function () {
-  $('.t1 .one').css("border", "3px solid white");
-  $('.t1 .pelement').click(function () {
-    $('.t1 .pelement').css("border", "3px solid transparent");
-    $(this).css("border", "3px solid white");
-    $('.t1 .left_side').css("background-color", $(this).css("background-color"));
-    $('.t1 .right_side .about .text h4').css("color", appender(addStr($(this).css("background-color"), 3, "a"), ", 0.82"));
-    $('.t1 .right_side .percent div').css("background-color", appender(addStr($(this).css("background-color"), 3, "a"), ", 0.65"));
-  })
-})
-
-
-
-
-// ********************************* Template 2's js has been added using script src ****************************************

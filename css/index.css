@@ -54,14 +54,17 @@ background:linear-gradient(135deg,rgba(0,97,242,1)0%,rgba(105,0,199,1)100%);*/
 li {
   padding-left: 2.5rem;
 }
-
+.dev a{
+  text-decoration: none;
+  color: black;
+}
 .page.dev{
   background: rgb(240, 240, 240);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 80% 95%,0 100%);
 }
 .dev .card{
   width:350px; 
-  height:450px; 
+  height:500px; 
   box-shadow:2px 2px 14px 3px #726c6c;
   background-color:rgb(240, 240, 240);
 }

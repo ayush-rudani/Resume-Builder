@@ -62,14 +62,11 @@
                 </div>
                 <hr style="width:95%; margin: 10px;" , size="3" class="bg-secondary">
                 <div class="d-flex flex-row">
-                    <!-- <div class="img-thumbnail float-left m-4"
-                        style="width: 150px; height:150px; border:1px doted black;">
-                        <img src="..." alt="">
-                    </div> -->
                     <input type="file" accept="image/*" name="inpImg" id="inpImg">
                     <div class="imgContainer float-left m-4">
                         <img src="" alt="Image Preview" id="image">
-                        <span id="previewText"><span id="innerSpan">Image preview</span></span>
+                        <span id="previewText"><span id="innerSpan"><i class="fas fa-upload me-2"></i>Upload
+                                photo</span></span>
                     </div>
                     <div class="row col-6  m-3 " style="float:left;">
                         <div class="col-12">
@@ -443,7 +440,8 @@
                                                             <div class="col-md-6">
                                                                 <label for="" class="form-label">Skill</label>
                                                                 <input type="text" class="form-control skill" id="skill"
-                                                                    placeholder="e.g. photoshop, Python, DBMS" onkeydown="adder(event,'skill')">
+                                                                    placeholder="e.g. photoshop, Python, DBMS"
+                                                                    onkeydown="adder(event,'skill')">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -499,7 +497,8 @@
                                                 <div class="col-12">
                                                     <!-- <label for="hobby1" class="form-label">Hobby</label> -->
                                                     <input type="text" class="form-control hobby"
-                                                        placeholder="e.g. Reading, Writing" onkeydown="adder(event,'hobby')">
+                                                        placeholder="e.g. Reading, Writing"
+                                                        onkeydown="adder(event,'hobby')">
                                                 </div>
 
                                             </div>
@@ -589,7 +588,8 @@
                                                     <div class="col-12 mt-3">
                                                         <div class="d-flex flex-row">
                                                             <input type="text" class="form-control lang" id="lang"
-                                                                placeholder="e.g. English, French, German" onkeydown="adder(event,'lang')">
+                                                                placeholder="e.g. English, French, German"
+                                                                onkeydown="adder(event,'lang')">
                                                         </div>
                                                     </div>
 
@@ -875,7 +875,8 @@
             </div>
         </div>
         <div>
-            <button type="button" class="btn btn-primary btn-lg mt-5 mb-5 mx-4 dwnldimage" id="dwnldimage">Download Resume as
+            <button type="button" class="btn btn-primary btn-lg mt-5 mb-5 mx-4 dwnldimage" id="dwnldimage">Download
+                Resume as
                 Image</button>
             <button type="button" class="btn btn-primary btn-lg mt-5 mb-5 mx-4 printCv" id="printCv">Download Resume as
                 PDF</button>
@@ -1074,7 +1075,8 @@
             </div>
         </div>
         <div>
-            <button type="button" class="btn btn-primary btn-lg mt-5 mb-5 mx-4 dwnldimage" id="dwnldimage">Download Resume as
+            <button type="button" class="btn btn-primary btn-lg mt-5 mb-5 mx-4 dwnldimage" id="dwnldimage">Download
+                Resume as
                 Image</button>
             <button type="button" class="btn btn-primary btn-lg mt-5 mb-5 mx-4 printCv" id="printCv">Download Resume as
                 PDF</button>
@@ -1107,7 +1109,8 @@
                     <p class="p3"><i class="fa fa-envelope"></i>&nbsp;&nbsp;<span id="t_email">xyz@gmail.com</span>
                     </p>
                     <p class="p3"><i class="fa fa-home"></i>&nbsp;&nbsp;<span id="t_address"></span></p>
-                    <p class="p3" style="overflow:hidden;"><i class="fab fa-linkedin"></i><span id="t_linkedIn"></span></p>
+                    <p class="p3" style="overflow:hidden;"><i class="fab fa-linkedin"></i><span id="t_linkedIn"></span>
+                    </p>
                     <p class="p3"><i class="fas fa-globe"></i>&nbsp;&nbsp;<span id="t_website"></span></p>
                     <br />
 
@@ -1197,7 +1200,8 @@
             </div>
         </div>
         <div style="width: auto; margin: auto; text-align: center;">
-            <button type="button" class="btn btn-primary btn-lg mt-5 mb-5 mx-4 dwnldimage" id="dwnldimage">Download Resume as
+            <button type="button" class="btn btn-primary btn-lg mt-5 mb-5 mx-4 dwnldimage" id="dwnldimage">Download
+                Resume as
                 Image</button>
             <button type="button" class="btn btn-primary btn-lg mt-5 mb-5 mx-4 printCv" id="printCv">Download Resume as
                 PDF</button>
@@ -1238,8 +1242,8 @@
 
         next_btn.forEach(button => {
             button.addEventListener('click', () => {
-                // if (validate_form1(this))
-                changeStep('next');
+                if (validate_form1(this))
+                    changeStep('next');
             });
         });
         prev_btn.forEach(button => {
@@ -1273,31 +1277,31 @@
         $('.t1 .left_side .education ul').html('');
         $('.t2 .lower_right .education .content').html('');
         $('.t3 .education').html('');
-        
+
         // ***************** Emptying work ******************* 
         $('.t1 .right_side .experience').html('<h2 class="title2">Experience</h2>');
         $('.t2 .lower_right .experience .content').html('');
         $('.t3 .content-box .experience').html('');
-        
+
         // ***************** Emptying skill ******************* 
         $('.t1 .right_side .skills .box').html('');
         $('.t2 .lower .lower_left .skills .content').html('');
         $('.t3 .skills').html('');
-        
+
         // ***************** Emptying languages ******************* 
         $('.t1 .left_side .language ul').html('');
         $('.t2 .lower .lower_left .languages .content .con').html('');
         $('.t3 .content-box .languages').html('<p class="head">Languages</p>');
-        
+
         // ***************** Emptying achievements ******************* 
         $('.t1 .right_side .achievements').html(`<h2 class="title2">Achievements</h2>`);
         $('.t2 .lower_right .achievements .content .con').html('');
-        
+
         // ***************** Emptying profile ******************* 
         $('.t1 .right_side .prof').html('<h2 class="title2">Profile</h2>')
         $('.t2 .lower_right .profile').html('<div class="hr title">Profile</div>')
         $('.t3 .objective').html('');
-        
+
         // ***************** Emptying interest ******************* 
         $('.t1 .right_side .interest ul').html('');
         $('.t2 .lower .lower_left .interests .content').html('');
