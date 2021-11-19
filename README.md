@@ -36,12 +36,12 @@ _**Created by :-**_ <br>[Ayush Rudani ( CE104 )](https://github.com/R-Ayush777)<
 
 ## Watch Demo Video :-
 
-(Partial Project Link)
-"[Resume Builder](https://drive.google.com/file/d/1X8XSruU315Ziyao32fiOv2zgZ8U-nqOP/view)"
+(Project Demo Link)
+"[Resume Builder](https://drive.google.com/file/d/1EuOOZCdjE9vxb4UhVG27ybTMskUWizxt/view?usp=sharing)"
 
 <br>
 
-![Home](WDW-Project-Video.gif)
+![Home](WDW-ResumeBuilder.gif)
 
 <br>
 
