@@ -171,11 +171,11 @@ function generateCV(template) {
         else if (template == 'Template_2') {
             $('.t2 .lower_right .experience .content').append(`<div class="con">
             <div class="time"><h4>${srt_date}-${end_date}</h4><h4>${company_name}</h4></div>
-            <div class="exp">${work_desc}</div>
+            <div class="box"><div class="text">${job_title}</div><div class="exp">${work_desc}</div></div>
         </div>`)
         }
         else if (template == 'Template_3') {
-            $('.t3 .content-box .experience').append(`<p class="job-title">${job_title}&nbsp;(${srt_date}-${end_date})</p>
+            $('.t3 .content-box .experience').append(`<p class="job-title">${job_title}&nbsp;at&nbsp;${company_name}&nbsp;(${srt_date}-${end_date})</p>
             <p class="par-4">${work_desc}</p>`)
         }
     }
@@ -239,10 +239,10 @@ function generateCV(template) {
             $('.t1 .left_side .language ul').append(`<li><span class="text">${lang}</span></li>`);
         }
         else if (template == 'Template_2') {
-            $('.t2 .lower .lower_left .languages .content .con').append(`<div class="lang">${lang}</div>`)
+            $('.t2 .lower .lower_left .languages .content .con').append(`<div class="lang">${lang}</div>`);
         }
         else if (template == 'Template_3') {
-            $('.t3 .content-box .languages').append(`<p class="p3">${lang}</p>`)
+            $('.t3 .content-box .languages').append(`<p class="p3">${lang}</p>`);
         }
     }
 

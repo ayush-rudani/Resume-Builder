@@ -1181,7 +1181,7 @@
                     </div>
                     <br />
 
-                    <p class="head">Eduction</p>
+                    <p class="head">Education</p>
                     <div class="education">
                         <!-- <p class="degree">High School (2009-2010)</p>
                         <p class="par-4">
@@ -1267,8 +1267,37 @@
 
     function backToForm(ele) {
         $(`.${ele}`).css('display', 'none');
-        // console.log(ele.parent());
+        document.getElementById('nav').style.display = 'block';
         document.getElementById('form3').classList.add('active');
+        // ***************** Emptying education ******************* 
+        $('.t1 .left_side .education ul').html('');
+        $('.t2 .lower_right .education .content').html('');
+        $('.t3 .education').html('');
+        
+        // ***************** Emptying work ******************* 
+        $('.t1 .right_side .experience').html('<h2 class="title2">Experience</h2>');
+        $('.t2 .lower_right .experience .content').html('');
+        $('.t3 .content-box .experience').html('');
+        
+        // ***************** Emptying skill ******************* 
+        $('.t1 .right_side .skills .box').html('');
+        $('.t2 .lower .lower_left .skills .content').html('');
+        $('.t3 .skills').html('');
+        
+        // ***************** Emptying languages ******************* 
+        $('.t1 .left_side .language ul').html('');
+        $('.t2 .lower .lower_left .languages .content .con').html('');
+        $('.t3 .content-box .languages').html('<p class="head">Languages</p>');
+        
+        // ***************** Emptying achievements ******************* 
+        $('.t1 .right_side .achievements').html(`<h2 class="title2">Achievements</h2>`);
+        $('.t2 .lower_right .achievements .content .con').html('');
+        
+        // ***************** Emptying profile ******************* 
+        $('.t1 .right_side .prof').html('<h2 class="title2">Profile</h2>')
+        $('.t2 .lower_right .profile').html('<div class="hr title">Profile</div>')
+        $('.t3 .objective').html('');
+
     }
 
 </script>

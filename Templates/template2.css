@@ -195,9 +195,14 @@
 }
 .t2 .experience h4 {
   font-size: 13px;
+  margin-bottom: 4px;
+  margin-right: 25px;
 }
 .t2 .achievements h4 {
   font-size: 13px;
+}
+.t2 .achievements .val{
+  overflow: hidden;
 }
 .t2 .achievements .content{
   display: block;

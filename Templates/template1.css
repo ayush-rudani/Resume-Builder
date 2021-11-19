@@ -200,7 +200,7 @@ p {
   margin: 20px 0;
 }
 .t1 .about .box .year_company {
-  min-width: 150px;
+  width: 150px;
 }
 .t1 .about .box .year_company h5 {
   font-size: 13.28px;
@@ -272,6 +272,11 @@ p {
 
 .t1 .interest ul {
   padding: 0px;
+}
+
+.t1 .experience .h5{
+  margin-right: 25px;
+  overflow: hidden;
 }
 
 @media (max-width: 1000px) {
