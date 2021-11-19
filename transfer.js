@@ -33,9 +33,30 @@ function generateCV(template) {
         });
     });
 
-    document.querySelector(`#${template} #printCv`).addEventListener('click', function () {
+    function visibler(template){
+        $(`#${template} .dwnldimage`).css('display','inline-block');
+        $(`#${template} .printCv`).css('display','inline-block');
+        $(`#${template} .back-to-form`).css('display','flex');
+        $(`#${template} .palette`).css('display','block');
+    }
+
+    function printer(template){
+        $(`#${template} .dwnldimage`).css('display','none');
+        $(`#${template} .printCv`).css('display','none');
+        $(`#${template} .back-to-form`).css('display','none');
+        $(`#${template} .palette`).css('display','none');
         window.print();
-    })
+        setTimeout(visibler(template),500);
+    }
+
+    $(`#${template} .printCv`).unbind('click');
+    $(`#${template} .printCv`).click(printer(template));
+
+    // document.querySelector(`#${template} .printCv`).addEventListener('click', function(){
+        // document.querySelector(`#${template} .printCv`).removeEventListener('click',printer(template));
+        // document.querySelector(`#${template} .printCv`).addEventListener('click',printer(template));
+        // printer(template);
+    // });
 
     //  **********    **********    **********    **********    **********
 
@@ -58,7 +79,7 @@ function generateCV(template) {
     let dob = new Date($('#dob').val());
     $(`#${template} #t_name`).html($('#fname').val() + " " + $('#lname').val());
     $(`#${template} #t_gender`).html($('#gender').val());
-    $(`#${template} #t_dob`).html(dob.getDate() + " / " + (dob.getMonth() + 1) + " / " + dob.getFullYear());
+    $(`#${template} #t_dob`).html(String(dob.getDate()).padStart(2, '0') + "/" + String(dob.getMonth() + 1).padStart(2, '0') + "/" + dob.getFullYear());
     $(`#${template} #t_email`).html($('#email').val());
     $(`#${template} #t_number`).html($('#number').val());
     $(`#${template} #t_address`).html($('#address').val() + "<br>" + $('#zip').val() + "<br>" + ($('#city').val() == null ? "" : $('#city').val() + ", ") + $('#state').val() + ", " + $('#country').val());
