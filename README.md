@@ -47,7 +47,7 @@ _**Created by :-**_ <br>[Ayush Rudani](https://github.com/ayush-rudani)<br>[Deva
 (Project Demo Link)
 "[Resume Builder](https://drive.google.com/file/d/1EuOOZCdjE9vxb4UhVG27ybTMskUWizxt/view?usp=sharing)"
 
-![Home](WDW-ResumeBuilder.gif)
+<!-- ![Home](WDW-ResumeBuilder.gif) -->
 
 <br>
 
