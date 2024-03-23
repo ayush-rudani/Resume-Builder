@@ -24,7 +24,7 @@ This online resume builder assists job searchers in building a professional resu
 <br>
 <hr>
 
-<h3><b>WDW Termwork Project</b></h3>
+<h3><b>Termwork Project</b></h3>
 
 <!-- [Resume Builder](https://github.com/R-Ayush777/WDW_Project_CE104_CE108_CE144) -->
 _**Created by :-**_ <br>[Ayush Rudani](https://github.com/ayush-rudani)<br>[Devansh Shah](https://github.com/shahdevansh28)<br>[Murtaza Mister](https://github.com/MurtazaMister)
@@ -47,7 +47,7 @@ _**Created by :-**_ <br>[Ayush Rudani](https://github.com/ayush-rudani)<br>[Deva
 (Project Demo Link)
 "[Resume Builder](https://drive.google.com/file/d/1EuOOZCdjE9vxb4UhVG27ybTMskUWizxt/view?usp=sharing)"
 
-<!-- ![Home](WDW-ResumeBuilder.gif) -->
+<!-- ![Home](ResumeBuilder.gif) -->
 
 <br>
 
